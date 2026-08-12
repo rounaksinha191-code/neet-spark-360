@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sexual Reproduction PYQs | NEET Spark 360</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="logo">
+
+            <span>⚡</span>
+
+            <div>
+                <h1>NEET Spark 360</h1>
+                <p>NEET Preparation in 360°</p>
+            </div>
+
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="biology.html">Biology</a>
+            <a href="biology12.html">Class 12</a>
+            <a href="sexual-reproduction.html">Chapter</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="quiz-hero">
+
+        <p class="section-tag">
+            📝 NEET PREVIOUS YEAR QUESTIONS
+        </p>
+
+        <h2>
+            Sexual Reproduction in<br>
+            <span>Flowering Plants</span>
+        </h2>
+
+        <p>
+            Practice NEET-level previous year questions
+            and test your understanding.
+        </p>
+
+    </section>
+
+
+    <!-- QUIZ AREA -->
+    <main class="quiz-container">
+
+        <!-- PROGRESS -->
+        <div class="quiz-top">
+
+            <div>
+                Question <strong id="questionNumber">1</strong>
+                of <strong id="totalQuestions">10</strong>
+            </div>
+
+            <div class="score-display">
+                Score: <strong id="score">0</strong>
+            </div>
+
+        </div>
+
+
+        <!-- PROGRESS BAR -->
+        <div class="progress-bar">
+
+            <div id="progress"></div>
+
+        </div>
+
+
+        <!-- QUESTION CARD -->
+        <div class="question-card">
+
+            <p class="question-source" id="questionSource">
+                NEET PYQ
+            </p>
+
+            <h2 id="question">
+                Loading question...
+            </h2>
+
+
+            <!-- OPTIONS -->
+            <div id="options" class="options">
+
+            </div>
+
+
+            <!-- RESULT -->
+            <div id="answerResult" class="answer-result">
+
+            </div>
+
+
+            <!-- NEXT BUTTON -->
+            <button id="nextButton" class="next-btn" onclick="nextQuestion()" disabled>
+                Next Question →
+            </button>
+
+        </div>
+
+
+        <!-- FINAL RESULT -->
+        <div id="finalResult" class="final-result">
+
+            <h2>🎉 Test Complete!</h2>
+
+            <p>
+                Your Score
+            </p>
+
+            <strong id="finalScore">
+                0 / 10
+            </strong>
+
+            <button onclick="restartQuiz()">
+                🔄 Try Again
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h3>NEET Spark 360</h3>
+
+        <p>
+            NEET Preparation in 360°
+        </p>
+
+        <p class="copyright">
+            Founded & Developed by Rounak Sinha
+        </p>
+
+        <p class="copyright">
+            © 2026 NEET Spark 360. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        const questions = [
+
+            {
+                question:
+                    "The outermost layer of the pollen grain is called:",
+
+                options: [
+                    "Intine",
+                    "Exine",
+                    "Endothecium",
+                    "Tapetum"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "The outer wall of a pollen grain is called exine. It is mainly composed of sporopollenin."
+            },
+
+
+            {
+                question:
+                    "A typical angiosperm embryo sac is:",
+
+                options: [
+                    "8-celled and 8-nucleate",
+                    "7-celled and 7-nucleate",
+                    "7-celled and 8-nucleate",
+                    "8-celled and 7-nucleate"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "A typical mature embryo sac is 7-celled and 8-nucleate."
+            },
+
+
+            {
+                question:
+                    "Which of the following represents the female reproductive part of a flower?",
+
+                options: [
+                    "Androecium",
+                    "Gynoecium",
+                    "Corolla",
+                    "Calyx"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "Gynoecium is the female reproductive whorl of a flower."
+            },
+
+
+            {
+                question:
+                    "Transfer of pollen grains from anther to stigma of another flower of the same plant is called:",
+
+                options: [
+                    "Autogamy",
+                    "Geitonogamy",
+                    "Xenogamy",
+                    "Apomixis"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "Geitonogamy is pollen transfer between different flowers of the same plant."
+            },
+
+
+            {
+                question:
+                    "Double fertilisation in angiosperms results in the formation of:",
+
+                options: [
+                    "Two zygotes",
+                    "Zygote and primary endosperm nucleus",
+                    "Two endosperms",
+                    "Embryo and fruit"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "One male gamete fuses with the egg to form the zygote, while the other participates in triple fusion to form the primary endosperm nucleus."
+            },
+
+
+            {
+                question:
+                    "Which structure develops into the seed after fertilisation?",
+
+                options: [
+                    "Ovary",
+                    "Ovule",
+                    "Stigma",
+                    "Anther"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "The ovule develops into the seed after fertilisation."
+            },
+
+
+            {
+                question:
+                    "Which substance makes the pollen exine highly resistant?",
+
+                options: [
+                    "Cellulose",
+                    "Pectin",
+                    "Sporopollenin",
+                    "Lignin"
+                ],
+
+                answer: 2,
+
+                explanation:
+                    "Sporopollenin is highly resistant and forms an important component of the pollen exine."
+            },
+
+
+            {
+                question:
+                    "Formation of seeds without fertilisation is known as:",
+
+                options: [
+                    "Parthenocarpy",
+                    "Apomixis",
+                    "Polyembryony",
+                    "Syngamy"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "Apomixis refers to asexual seed formation without fertilisation."
+            },
+
+
+            {
+                question:
+                    "The ovary of a flower generally develops into:",
+
+                options: [
+                    "Seed",
+                    "Fruit",
+                    "Embryo",
+                    "Endosperm"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "After fertilisation, the ovary generally develops into the fruit."
+            },
+
+
+            {
+                question:
+                    "The two male gametes in an angiosperm are ultimately formed from:",
+
+                options: [
+                    "Vegetative cell",
+                    "Generative cell",
+                    "Tube nucleus",
+                    "Polar nuclei"
+                ],
+
+                answer: 1,
+
+                explanation:
+                    "The generative cell divides to produce the two male gametes."
+            }
+
+        ];
+
+
+        let currentQuestion = 0;
+
+        let score = 0;
+
+        let answered = false;
+
+
+        const questionElement =
+            document.getElementById("question");
+
+        const optionsElement =
+            document.getElementById("options");
+
+        const resultElement =
+            document.getElementById("answerResult");
+
+        const nextButton =
+            document.getElementById("nextButton");
+
+        const scoreElement =
+            document.getElementById("score");
+
+        const questionNumberElement =
+            document.getElementById("questionNumber");
+
+        const totalQuestionsElement =
+            document.getElementById("totalQuestions");
+
+        const progressElement =
+            document.getElementById("progress");
+
+        const finalResult =
+            document.getElementById("finalResult");
+
+        const finalScore =
+            document.getElementById("finalScore");
+
+
+        totalQuestionsElement.textContent =
+            questions.length;
+
+
+        function loadQuestion() {
+
+            answered = false;
+
+            nextButton.disabled = true;
+
+            resultElement.innerHTML = "";
+
+            resultElement.className =
+                "answer-result";
+
+
+            const current =
+                questions[currentQuestion];
+
+
+            questionElement.textContent =
+                current.question;
+
+
+            questionNumberElement.textContent =
+                currentQuestion + 1;
+
+
+            progressElement.style.width =
+                ((currentQuestion + 1) / questions.length * 100) + "%";
+
+
+            optionsElement.innerHTML = "";
+
+
+            current.options.forEach(
+                (option, index) => {
+
+                    const button =
+                        document.createElement("button");
+
+                    button.className =
+                        "option-btn";
+
+                    button.textContent =
+                        option;
+
+                    button.onclick =
+                        () => selectAnswer(index);
+
+                    optionsElement.appendChild(button);
+
+                }
+            );
+
+        }
+
+
+        function selectAnswer(selected) {
+
+            if (answered) return;
+
+            answered = true;
+
+            const current =
+                questions[currentQuestion];
+
+            const buttons =
+                document.querySelectorAll(".option-btn");
+
+
+            buttons.forEach(
+                (button, index) => {
+
+                    button.disabled = true;
+
+                    if (index === current.answer) {
+
+                        button.classList.add(
+                            "correct"
+                        );
+
+                    }
+
+                    if (
+                        index === selected &&
+                        selected !== current.answer
+                    ) {
+
+                        button.classList.add(
+                            "wrong"
+                        );
+
+                    }
+
+                }
+            );
+
+
+            if (selected === current.answer) {
+
+                score++;
+
+                scoreElement.textContent =
+                    score;
+
+                resultElement.className =
+                    "answer-result correct-result";
+
+                resultElement.innerHTML =
+                    "✅ Correct!<br><small>" +
+                    current.explanation +
+                    "</small>";
+
+            } else {
+
+                resultElement.className =
+                    "answer-result wrong-result";
+
+                resultElement.innerHTML =
+                    "❌ Incorrect!<br><small>" +
+                    current.explanation +
+                    "</small>";
+
+            }
+
+
+            nextButton.disabled = false;
+
+        }
+
+
+        function nextQuestion() {
+
+            currentQuestion++;
+
+
+            if (
+                currentQuestion >=
+                questions.length
+            ) {
+
+                showFinalResult();
+
+                return;
+
+            }
+
+
+            loadQuestion();
+
+        }
+
+
+        function showFinalResult() {
+
+            document.querySelector(".question-card")
+                .style.display = "none";
+
+            document.querySelector(".quiz-top")
+                .style.display = "none";
+
+            document.querySelector(".progress-bar")
+                .style.display = "none";
+
+
+            finalResult.style.display =
+                "block";
+
+
+            finalScore.textContent =
+                score + " / " + questions.length;
+
+        }
+
+
+        function restartQuiz() {
+
+            currentQuestion = 0;
+
+            score = 0;
+
+            scoreElement.textContent = "0";
+
+
+            document.querySelector(".question-card")
+                .style.display = "block";
+
+            document.querySelector(".quiz-top")
+                .style.display = "flex";
+
+            document.querySelector(".progress-bar")
+                .style.display = "block";
+
+
+            finalResult.style.display =
+                "none";
+
+
+            loadQuestion();
+
+        }
+
+
+        loadQuestion();
+
+    </script>
+
+</body>
+
+</html>

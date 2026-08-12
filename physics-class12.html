@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Class 12 Physics | NEET Spark 360</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =========================
+           CONTENT POPUP
+        ========================= */
+
+        .content-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+
+            background: rgba(0, 0, 0, 0.72);
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 20px;
+        }
+
+        .content-modal.active {
+            display: flex;
+        }
+
+        .content-box {
+            width: min(750px, 95%);
+            max-height: 85vh;
+            overflow-y: auto;
+
+            background: #111827;
+            color: white;
+
+            padding: 30px;
+
+            border-radius: 18px;
+
+            position: relative;
+
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 18px;
+
+            border: none;
+            background: transparent;
+
+            color: white;
+
+            font-size: 32px;
+            cursor: pointer;
+        }
+
+        .modal-icon {
+            font-size: 42px;
+            margin-bottom: 8px;
+        }
+
+        .content-box h2 {
+            margin-bottom: 20px;
+        }
+
+        .content-box h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #93c5fd;
+        }
+
+        .content-box p {
+            line-height: 1.7;
+            color: #e2e8f0;
+        }
+
+        .content-box ul {
+            padding-left: 22px;
+        }
+
+        .content-box li {
+            margin: 8px 0;
+            line-height: 1.6;
+            color: #e2e8f0;
+        }
+
+        .formula-box {
+            margin: 12px 0;
+            padding: 14px;
+
+            background: rgba(255, 255, 255, 0.08);
+
+            border-radius: 10px;
+
+            font-family: monospace;
+            font-size: 16px;
+        }
+
+        .pyq-box {
+            margin: 15px 0;
+            padding: 16px;
+
+            background: rgba(255, 255, 255, 0.06);
+
+            border-radius: 12px;
+
+            line-height: 1.7;
+        }
+
+        .pyq-answer {
+            margin-top: 8px;
+            color: #86efac;
+            font-weight: bold;
+        }
+
+        .topic-buttons button {
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- =========================
+HEADER
+========================= -->
+
+    <header>
+
+        <div class="logo">
+
+            <span>⚡</span>
+
+            <div>
+
+                <h1>NEET Spark 360</h1>
+
+                <p>NEET Preparation in 360°</p>
+
+            </div>
+
+        </div>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+            <a href="physics.html">Physics</a>
+            <a href="physics-class11.html">Class 11</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+HERO
+========================= -->
+
+    <section class="syllabus-hero">
+
+        <div>
+
+            <p class="section-tag">
+                PHYSICS • CLASS 12
+            </p>
+
+            <h2>
+                Class 12 <span>Physics</span>
+            </h2>
+
+            <p>
+                Master Class 12 Physics with concepts, formulas,
+                numericals, NCERT points and NEET PYQs.
+            </p>
+
+        </div>
+
+        <div class="syllabus-hero-box">
+
+            <strong>12</strong>
+            <span>CLASS</span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+STATS
+========================= -->
+
+    <section class="stats-section">
+
+        <div class="stat-card">
+            <strong>9</strong>
+            <span>Units</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>14</strong>
+            <span>Chapters</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>PYQs</strong>
+            <span>NEET Focused</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>360°</strong>
+            <span>Preparation</span>
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+ELECTROSTATICS
+========================= -->
+
+    <section class="syllabus-section">
+
+        <div class="unit-title">
+
+            <span>01</span>
+
+            <div>
+                <h2>Electrostatics</h2>
+                <p>Electric charges, fields and potential</p>
+            </div>
+
+        </div>
+
+
+        <div class="topic-grid">
+
+
+            <div class="topic-card">
+
+                <div class="topic-icon">⚡</div>
+
+                <h3>Electric Charges & Fields</h3>
+
+                <p>
+                    Charge, Coulomb's law, electric field,
+                    electric flux and Gauss's law.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('charges','concepts')">
+                        Concepts
+                    </button>
+
+                    <button onclick="openContent('charges','formula')">
+                        Formulae
+                    </button>
+
+                    <button onclick="openContent('charges','pyq')">
+                        PYQs
+                    </button>
+
+                    <button onclick="openContent('charges','numerical')">
+                        Numericals
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="topic-card">
+
+                <div class="topic-icon">🔋</div>
+
+                <h3>Electrostatic Potential & Capacitance</h3>
+
+                <p>
+                    Potential, potential energy, capacitors
+                    and energy stored.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('potential','concepts')">
+                        Concepts
+                    </button>
+
+                    <button onclick="openContent('potential','formula')">
+                        Formulae
+                    </button>
+
+                    <button onclick="openContent('potential','pyq')">
+                        PYQs
+                    </button>
+
+                    <button onclick="openContent('potential','numerical')">
+                        Numericals
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+CURRENT ELECTRICITY
+========================= -->
+
+    <section class="syllabus-section">
+
+        <div class="unit-title">
+
+            <span>02</span>
+
+            <div>
+                <h2>Current Electricity</h2>
+                <p>Electric current and circuits</p>
+            </div>
+
+        </div>
+
+
+        <div class="topic-grid">
+
+            <div class="topic-card">
+
+                <div class="topic-icon">🔌</div>
+
+                <h3>Current Electricity</h3>
+
+                <p>
+                    Drift velocity, resistance, resistivity,
+                    Kirchhoff laws and bridges.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('current','concepts')">
+                        Concepts
+                    </button>
+
+                    <button onclick="openContent('current','formula')">
+                        Formulae
+                    </button>
+
+                    <button onclick="openContent('current','pyq')">
+                        PYQs
+                    </button>
+
+                    <button onclick="openContent('current','numerical')">
+                        Numericals
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+MAGNETISM
+========================= -->
+
+    <section class="syllabus-section">
+
+        <div class="unit-title">
+
+            <span>03</span>
+
+            <div>
+                <h2>Magnetic Effects & Magnetism</h2>
+                <p>Magnetic fields and forces</p>
+            </div>
+
+        </div>
+
+
+        <div class="topic-grid">
+
+
+            <div class="topic-card">
+
+                <div class="topic-icon">🧲</div>
+
+                <h3>Moving Charges & Magnetism</h3>
+
+                <p>
+                    Lorentz force, Biot-Savart law,
+                    Ampere law and cyclotron.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('moving','concepts')">
+                        Concepts
+                    </button>
+
+                    <button onclick="openContent('moving','formula')">
+                        Formulae
+                    </button>
+
+                    <button onclick="openContent('moving','pyq')">
+                        PYQs
+                    </button>
+
+                    <button onclick="openContent('moving','numerical')">
+                        Numericals
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="topic-card">
+
+                <div class="topic-icon">🧭</div>
+
+                <h3>Magnetism & Matter</h3>
+
+                <p>
+                    Bar magnets, Earth's magnetism
+                    and magnetic materials.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('matter','concepts')">
+                        Concepts
+                    </button>
+
+                    <button onclick="openContent('matter','formula')">
+                        Formulae
+                    </button>
+
+                    <button onclick="openContent('matter','pyq')">
+                        PYQs
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+EMI + AC
+========================= -->
+
+    <section class="syllabus-section">
+
+        <div class="unit-title">
+
+            <span>04</span>
+
+            <div>
+                <h2>Electromagnetic Induction & AC</h2>
+                <p>Induction and alternating current</p>
+            </div>
+
+        </div>
+
+
+        <div class="topic-grid">
+
+
+            <div class="topic-card">
+
+                <div class="topic-icon">🔄</div>
+
+                <h3>Electromagnetic Induction</h3>
+
+                <p>
+                    Faraday's law, Lenz's law,
+                    motional emf and inductance.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('emi','concepts')">
+                        Concepts
+                    </button>
+
+                    <button onclick="openContent('emi','formula')">
+                        Formulae
+                    </button>
+
+                    <button onclick="openContent('emi','pyq')">
+                        PYQs
+                    </button>
+
+                    <button onclick="openContent('emi','numerical')">
+                        Numericals
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="topic-card">
+
+                <div class="topic-icon">〰️</div>
+
+                <h3>Alternating Current</h3>
+
+                <p>
+                    RMS values, reactance, impedance,
+                    resonance and power.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('ac','concepts')">
+                        Concepts
+                    </button>
+
+                    <button onclick="openContent('ac','formula')">
+                        Formulae
+                    </button>
+
+                    <button onclick="openContent('ac','pyq')">
+                        PYQs
+                    </button>
+
+                    <button onclick="openContent('ac','numerical')">
+                        Numericals
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+EM WAVES
+========================= -->
+
+    <section class="syllabus-section">
+
+        <div class="unit-title">
+
+            <span>05</span>
+
+            <div>
+                <h2>Electromagnetic Waves</h2>
+                <p>EM waves and spectrum</p>
+            </div>
+
+        </div>
+
+
+        <div class="topic-grid">
+
+            <div class="topic-card">
+
+                <div class="topic-icon">📡</div>
+
+                <h3>Electromagnetic Waves</h3>
+
+                <p>
+                    Properties, displacement current
+                    and electromagnetic spectrum.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('waves','concepts')">
+                        Concepts
+                    </button>
+
+                    <button onclick="openContent('waves','formula')">
+                        Formulae
+                    </button>
+
+                    <button onclick="openContent('waves','pyq')">
+                        PYQs
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+OPTICS
+========================= -->
+
+    <section class="syllabus-section">
+
+        <div class="unit-title">
+
+            <span>06</span>
+
+            <div>
+                <h2>Optics</h2>
+                <p>Ray optics and wave optics</p>
+            </div>
+
+        </div>
+
+
+        <div class="topic-grid">
+
+
+            <div class="topic-card">
+
+                <div class="topic-icon">🔍</div>
+
+                <h3>Ray Optics & Optical Instruments</h3>
+
+                <p>
+                    Mirrors, lenses, refraction,
+                    reflection and optical instruments.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('rayoptics','concepts')">
+                        Concepts
+                    </button>
+
+                    <button onclick="openContent('rayoptics','formula')">
+                        Formulae
+                    </button>
+
+                    <button onclick="openContent('rayoptics','pyq')">
+                        PYQs
+                    </button>
+
+                    <button onclick="openContent('rayoptics','numerical')">
+                        Numericals
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="topic-card">
+
+                <div class="topic-icon">🌈</div>
+
+                <h3>Wave Optics</h3>
+
+                <p>
+                    Huygens principle, interference,
+                    YDSE, diffraction and polarization.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('waveoptics','concepts')">
+                        Concepts
+                    </button>
+
+                    <button onclick="openContent('waveoptics','formula')">
+                        Formulae
+                    </button>
+
+                    <button onclick="openContent('waveoptics','pyq')">
+                        PYQs
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+DUAL NATURE
+========================= -->
+
+    <section class="syllabus-section">
+
+        <div class="unit-title">
+
+            <span>07</span>
+
+            <div>
+                <h2>Dual Nature of Matter & Radiation</h2>
+                <p>Photoelectric effect and matter waves</p>
+            </div>
+
+        </div>
+
+
+        <div class="topic-grid">
+
+            <div class="topic-card">
+
+                <div class="topic-icon">💡</div>
+
+                <h3>Dual Nature</h3>
+
+                <p>
+                    Photoelectric effect, photons
+                    and de Broglie wavelength.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('dual','concepts')">
+                        Concepts
+                    </button>
+
+                    <button onclick="openContent('dual','formula')">
+                        Formulae
+                    </button>
+
+                    <button onclick="openContent('dual','pyq')">
+                        PYQs
+                    </button>
+
+                    <button onclick="openContent('dual','numerical')">
+                        Numericals
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+ATOMS + NUCLEI
+========================= -->
+
+    <section class="syllabus-section">
+
+        <div class="unit-title">
+
+            <span>08</span>
+
+            <div>
+                <h2>Atoms & Nuclei</h2>
+                <p>Atomic and nuclear physics</p>
+            </div>
+
+        </div>
+
+
+        <div class="topic-grid">
+
+
+            <div class="topic-card">
+
+                <div class="topic-icon">⚛️</div>
+
+                <h3>Atoms</h3>
+
+                <p>
+                    Rutherford model, Bohr model,
+                    hydrogen spectrum and energy levels.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('atoms','concepts')">
+                        Concepts
+                    </button>
+
+                    <button onclick="openContent('atoms','formula')">
+                        Formulae
+                    </button>
+
+                    <button onclick="openContent('atoms','pyq')">
+                        PYQs
+                    </button>
+
+                    <button onclick="openContent('atoms','numerical')">
+                        Numericals
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="topic-card">
+
+                <div class="topic-icon">☢️</div>
+
+                <h3>Nuclei</h3>
+
+                <p>
+                    Mass defect, binding energy,
+                    radioactivity and nuclear reactions.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('nuclei','concepts')">
+                        Concepts
+                    </button>
+
+                    <button onclick="openContent('nuclei','formula')">
+                        Formulae
+                    </button>
+
+                    <button onclick="openContent('nuclei','pyq')">
+                        PYQs
+                    </button>
+
+                    <button onclick="openContent('nuclei','numerical')">
+                        Numericals
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+SEMICONDUCTORS
+========================= -->
+
+    <section class="syllabus-section">
+
+        <div class="unit-title">
+
+            <span>09</span>
+
+            <div>
+                <h2>Electronic Devices</h2>
+                <p>Semiconductor electronics</p>
+            </div>
+
+        </div>
+
+
+        <div class="topic-grid">
+
+            <div class="topic-card">
+
+                <div class="topic-icon">💻</div>
+
+                <h3>Semiconductor Electronics</h3>
+
+                <p>
+                    p-n junction, diode, rectifier,
+                    LED, transistor and logic gates.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('semiconductor','concepts')">
+                        Concepts
+                    </button>
+
+                    <button onclick="openContent('semiconductor','formula')">
+                        Formulae
+                    </button>
+
+                    <button onclick="openContent('semiconductor','pyq')">
+                        PYQs
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+STUDY SYSTEM
+========================= -->
+
+    <section class="study-system">
+
+        <div>
+
+            <p class="section-tag">
+                HOW TO STUDY
+            </p>
+
+            <h2>
+                Master Class 12 Physics
+            </h2>
+
+            <p>
+                Concept → Formula → Numericals → PYQs → Test → Revision
+            </p>
+
+        </div>
+
+
+        <div class="system-steps">
+
+            <div>
+                <strong>01</strong>
+                <span>Concept</span>
+            </div>
+
+            <div>
+                <strong>02</strong>
+                <span>Formula</span>
+            </div>
+
+            <div>
+                <strong>03</strong>
+                <span>Numericals</span>
+            </div>
+
+            <div>
+                <strong>04</strong>
+                <span>PYQs</span>
+            </div>
+
+            <div>
+                <strong>05</strong>
+                <span>Test</span>
+            </div>
+
+            <div>
+                <strong>06</strong>
+                <span>Revision</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+FOOTER
+========================= -->
+
+    <footer>
+
+        <h3>NEET Spark 360</h3>
+
+        <p>NEET Preparation in 360°</p>
+
+        <p class="copyright">
+            © 2026 NEET Spark 360. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+CONTENT MODAL
+========================= -->
+
+    <div id="contentModal" class="content-modal">
+
+        <div class="content-box">
+
+            <button class="close-modal" onclick="closeContent()">
+                ×
+            </button>
+
+            <div id="modalIcon" class="modal-icon">
+                📘
+            </div>
+
+            <h2 id="modalTitle">
+                Physics
+            </h2>
+
+            <div id="modalContent"></div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        /* =========================
+        CONTENT DATABASE
+        ========================= */
+
+        const contentData = {
+
+            charges: {
+
+                title: "Electric Charges & Fields",
+                icon: "⚡",
+
+                concepts: `
+            <h3>Core Concepts</h3>
+
+            <ul>
+                <li>Electric charge is a fundamental property of matter.</li>
+                <li>Like charges repel and unlike charges attract.</li>
+                <li>Coulomb's law gives the force between two point charges.</li>
+                <li>Electric field is force experienced per unit positive test charge.</li>
+                <li>Electric flux represents electric field passing through a surface.</li>
+                <li>Gauss's law relates net electric flux to enclosed charge.</li>
+            </ul>
+        `,
+
+                formula: `
+            <h3>Important Formulae</h3>
+
+            <div class="formula-box">F = k q₁q₂ / r²</div>
+            <div class="formula-box">E = F/q</div>
+            <div class="formula-box">E = kq/r²</div>
+            <div class="formula-box">Φ = EA cosθ</div>
+            <div class="formula-box">Φ = q/ε₀</div>
+        `,
+
+                pyq: `
+            <h3>NEET Practice</h3>
+
+            <div class="pyq-box">
+                Two charges exert force F on each other. If distance between them is doubled, the force becomes:
+                <div class="pyq-answer">Answer: F/4</div>
+            </div>
+
+            <div class="pyq-box">
+                SI unit of electric flux is:
+                <div class="pyq-answer">Answer: N m²/C</div>
+            </div>
+        `,
+
+                numerical: `
+            <h3>Numerical</h3>
+
+            <div class="pyq-box">
+                Two charges 2 μC and 3 μC are separated by 1 m.
+                Find the electrostatic force between them.
+                <br><br>
+                Use Coulomb's law.
+            </div>
+        `
+            },
+
+
+            potential: {
+
+                title: "Electrostatic Potential & Capacitance",
+                icon: "🔋",
+
+                concepts: `
+            <h3>Core Concepts</h3>
+
+            <ul>
+                <li>Electric potential is work done per unit charge.</li>
+                <li>Potential difference drives charge movement in circuits.</li>
+                <li>Capacitance measures the charge storing ability of a conductor.</li>
+                <li>A capacitor stores electrical energy.</li>
+                <li>Dielectric insertion increases capacitance.</li>
+            </ul>
+        `,
+
+                formula: `
+            <h3>Important Formulae</h3>
+
+            <div class="formula-box">V = W/q</div>
+            <div class="formula-box">V = kq/r</div>
+            <div class="formula-box">C = Q/V</div>
+            <div class="formula-box">C = ε₀A/d</div>
+            <div class="formula-box">U = ½CV²</div>
+        `,
+
+                pyq: `
+            <h3>NEET Practice</h3>
+
+            <div class="pyq-box">
+                If the separation between capacitor plates is doubled, capacitance becomes:
+                <div class="pyq-answer">Answer: Half</div>
+            </div>
+        `,
+
+                numerical: `
+            <h3>Numerical</h3>
+
+            <div class="pyq-box">
+                A capacitor of capacitance 10 μF is connected to 100 V.
+                Find the charge stored.
+            </div>
+        `
+            },
+
+
+            current: {
+
+                title: "Current Electricity",
+                icon: "🔌",
+
+                concepts: `
+            <h3>Core Concepts</h3>
+
+            <ul>
+                <li>Electric current is rate of flow of charge.</li>
+                <li>Resistance opposes the flow of current.</li>
+                <li>Resistivity depends on material and temperature.</li>
+                <li>Kirchhoff's laws are used to solve complex circuits.</li>
+                <li>Wheatstone bridge is used for comparison of resistances.</li>
+            </ul>
+        `,
+
+                formula: `
+            <h3>Important Formulae</h3>
+
+            <div class="formula-box">I = Q/t</div>
+            <div class="formula-box">V = IR</div>
+            <div class="formula-box">R = ρL/A</div>
+            <div class="formula-box">P = VI = I²R = V²/R</div>
+        `,
+
+                pyq: `
+            <h3>NEET Practice</h3>
+
+            <div class="pyq-box">
+                If resistance is doubled at constant voltage, power becomes:
+                <div class="pyq-answer">Answer: Half</div>
+            </div>
+        `,
+
+                numerical: `
+            <h3>Numerical</h3>
+
+            <div class="pyq-box">
+                A 10 Ω resistor is connected to a 20 V source.
+                Find the current.
+            </div>
+        `
+            },
+
+
+            moving: {
+
+                title: "Moving Charges & Magnetism",
+                icon: "🧲",
+
+                concepts: `
+            <h3>Core Concepts</h3>
+
+            <ul>
+                <li>A moving charge produces a magnetic field.</li>
+                <li>A charged particle moving in a magnetic field experiences Lorentz force.</li>
+                <li>Biot-Savart law gives magnetic field due to current elements.</li>
+                <li>A current carrying conductor experiences force in magnetic field.</li>
+                <li>Cyclotron accelerates charged particles.</li>
+            </ul>
+        `,
+
+                formula: `
+            <h3>Important Formulae</h3>
+
+            <div class="formula-box">F = qvB sinθ</div>
+            <div class="formula-box">F = BIL sinθ</div>
+            <div class="formula-box">r = mv/qB</div>
+            <div class="formula-box">B = μ₀I/2πr</div>
+        `,
+
+                pyq: `
+            <h3>NEET Practice</h3>
+
+            <div class="pyq-box">
+                Magnetic force on a charged particle is maximum when angle between v and B is:
+                <div class="pyq-answer">Answer: 90°</div>
+            </div>
+        `,
+
+                numerical: `
+            <h3>Numerical</h3>
+
+            <div class="pyq-box">
+                A charge moves perpendicular to a magnetic field.
+                Calculate magnetic force using F = qvB.
+            </div>
+        `
+            },
+
+
+            matter: {
+
+                title: "Magnetism & Matter",
+                icon: "🧭",
+
+                concepts: `
+            <h3>Core Concepts</h3>
+
+            <ul>
+                <li>Every magnet has north and south poles.</li>
+                <li>Magnetic field lines form closed loops.</li>
+                <li>Earth behaves approximately like a giant magnet.</li>
+                <li>Materials can be diamagnetic, paramagnetic or ferromagnetic.</li>
+            </ul>
+        `,
+
+                formula: `
+            <h3>Important Formulae</h3>
+
+            <div class="formula-box">B = μ₀(H + M)</div>
+            <div class="formula-box">χ = M/H</div>
+        `,
+
+                pyq: `
+            <h3>NEET Practice</h3>
+
+            <div class="pyq-box">
+                Which material is strongly attracted by a magnetic field?
+                <div class="pyq-answer">Answer: Ferromagnetic material</div>
+            </div>
+        `
+            },
+
+
+            emi: {
+
+                title: "Electromagnetic Induction",
+                icon: "🔄",
+
+                concepts: `
+            <h3>Core Concepts</h3>
+
+            <ul>
+                <li>Changing magnetic flux produces induced emf.</li>
+                <li>Faraday's law gives magnitude of induced emf.</li>
+                <li>Lenz's law gives direction of induced current.</li>
+                <li>Self-induction opposes change in current.</li>
+            </ul>
+        `,
+
+                formula: `
+            <h3>Important Formulae</h3>
+
+            <div class="formula-box">ε = -dΦ/dt</div>
+            <div class="formula-box">Φ = BA cosθ</div>
+            <div class="formula-box">ε = Blv</div>
+            <div class="formula-box">ε = -L dI/dt</div>
+        `,
+
+                pyq: `
+            <h3>NEET Practice</h3>
+
+            <div class="pyq-box">
+                The negative sign in Faraday's law represents:
+                <div class="pyq-answer">Answer: Lenz's law</div>
+            </div>
+        `,
+
+                numerical: `
+            <h3>Numerical</h3>
+
+            <div class="pyq-box">
+                Magnetic flux changes from 2 Wb to 5 Wb in 0.5 s.
+                Find average induced emf.
+            </div>
+        `
+            },
+
+
+            ac: {
+
+                title: "Alternating Current",
+                icon: "〰️",
+
+                concepts: `
+            <h3>Core Concepts</h3>
+
+            <ul>
+                <li>Alternating current changes magnitude and direction periodically.</li>
+                <li>RMS value represents equivalent DC value.</li>
+                <li>Inductors and capacitors offer reactance.</li>
+                <li>At resonance, inductive and capacitive reactances become equal.</li>
+            </ul>
+        `,
+
+                formula: `
+            <h3>Important Formulae</h3>
+
+            <div class="formula-box">Iᵣₘₛ = I₀/√2</div>
+            <div class="formula-box">Vᵣₘₛ = V₀/√2</div>
+            <div class="formula-box">Xᴸ = ωL</div>
+            <div class="formula-box">Xᶜ = 1/ωC</div>
+            <div class="formula-box">Z = √(R² + (Xᴸ-Xᶜ)²)</div>
+        `,
+
+                pyq: `
+            <h3>NEET Practice</h3>
+
+            <div class="pyq-box">
+                At resonance in an LCR circuit, impedance is:
+                <div class="pyq-answer">Answer: Minimum and equal to R</div>
+            </div>
+        `,
+
+                numerical: `
+            <h3>Numerical</h3>
+
+            <div class="pyq-box">
+                If peak current is 10 A, calculate RMS current.
+            </div>
+        `
+            },
+
+
+            waves: {
+
+                title: "Electromagnetic Waves",
+                icon: "📡",
+
+                concepts: `
+            <h3>Core Concepts</h3>
+
+            <ul>
+                <li>Electromagnetic waves do not require a material medium.</li>
+                <li>Electric and magnetic fields are perpendicular to each other.</li>
+                <li>EM waves travel at speed of light in vacuum.</li>
+                <li>The electromagnetic spectrum contains radio waves through gamma rays.</li>
+            </ul>
+        `,
+
+                formula: `
+            <h3>Important Formulae</h3>
+
+            <div class="formula-box">c = 1/√(μ₀ε₀)</div>
+            <div class="formula-box">c = νλ</div>
+        `,
+
+                pyq: `
+            <h3>NEET Practice</h3>
+
+            <div class="pyq-box">
+                Which electromagnetic wave has the highest frequency?
+                <div class="pyq-answer">Answer: Gamma rays</div>
+            </div>
+        `
+            },
+
+
+            rayoptics: {
+
+                title: "Ray Optics & Optical Instruments",
+                icon: "🔍",
+
+                concepts: `
+            <h3>Core Concepts</h3>
+
+            <ul>
+                <li>Reflection follows the law of reflection.</li>
+                <li>Refraction occurs due to change in speed of light.</li>
+                <li>Total internal reflection occurs when light travels from denser to rarer medium with incidence angle greater than critical angle.</li>
+                <li>Lenses form images by refraction.</li>
+            </ul>
+        `,
+
+                formula: `
+            <h3>Important Formulae</h3>
+
+            <div class="formula-box">1/f = 1/v - 1/u</div>
+            <div class="formula-box">m = v/u</div>
+            <div class="formula-box">n = c/v</div>
+            <div class="formula-box">sin C = 1/n</div>
+        `,
+
+                pyq: `
+            <h3>NEET Practice</h3>
+
+            <div class="pyq-box">
+                Total internal reflection is possible when light travels from:
+                <div class="pyq-answer">Answer: Denser medium to rarer medium</div>
+            </div>
+        `,
+
+                numerical: `
+            <h3>Numerical</h3>
+
+            <div class="pyq-box">
+                An object is placed in front of a convex lens.
+                Use the lens formula to determine image position.
+            </div>
+        `
+            },
+
+
+            waveoptics: {
+
+                title: "Wave Optics",
+                icon: "🌈",
+
+                concepts: `
+            <h3>Core Concepts</h3>
+
+            <ul>
+                <li>Huygens principle explains propagation of wavefronts.</li>
+                <li>Interference occurs due to superposition of coherent waves.</li>
+                <li>Young's double slit experiment demonstrates interference.</li>
+                <li>Diffraction is bending/spreading of waves around obstacles.</li>
+                <li>Polarization proves the transverse nature of light.</li>
+            </ul>
+        `,
+
+                formula: `
+            <h3>Important Formulae</h3>
+
+            <div class="formula-box">β = λD/d</div>
+            <div class="formula-box">Path difference = d sinθ</div>
+        `,
+
+                pyq: `
+            <h3>NEET Practice</h3>
+
+            <div class="pyq-box">
+                Polarization proves that light waves are:
+                <div class="pyq-answer">Answer: Transverse</div>
+            </div>
+        `
+            },
+
+
+            dual: {
+
+                title: "Dual Nature of Matter & Radiation",
+                icon: "💡",
+
+                concepts: `
+            <h3>Core Concepts</h3>
+
+            <ul>
+                <li>Light exhibits both wave and particle nature.</li>
+                <li>Photoelectric effect supports particle nature of light.</li>
+                <li>Photon energy depends on frequency.</li>
+                <li>Matter particles also exhibit wave nature.</li>
+            </ul>
+        `,
+
+                formula: `
+            <h3>Important Formulae</h3>
+
+            <div class="formula-box">E = hν</div>
+            <div class="formula-box">Kmax = hν - φ</div>
+            <div class="formula-box">λ = h/p</div>
+            <div class="formula-box">p = h/λ</div>
+        `,
+
+                pyq: `
+            <h3>NEET Practice</h3>
+
+            <div class="pyq-box">
+                Increasing intensity of incident light mainly increases:
+                <div class="pyq-answer">Answer: Photoelectric current</div>
+            </div>
+        `,
+
+                numerical: `
+            <h3>Numerical</h3>
+
+            <div class="pyq-box">
+                Calculate photon energy using E = hν for a given frequency.
+            </div>
+        `
+            },
+
+
+            atoms: {
+
+                title: "Atoms",
+                icon: "⚛️",
+
+                concepts: `
+            <h3>Core Concepts</h3>
+
+            <ul>
+                <li>Rutherford proposed the nuclear model.</li>
+                <li>Bohr introduced quantised stationary orbits.</li>
+                <li>Electrons emit or absorb energy during transitions.</li>
+                <li>Hydrogen spectrum consists of different spectral series.</li>
+            </ul>
+        `,
+
+                formula: `
+            <h3>Important Formulae</h3>
+
+            <div class="formula-box">Eₙ = -13.6/n² eV</div>
+            <div class="formula-box">rₙ = 0.529n² Å</div>
+            <div class="formula-box">1/λ = R(1/n₁² - 1/n₂²)</div>
+        `,
+
+                pyq: `
+            <h3>NEET Practice</h3>
+
+            <div class="pyq-box">
+                Number of spectral lines possible from level n is:
+                <div class="pyq-answer">Answer: n(n-1)/2</div>
+            </div>
+        `,
+
+                numerical: `
+            <h3>Numerical</h3>
+
+            <div class="pyq-box">
+                Calculate energy of electron in the second orbit of hydrogen atom.
+            </div>
+        `
+            },
+
+
+            nuclei: {
+
+                title: "Nuclei",
+                icon: "☢️",
+
+                concepts: `
+            <h3>Core Concepts</h3>
+
+            <ul>
+                <li>Nucleus contains protons and neutrons.</li>
+                <li>Mass defect is responsible for nuclear binding energy.</li>
+                <li>Radioactive decay is spontaneous.</li>
+                <li>Nuclear fission and fusion release large amounts of energy.</li>
+            </ul>
+        `,
+
+                formula: `
+            <h3>Important Formulae</h3>
+
+            <div class="formula-box">E = Δmc²</div>
+            <div class="formula-box">N = N₀e⁻λt</div>
+            <div class="formula-box">T₁/₂ = 0.693/λ</div>
+            <div class="formula-box">R = R₀A¹ᐟ³</div>
+        `,
+
+                pyq: `
+            <h3>NEET Practice</h3>
+
+            <div class="pyq-box">
+                Half-life of a radioactive substance is related to decay constant by:
+                <div class="pyq-answer">Answer: T₁/₂ = 0.693/λ</div>
+            </div>
+        `,
+
+                numerical: `
+            <h3>Numerical</h3>
+
+            <div class="pyq-box">
+                A radioactive sample has a half-life of 10 days.
+                Find the fraction remaining after 30 days.
+            </div>
+        `
+            },
+
+
+            semiconductor: {
+
+                title: "Semiconductor Electronics",
+                icon: "💻",
+
+                concepts: `
+            <h3>Core Concepts</h3>
+
+            <ul>
+                <li>Semiconductors have conductivity between conductors and insulators.</li>
+                <li>p-type and n-type semiconductors are formed by doping.</li>
+                <li>A p-n junction forms a depletion region.</li>
+                <li>Diodes allow current mainly in one direction.</li>
+                <li>Logic gates perform basic logical operations.</li>
+            </ul>
+        `,
+
+                formula: `
+            <h3>Important Points & Relations</h3>
+
+            <div class="formula-box">Forward bias → low resistance</div>
+            <div class="formula-box">Reverse bias → high resistance</div>
+            <div class="formula-box">AND → Y = A·B</div>
+            <div class="formula-box">OR → Y = A+B</div>
+            <div class="formula-box">NOT → Y = A̅</div>
+        `,
+
+                pyq: `
+            <h3>NEET Practice</h3>
+
+            <div class="pyq-box">
+                In a p-type semiconductor, majority charge carriers are:
+                <div class="pyq-answer">Answer: Holes</div>
+            </div>
+
+            <div class="pyq-box">
+                In an n-type semiconductor, majority charge carriers are:
+                <div class="pyq-answer">Answer: Electrons</div>
+            </div>
+        `
+            }
+
+        };
+
+
+        /* =========================
+        OPEN CONTENT
+        ========================= */
+
+        function openContent(chapter, type) {
+
+            const data = contentData[chapter];
+
+            if (!data) {
+                alert("Content is being prepared.");
+                return;
+            }
+
+            let content = "";
+
+            if (type === "concepts") {
+                content = data.concepts;
+            }
+
+            else if (type === "formula") {
+                content = data.formula;
+            }
+
+            else if (type === "pyq") {
+                content = data.pyq;
+            }
+
+            else if (type === "numerical") {
+                content = data.numerical || `
+            <h3>Numerical Practice</h3>
+            <p>Numerical questions are being prepared for this chapter.</p>
+        `;
+            }
+
+            document.getElementById("modalIcon").innerHTML = data.icon;
+
+            document.getElementById("modalTitle").innerText = data.title;
+
+            document.getElementById("modalContent").innerHTML = content;
+
+            document.getElementById("contentModal").classList.add("active");
+        }
+
+
+        /* =========================
+        CLOSE POPUP
+        ========================= */
+
+        function closeContent() {
+
+            document
+                .getElementById("contentModal")
+                .classList.remove("active");
+
+        }
+
+
+        /* CLICK OUTSIDE */
+
+        document
+            .getElementById("contentModal")
+            .addEventListener("click", function (e) {
+
+                if (e.target === this) {
+                    closeContent();
+                }
+
+            });
+
+
+        /* ESC KEY */
+
+        document.addEventListener("keydown", function (e) {
+
+            if (e.key === "Escape") {
+                closeContent();
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

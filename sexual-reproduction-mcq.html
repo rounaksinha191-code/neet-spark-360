@@ -1,0 +1,1827 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Sexual Reproduction — Hard MCQ Test |
+        NEET Spark 360
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+
+            <span>⚡</span>
+
+            <div>
+
+                <h1>
+                    NEET Spark 360
+                </h1>
+
+                <p>
+                    NEET Preparation in 360°
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="biology12.html">
+                Class 12
+            </a>
+
+            <a href="sexual-reproduction.html">
+                Chapter
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- TEST HERO -->
+
+    <section class="mcq-hero">
+
+        <p class="section-tag">
+            ☠️ CHALLENGE MODE
+        </p>
+
+
+        <h2>
+
+            Sexual Reproduction in
+            <span>
+                Flowering Plants
+            </span>
+
+        </h2>
+
+
+        <p>
+
+            Hard NEET-level conceptual
+            MCQ challenge.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- TEST INFO -->
+
+    <section class="test-info">
+
+        <div>
+
+            <strong>
+                30
+            </strong>
+
+            <span>
+                Questions
+            </span>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                30
+            </strong>
+
+            <span>
+                Minutes
+            </span>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                +4 / −1
+            </strong>
+
+            <span>
+                Marking
+            </span>
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                ☠️
+            </strong>
+
+            <span>
+                Hard Mode
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- QUIZ -->
+
+    <main class="mcq-container">
+
+
+        <!-- TOP BAR -->
+
+        <div class="mcq-top">
+
+            <div>
+
+                Question
+
+                <strong id="qNumber">
+                    1
+                </strong>
+
+                /
+
+                <strong>
+                    30
+                </strong>
+
+            </div>
+
+
+            <div class="timer">
+
+                ⏱️
+
+                <span id="timer">
+                    30:00
+                </span>
+
+            </div>
+
+
+            <div>
+
+                Score:
+
+                <strong id="liveScore">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PROGRESS -->
+
+        <div class="mcq-progress">
+
+            <div id="mcqProgress"></div>
+
+        </div>
+
+
+
+        <!-- QUESTION CARD -->
+
+        <div class="mcq-card">
+
+
+            <div class="difficulty">
+
+                🔴 HARD
+
+            </div>
+
+
+            <h2 id="mcqQuestion">
+
+                Loading...
+
+            </h2>
+
+
+            <div id="mcqOptions" class="mcq-options">
+
+            </div>
+
+
+            <div id="mcqExplanation" class="mcq-explanation">
+
+            </div>
+
+
+            <button id="nextMCQ" class="mcq-next" disabled>
+
+                Next Question →
+
+            </button>
+
+        </div>
+
+
+
+        <!-- RESULT -->
+
+        <div id="mcqResult" class="mcq-result">
+
+
+            <div class="result-icon">
+                🏆
+            </div>
+
+
+            <h2>
+                Challenge Complete!
+            </h2>
+
+
+            <p>
+                Your Final Score
+            </p>
+
+
+            <strong id="finalMarks">
+                0 / 120
+            </strong>
+
+
+            <div class="result-stats">
+
+                <div>
+
+                    <strong id="correctCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Correct
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong id="wrongCount">
+                        0
+                    </strong>
+
+                    <span>
+                        Wrong
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong id="accuracy">
+                        0%
+                    </strong>
+
+                    <span>
+                        Accuracy
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button onclick="restartTest()">
+
+                🔄 Attempt Again
+
+            </button>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>
+            NEET Spark 360
+        </h3>
+
+        <p>
+            NEET Preparation in 360°
+        </p>
+
+        <p class="copyright">
+
+            Founded & Developed by
+            Rounak Sinha
+
+        </p>
+
+        <p class="copyright">
+
+            © 2026 NEET Spark 360.
+            All rights reserved.
+
+        </p>
+
+    </footer>
+
+
+
+    <script>
+
+
+        /* =========================================
+           QUESTION BANK
+        ========================================= */
+
+
+        const questions = [
+
+
+            /* 1 */
+
+            {
+
+                question:
+
+                    "In a typical angiosperm embryo sac, which combination correctly represents the number of cells and nuclei respectively?",
+
+                options:
+
+                    [
+
+                        "7 cells and 7 nuclei",
+
+                        "8 cells and 8 nuclei",
+
+                        "7 cells and 8 nuclei",
+
+                        "8 cells and 7 nuclei"
+
+                    ],
+
+                answer: 2,
+
+                explanation:
+
+                    "A typical mature embryo sac is 7-celled and 8-nucleate. The central cell contains two polar nuclei."
+
+            },
+
+
+
+            /* 2 */
+
+            {
+
+                question:
+
+                    "A pollen grain is shed at the two-celled stage. Which statement is correct?",
+
+                options:
+
+                    [
+
+                        "The generative cell directly forms the pollen tube",
+
+                        "The vegetative cell divides to form two male gametes",
+
+                        "The generative cell later divides to form two male gametes",
+
+                        "The tube cell fuses with the egg"
+
+                    ],
+
+                answer: 2,
+
+                explanation:
+
+                    "In a two-celled pollen grain, the vegetative cell forms the pollen tube while the generative cell divides mitotically to form two male gametes."
+
+            },
+
+
+
+            /* 3 */
+
+            {
+
+                question:
+
+                    "Which statement regarding sporopollenin is INCORRECT?",
+
+                options:
+
+                    [
+
+                        "It is present in pollen exine",
+
+                        "It is highly resistant",
+
+                        "It can withstand high temperatures and strong acids",
+
+                        "It is easily degraded by most enzymes"
+
+                    ],
+
+                answer: 3,
+
+                explanation:
+
+                    "Sporopollenin is exceptionally resistant and is not easily degraded by enzymes."
+
+            },
+
+
+
+            /* 4 */
+
+            {
+
+                question:
+
+                    "Consider the following statements about geitonogamy: 1. It involves pollen transfer between two flowers of the same plant. 2. It is genetically equivalent to autogamy. 3. It requires a pollinating agent. Which option is correct?",
+
+                options:
+
+                    [
+
+                        "1 only",
+
+                        "1 and 2 only",
+
+                        "1 and 3 only",
+
+                        "1, 2 and 3"
+
+                    ],
+
+                answer: 3,
+
+                explanation:
+
+                    "Geitonogamy involves different flowers of the same plant. It is genetically similar to autogamy but functionally requires a pollinating agent for pollen transfer."
+
+            },
+
+
+
+            /* 5 */
+
+            {
+
+                question:
+
+                    "During double fertilisation, the second male gamete fuses with:",
+
+                options:
+
+                    [
+
+                        "Egg cell",
+
+                        "Two synergids",
+
+                        "Two polar nuclei or their fusion product",
+
+                        "Three antipodal cells"
+
+                    ],
+
+                answer: 2,
+
+                explanation:
+
+                    "The second male gamete participates in triple fusion with the two polar nuclei or their fusion product, producing the primary endosperm nucleus."
+
+            },
+
+
+
+            /* 6 */
+
+            {
+
+                question:
+
+                    "If a plant has 2n = 24 chromosomes, the chromosome number in a normal male gamete will be:",
+
+                options:
+
+                    [
+
+                        "6",
+
+                        "12",
+
+                        "24",
+
+                        "48"
+
+                    ],
+
+                answer: 1,
+
+                explanation:
+
+                    "Gametes are haploid. Therefore n = 24/2 = 12."
+
+            },
+
+
+
+            /* 7 */
+
+            {
+
+                question:
+
+                    "Which sequence correctly represents the development of a typical male gametophyte?",
+
+                options:
+
+                    [
+
+                        "Microspore → pollen grain → generative cell → male gametes",
+
+                        "Pollen mother cell → embryo sac → male gametes",
+
+                        "Microspore → megaspore → pollen grain",
+
+                        "Microspore → ovule → embryo"
+
+                    ],
+
+                answer: 0,
+
+                explanation:
+
+                    "The haploid microspore develops into the pollen grain. Its generative cell eventually produces the two male gametes."
+
+            },
+
+
+
+            /* 8 */
+
+            {
+
+                question:
+
+                    "Which of the following pairs is correctly matched?",
+
+                options:
+
+                    [
+
+                        "Ovule — Fruit",
+
+                        "Ovary — Seed",
+
+                        "Zygote — Embryo",
+
+                        "Polar nuclei — Pollen tube"
+
+                    ],
+
+                answer: 2,
+
+                explanation:
+
+                    "After fertilisation, the zygote develops into the embryo. Ovule develops into seed and ovary generally develops into fruit."
+
+            },
+
+
+
+            /* 9 */
+
+            {
+
+                question:
+
+                    "Which event occurs immediately after compatible pollen lands on the stigma?",
+
+                options:
+
+                    [
+
+                        "Triple fusion",
+
+                        "Pollen germination and pollen tube formation",
+
+                        "Embryo formation",
+
+                        "Endosperm maturation"
+
+                    ],
+
+                answer: 1,
+
+                explanation:
+
+                    "Compatible pollen germinates on the stigma and produces a pollen tube."
+
+            },
+
+
+
+            /* 10 */
+
+            {
+
+                question:
+
+                    "Which floral condition most directly promotes cross-pollination?",
+
+                options:
+
+                    [
+
+                        "Homogamy",
+
+                        "Self-incompatibility",
+
+                        "Bisexuality with synchronised maturity",
+
+                        "Anthers and stigma at identical positions"
+
+                    ],
+
+                answer: 1,
+
+                explanation:
+
+                    "Self-incompatibility prevents self-pollen from successfully fertilising the ovule and therefore promotes cross-pollination."
+
+            },
+
+
+
+            /* 11 */
+
+            {
+
+                question:
+
+                    "The primary endosperm nucleus formed after triple fusion is generally:",
+
+                options:
+
+                    [
+
+                        "Haploid",
+
+                        "Diploid",
+
+                        "Triploid",
+
+                        "Tetraploid"
+
+                    ],
+
+                answer: 2,
+
+                explanation:
+
+                    "Two polar nuclei are haploid and fuse with one haploid male gamete, producing a triploid primary endosperm nucleus."
+
+            },
+
+
+
+            /* 12 */
+
+            {
+
+                question:
+
+                    "Which statement best distinguishes xenogamy from geitonogamy?",
+
+                options:
+
+                    [
+
+                        "Xenogamy occurs within the same flower",
+
+                        "Geitonogamy occurs between different species",
+
+                        "Xenogamy involves genetically different plants",
+
+                        "Both are genetically identical processes"
+
+                    ],
+
+                answer: 2,
+
+                explanation:
+
+                    "Xenogamy involves transfer of pollen between flowers of different plants, generally introducing genetic differences."
+
+            },
+
+
+
+            /* 13 */
+
+            {
+
+                question:
+
+                    "Which structure of the embryo sac is located at the micropylar end?",
+
+                options:
+
+                    [
+
+                        "Antipodals",
+
+                        "Egg apparatus",
+
+                        "Polar nuclei",
+
+                        "Endosperm"
+
+                    ],
+
+                answer: 1,
+
+                explanation:
+
+                    "The egg apparatus, consisting of one egg and two synergids, is present at the micropylar end."
+
+            },
+
+
+
+            /* 14 */
+
+            {
+
+                question:
+
+                    "The three cells present at the chalazal end of a typical embryo sac are:",
+
+                options:
+
+                    [
+
+                        "Egg cells",
+
+                        "Synergids",
+
+                        "Antipodals",
+
+                        "Polar nuclei"
+
+                    ],
+
+                answer: 2,
+
+                explanation:
+
+                    "Three antipodal cells are present at the chalazal end."
+
+            },
+
+
+
+            /* 15 */
+
+            {
+
+                question:
+
+                    "A seed develops from which structure after fertilisation?",
+
+                options:
+
+                    [
+
+                        "Stigma",
+
+                        "Ovary wall",
+
+                        "Ovule",
+
+                        "Anther"
+
+                    ],
+
+                answer: 2,
+
+                explanation:
+
+                    "The fertilised ovule develops into a seed."
+
+            },
+
+
+
+            /* 16 */
+
+            {
+
+                question:
+
+                    "Which process is correctly associated with apomixis?",
+
+                options:
+
+                    [
+
+                        "Seed formation without fertilisation",
+
+                        "Fruit formation only after double fertilisation",
+
+                        "Fusion of two gametes",
+
+                        "Formation of pollen through meiosis"
+
+                    ],
+
+                answer: 0,
+
+                explanation:
+
+                    "Apomixis is a form of asexual reproduction in which seeds are formed without fertilisation."
+
+            },
+
+
+
+            /* 17 */
+
+            {
+
+                question:
+
+                    "Parthenocarpy differs from apomixis because parthenocarpy primarily involves:",
+
+                options:
+
+                    [
+
+                        "Seed formation without fertilisation",
+
+                        "Fruit development without fertilisation",
+
+                        "Embryo formation through syngamy",
+
+                        "Formation of male gametes"
+
+                    ],
+
+                answer: 1,
+
+                explanation:
+
+                    "Parthenocarpy refers to fruit development without fertilisation, often resulting in seedless fruits."
+
+            },
+
+
+
+            /* 18 */
+
+            {
+
+                question:
+
+                    "Which combination is correctly matched?",
+
+                options:
+
+                    [
+
+                        "Autogamy — different plants",
+
+                        "Geitonogamy — same flower",
+
+                        "Xenogamy — different plants",
+
+                        "Apomixis — obligatory fertilisation"
+
+                    ],
+
+                answer: 2,
+
+                explanation:
+
+                    "Xenogamy involves transfer of pollen between flowers of different plants."
+
+            },
+
+
+
+            /* 19 */
+
+            {
+
+                question:
+
+                    "The receptive surface that receives pollen grains is:",
+
+                options:
+
+                    [
+
+                        "Anther",
+
+                        "Stigma",
+
+                        "Ovary",
+
+                        "Filament"
+
+                    ],
+
+                answer: 1,
+
+                explanation:
+
+                    "The stigma is the receptive part of the carpel and receives pollen grains."
+
+            },
+
+
+
+            /* 20 */
+
+            {
+
+                question:
+
+                    "Which statement about the embryo sac is most accurate?",
+
+                options:
+
+                    [
+
+                        "It is diploid throughout",
+
+                        "It is a female gametophyte",
+
+                        "It is formed directly by fertilisation",
+
+                        "It contains only seven nuclei"
+
+                    ],
+
+                answer: 1,
+
+                explanation:
+
+                    "The embryo sac represents the female gametophyte of angiosperms."
+
+            },
+
+
+
+            /* 21 */
+
+            {
+
+                question:
+
+                    "If the pollen mother cell has 24 chromosomes, the microspores produced after meiosis will have:",
+
+                options:
+
+                    [
+
+                        "24 chromosomes",
+
+                        "48 chromosomes",
+
+                        "12 chromosomes",
+
+                        "6 chromosomes"
+
+                    ],
+
+                answer: 2,
+
+                explanation:
+
+                    "Meiosis reduces chromosome number by half. Therefore microspores will have 12 chromosomes."
+
+            },
+
+
+
+            /* 22 */
+
+            {
+
+                question:
+
+                    "Which pair represents the correct ploidy relationship?",
+
+                options:
+
+                    [
+
+                        "Zygote — haploid",
+
+                        "Male gamete — diploid",
+
+                        "Primary endosperm nucleus — triploid",
+
+                        "Egg — diploid"
+
+                    ],
+
+                answer: 2,
+
+                explanation:
+
+                    "The primary endosperm nucleus is generally triploid because it results from fusion of two polar nuclei and one male gamete."
+
+            },
+
+
+
+            /* 23 */
+
+            {
+
+                question:
+
+                    "Which event is unique to angiosperms among the following?",
+
+                options:
+
+                    [
+
+                        "Syngamy",
+
+                        "Formation of pollen",
+
+                        "Double fertilisation",
+
+                        "Meiosis"
+
+                    ],
+
+                answer: 2,
+
+                explanation:
+
+                    "Double fertilisation is a characteristic feature of flowering plants."
+
+            },
+
+
+
+            /* 24 */
+
+            {
+
+                question:
+
+                    "A flower prevents self-pollination by having anthers and stigma mature at different times. This mechanism is called:",
+
+                options:
+
+                    [
+
+                        "Self-incompatibility",
+
+                        "Dichogamy",
+
+                        "Apomixis",
+
+                        "Parthenocarpy"
+
+                    ],
+
+                answer: 1,
+
+                explanation:
+
+                    "Dichogamy refers to different timing of maturation of anthers and stigma, reducing self-pollination."
+
+            },
+
+
+
+            /* 25 */
+
+            {
+
+                question:
+
+                    "Which sequence correctly represents post-fertilisation development?",
+
+                options:
+
+                    [
+
+                        "Ovary → seed; ovule → fruit",
+
+                        "Ovule → seed; ovary → fruit",
+
+                        "Zygote → endosperm; ovule → embryo",
+
+                        "Polar nuclei → embryo; egg → fruit"
+
+                    ],
+
+                answer: 1,
+
+                explanation:
+
+                    "The ovule develops into the seed, while the ovary generally develops into the fruit."
+
+            },
+
+
+
+            /* 26 */
+
+            {
+
+                question:
+
+                    "Which of the following is NOT part of the egg apparatus?",
+
+                options:
+
+                    [
+
+                        "Egg",
+
+                        "Two synergids",
+
+                        "Three antipodals",
+
+                        "All three"
+
+                    ],
+
+                answer: 2,
+
+                explanation:
+
+                    "The egg apparatus consists of one egg and two synergids. Antipodals are located at the opposite end."
+
+            },
+
+
+
+            /* 27 */
+
+            {
+
+                question:
+
+                    "The central cell of a typical embryo sac initially contains:",
+
+                options:
+
+                    [
+
+                        "One haploid nucleus",
+
+                        "Two polar nuclei",
+
+                        "Three antipodal nuclei",
+
+                        "Two egg nuclei"
+
+                    ],
+
+                answer: 1,
+
+                explanation:
+
+                    "The central cell generally contains two polar nuclei before their participation in triple fusion."
+
+            },
+
+
+
+            /* 28 */
+
+            {
+
+                question:
+
+                    "Which statement is most appropriate regarding pollen tube entry into the ovule?",
+
+                options:
+
+                    [
+
+                        "It generally enters through the micropyle",
+
+                        "It always enters through the chalaza",
+
+                        "It enters through the anther",
+
+                        "It enters through the stigma only"
+
+                    ],
+
+                answer: 0,
+
+                explanation:
+
+                    "In the common pathway, the pollen tube enters the ovule through the micropyle."
+
+            },
+
+
+
+            /* 29 */
+
+            {
+
+                question:
+
+                    "A fruit develops without fertilisation and contains no seeds. The phenomenon is best described as:",
+
+                options:
+
+                    [
+
+                        "Apomixis",
+
+                        "Parthenocarpy",
+
+                        "Xenogamy",
+
+                        "Geitonogamy"
+
+                    ],
+
+                answer: 1,
+
+                explanation:
+
+                    "Parthenocarpy is fruit development without fertilisation and commonly results in seedless fruits."
+
+            },
+
+
+
+            /* 30 */
+
+            {
+
+                question:
+
+                    "Which statement combines the events of double fertilisation correctly?",
+
+                options:
+
+                    [
+
+                        "One male gamete fuses with egg and the other with polar nuclei",
+
+                        "Both male gametes fuse with the egg",
+
+                        "Both male gametes fuse with polar nuclei",
+
+                        "One male gamete forms pollen and the other forms stigma"
+
+                    ],
+
+                answer: 0,
+
+                explanation:
+
+                    "One male gamete undergoes syngamy with the egg, while the second participates in triple fusion with the polar nuclei."
+
+            }
+
+        ];
+
+
+
+        /* =========================================
+           VARIABLES
+        ========================================= */
+
+
+        let current = 0;
+
+        let correct = 0;
+
+        let wrong = 0;
+
+        let score = 0;
+
+        let answered = false;
+
+        let timeLeft = 30 * 60;
+
+        let timerInterval;
+
+
+
+        /* =========================================
+           ELEMENTS
+        ========================================= */
+
+
+        const qNumber =
+            document.getElementById(
+                "qNumber"
+            );
+
+
+        const question =
+            document.getElementById(
+                "mcqQuestion"
+            );
+
+
+        const options =
+            document.getElementById(
+                "mcqOptions"
+            );
+
+
+        const explanation =
+            document.getElementById(
+                "mcqExplanation"
+            );
+
+
+        const nextButton =
+            document.getElementById(
+                "nextMCQ"
+            );
+
+
+        const progress =
+            document.getElementById(
+                "mcqProgress"
+            );
+
+
+        const timer =
+            document.getElementById(
+                "timer"
+            );
+
+
+        const liveScore =
+            document.getElementById(
+                "liveScore"
+            );
+
+
+        const quizResult =
+            document.getElementById(
+                "mcqResult"
+            );
+
+
+
+        /* =========================================
+           LOAD QUESTION
+        ========================================= */
+
+
+        function loadQuestion() {
+
+            answered = false;
+
+            nextButton.disabled = true;
+
+            explanation.innerHTML = "";
+
+            explanation.className =
+                "mcq-explanation";
+
+
+            const q =
+                questions[current];
+
+
+            qNumber.textContent =
+                current + 1;
+
+
+            question.textContent =
+                q.question;
+
+
+            progress.style.width =
+                ((current + 1) /
+                    questions.length * 100)
+                + "%";
+
+
+            options.innerHTML = "";
+
+
+            q.options.forEach(
+                (option, index) => {
+
+                    const button =
+                        document.createElement(
+                            "button"
+                        );
+
+
+                    button.className =
+                        "mcq-option";
+
+
+                    button.textContent =
+                        String.fromCharCode(
+                            65 + index
+                        )
+                        + ". "
+                        + option;
+
+
+                    button.onclick =
+                        () =>
+                            selectOption(
+                                index
+                            );
+
+
+                    options.appendChild(
+                        button
+                    );
+
+                }
+            );
+
+        }
+
+
+
+        /* =========================================
+           SELECT OPTION
+        ========================================= */
+
+
+        function selectOption(selected) {
+
+            if (answered)
+                return;
+
+
+            answered = true;
+
+
+            const q =
+                questions[current];
+
+
+            const buttons =
+                document.querySelectorAll(
+                    ".mcq-option"
+                );
+
+
+            buttons.forEach(
+                (button, index) => {
+
+                    button.disabled =
+                        true;
+
+
+                    if (
+                        index === q.answer
+                    ) {
+
+                        button.classList.add(
+                            "correct"
+                        );
+
+                    }
+
+
+                    if (
+                        index === selected &&
+                        selected !== q.answer
+                    ) {
+
+                        button.classList.add(
+                            "wrong"
+                        );
+
+                    }
+
+                }
+            );
+
+
+            if (
+                selected === q.answer
+            ) {
+
+                correct++;
+
+                score += 4;
+
+                liveScore.textContent =
+                    score;
+
+
+                explanation.className =
+                    "mcq-explanation correct-explanation";
+
+
+                explanation.innerHTML =
+                    "✅ Correct!<br><br>"
+                    + q.explanation;
+
+            }
+
+            else {
+
+                wrong++;
+
+                score -= 1;
+
+                liveScore.textContent =
+                    score;
+
+
+                explanation.className =
+                    "mcq-explanation wrong-explanation";
+
+
+                explanation.innerHTML =
+                    "❌ Incorrect!<br><br>"
+                    + q.explanation;
+
+            }
+
+
+            nextButton.disabled =
+                false;
+
+        }
+
+
+
+        /* =========================================
+           NEXT
+        ========================================= */
+
+
+        nextButton.onclick =
+            function () {
+
+                current++;
+
+
+                if (
+                    current >=
+                    questions.length
+                ) {
+
+                    finishTest();
+
+                    return;
+
+                }
+
+
+                loadQuestion();
+
+            };
+
+
+
+        /* =========================================
+           TIMER
+        ========================================= */
+
+
+        function startTimer() {
+
+            timerInterval =
+                setInterval(
+                    function () {
+
+                        timeLeft--;
+
+
+                        const minutes =
+                            Math.floor(
+                                timeLeft / 60
+                            );
+
+
+                        const seconds =
+                            timeLeft % 60;
+
+
+                        timer.textContent =
+                            String(minutes)
+                                .padStart(2, "0")
+                            + ":"
+                            +
+                            String(seconds)
+                                .padStart(2, "0");
+
+
+                        if (
+                            timeLeft <= 0
+                        ) {
+
+                            clearInterval(
+                                timerInterval
+                            );
+
+
+                            finishTest();
+
+                        }
+
+                    },
+                    1000
+                );
+
+        }
+
+
+
+        /* =========================================
+           FINISH
+        ========================================= */
+
+
+        function finishTest() {
+
+            clearInterval(
+                timerInterval
+            );
+
+
+            document.querySelector(
+                ".mcq-card"
+            ).style.display =
+                "none";
+
+
+            document.querySelector(
+                ".mcq-top"
+            ).style.display =
+                "none";
+
+
+            document.querySelector(
+                ".mcq-progress"
+            ).style.display =
+                "none";
+
+
+            quizResult.style.display =
+                "block";
+
+
+            document.getElementById(
+                "finalMarks"
+            ).textContent =
+                score + " / 120";
+
+
+            document.getElementById(
+                "correctCount"
+            ).textContent =
+                correct;
+
+
+            document.getElementById(
+                "wrongCount"
+            ).textContent =
+                wrong;
+
+
+            const accuracy =
+                Math.round(
+                    (correct /
+                        questions.length) *
+                    100
+                );
+
+
+            document.getElementById(
+                "accuracy"
+            ).textContent =
+                accuracy + "%";
+
+        }
+
+
+
+        /* =========================================
+           RESTART
+        ========================================= */
+
+
+        function restartTest() {
+
+            current = 0;
+
+            correct = 0;
+
+            wrong = 0;
+
+            score = 0;
+
+            timeLeft =
+                30 * 60;
+
+
+            liveScore.textContent =
+                "0";
+
+
+            timer.textContent =
+                "30:00";
+
+
+            quizResult.style.display =
+                "none";
+
+
+            document.querySelector(
+                ".mcq-card"
+            ).style.display =
+                "block";
+
+
+            document.querySelector(
+                ".mcq-top"
+            ).style.display =
+                "flex";
+
+
+            document.querySelector(
+                ".mcq-progress"
+            ).style.display =
+                "block";
+
+
+            loadQuestion();
+
+            startTimer();
+
+        }
+
+
+
+        /* START */
+
+        loadQuestion();
+
+        startTimer();
+
+
+    </script>
+
+
+</body>
+
+</html>
+```

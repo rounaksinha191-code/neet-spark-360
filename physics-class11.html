@@ -1,0 +1,1716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Class 11 Physics | NEET Spark 360</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =========================
+           POPUP CONTENT SYSTEM
+        ========================= */
+
+        .content-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .content-modal.active {
+            display: flex;
+        }
+
+        .content-box {
+            width: min(750px, 95%);
+            max-height: 85vh;
+            overflow-y: auto;
+            background: #111827;
+            color: white;
+            border-radius: 18px;
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .close-modal {
+            position: absolute;
+            right: 18px;
+            top: 10px;
+            border: none;
+            background: transparent;
+            color: white;
+            font-size: 32px;
+            cursor: pointer;
+        }
+
+        .modal-icon {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .content-box h2 {
+            margin-bottom: 20px;
+            color: #93c5fd;
+        }
+
+        .content-box h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .content-box p {
+            line-height: 1.7;
+            color: #e5e7eb;
+        }
+
+        .content-box li {
+            margin: 8px 0;
+            color: #e5e7eb;
+        }
+
+        .formula {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 12px 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            font-family: monospace;
+            color: #93c5fd;
+            font-size: 16px;
+        }
+
+        .question {
+            background: rgba(255, 255, 255, 0.07);
+            padding: 15px;
+            border-radius: 12px;
+            margin: 12px 0;
+            line-height: 1.6;
+        }
+
+        .answer {
+            color: #86efac;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+
+            <span>⚡</span>
+
+            <div>
+                <h1>NEET Spark 360</h1>
+                <p>NEET Preparation in 360°</p>
+            </div>
+
+        </div>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="physics.html">Physics</a>
+
+            <a href="physics-class12.html">Class 12</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="syllabus-hero">
+
+        <div>
+
+            <p class="section-tag">
+                PHYSICS • CLASS 11
+            </p>
+
+            <h2>
+                Class 11 <span>Physics</span>
+            </h2>
+
+            <p>
+                Master Class 11 Physics with concepts, important
+                formulas, numericals, PYQs, notes and
+                NEET-focused practice.
+            </p>
+
+        </div>
+
+        <div class="syllabus-hero-box">
+
+            <strong>11</strong>
+
+            <span>CLASS</span>
+
+        </div>
+
+    </section>
+
+
+    <!-- STATS -->
+
+    <section class="stats-section">
+
+        <div class="stat-card">
+            <strong>14</strong>
+            <span>Chapters</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>360°</strong>
+            <span>Preparation</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>NEET</strong>
+            <span>Focused</span>
+        </div>
+
+        <div class="stat-card">
+            <strong>PYQs</strong>
+            <span>Practice</span>
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CHAPTER 1
+    ========================= -->
+
+    <section class="syllabus-section">
+
+        <div class="unit-title">
+            <span>01</span>
+
+            <div>
+                <h2>Units & Measurements</h2>
+                <p>Measurement, units and errors</p>
+            </div>
+        </div>
+
+        <div class="topic-grid">
+
+            <div class="topic-card">
+
+                <div class="topic-icon">📏</div>
+
+                <h3>Units & Measurements</h3>
+
+                <p>
+                    SI units, dimensions, significant figures,
+                    errors and measurement techniques.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('units','concepts')">Concepts</button>
+
+                    <button onclick="openContent('units','formula')">Formulae</button>
+
+                    <button onclick="openContent('units','pyq')">PYQs</button>
+
+                    <button onclick="openContent('units','numerical')">Numericals</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CHAPTER 2
+    ========================= -->
+
+    <section class="syllabus-section">
+
+        <div class="unit-title">
+            <span>02</span>
+
+            <div>
+                <h2>Motion in a Straight Line</h2>
+                <p>One-dimensional motion</p>
+            </div>
+        </div>
+
+        <div class="topic-grid">
+
+            <div class="topic-card">
+
+                <div class="topic-icon">🏃</div>
+
+                <h3>Motion in a Straight Line</h3>
+
+                <p>
+                    Distance, displacement, velocity,
+                    acceleration and motion graphs.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('motion1','concepts')">Concepts</button>
+
+                    <button onclick="openContent('motion1','formula')">Formulae</button>
+
+                    <button onclick="openContent('motion1','pyq')">PYQs</button>
+
+                    <button onclick="openContent('motion1','numerical')">Numericals</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CHAPTER 3
+    ========================= -->
+
+    <section class="syllabus-section">
+
+        <div class="unit-title">
+            <span>03</span>
+
+            <div>
+                <h2>Motion in a Plane</h2>
+                <p>Vectors and projectile motion</p>
+            </div>
+        </div>
+
+        <div class="topic-grid">
+
+            <div class="topic-card">
+
+                <div class="topic-icon">🎯</div>
+
+                <h3>Motion in a Plane</h3>
+
+                <p>
+                    Vectors, relative motion and projectile motion.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('motion2','concepts')">Concepts</button>
+
+                    <button onclick="openContent('motion2','formula')">Formulae</button>
+
+                    <button onclick="openContent('motion2','pyq')">PYQs</button>
+
+                    <button onclick="openContent('motion2','numerical')">Numericals</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CHAPTER 4
+    ========================= -->
+
+    <section class="syllabus-section">
+
+        <div class="unit-title">
+            <span>04</span>
+
+            <div>
+                <h2>Laws of Motion</h2>
+                <p>Newton's laws and friction</p>
+            </div>
+        </div>
+
+        <div class="topic-grid">
+
+            <div class="topic-card">
+
+                <div class="topic-icon">⚙️</div>
+
+                <h3>Laws of Motion</h3>
+
+                <p>
+                    Newton's laws, momentum, impulse,
+                    friction and circular motion.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('laws','concepts')">Concepts</button>
+
+                    <button onclick="openContent('laws','formula')">Formulae</button>
+
+                    <button onclick="openContent('laws','pyq')">PYQs</button>
+
+                    <button onclick="openContent('laws','numerical')">Numericals</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CHAPTER 5
+    ========================= -->
+
+    <section class="syllabus-section">
+
+        <div class="unit-title">
+            <span>05</span>
+
+            <div>
+                <h2>Work, Energy & Power</h2>
+                <p>Energy and mechanical work</p>
+            </div>
+        </div>
+
+        <div class="topic-grid">
+
+            <div class="topic-card">
+
+                <div class="topic-icon">🔋</div>
+
+                <h3>Work, Energy & Power</h3>
+
+                <p>
+                    Work-energy theorem, kinetic energy,
+                    potential energy and power.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('wep','concepts')">Concepts</button>
+
+                    <button onclick="openContent('wep','formula')">Formulae</button>
+
+                    <button onclick="openContent('wep','pyq')">PYQs</button>
+
+                    <button onclick="openContent('wep','numerical')">Numericals</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CHAPTER 6
+    ========================= -->
+
+    <section class="syllabus-section">
+
+        <div class="unit-title">
+            <span>06</span>
+
+            <div>
+                <h2>System of Particles & Rotational Motion</h2>
+                <p>Centre of mass and rotational dynamics</p>
+            </div>
+        </div>
+
+        <div class="topic-grid">
+
+            <div class="topic-card">
+
+                <div class="topic-icon">🔄</div>
+
+                <h3>Rotational Motion</h3>
+
+                <p>
+                    Centre of mass, torque, angular momentum,
+                    moment of inertia and rolling motion.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('rotation','concepts')">Concepts</button>
+
+                    <button onclick="openContent('rotation','formula')">Formulae</button>
+
+                    <button onclick="openContent('rotation','pyq')">PYQs</button>
+
+                    <button onclick="openContent('rotation','numerical')">Numericals</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CHAPTER 7
+    ========================= -->
+
+    <section class="syllabus-section">
+
+        <div class="unit-title">
+            <span>07</span>
+
+            <div>
+                <h2>Gravitation</h2>
+                <p>Universal gravitation and satellites</p>
+            </div>
+        </div>
+
+        <div class="topic-grid">
+
+            <div class="topic-card">
+
+                <div class="topic-icon">🌍</div>
+
+                <h3>Gravitation</h3>
+
+                <p>
+                    Gravitational force, potential, escape velocity,
+                    satellites and Kepler's laws.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('gravitation','concepts')">Concepts</button>
+
+                    <button onclick="openContent('gravitation','formula')">Formulae</button>
+
+                    <button onclick="openContent('gravitation','pyq')">PYQs</button>
+
+                    <button onclick="openContent('gravitation','numerical')">Numericals</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CHAPTER 8
+    ========================= -->
+
+    <section class="syllabus-section">
+
+        <div class="unit-title">
+            <span>08</span>
+
+            <div>
+                <h2>Mechanical Properties of Solids</h2>
+                <p>Elasticity and deformation</p>
+            </div>
+        </div>
+
+        <div class="topic-grid">
+
+            <div class="topic-card">
+
+                <div class="topic-icon">🧱</div>
+
+                <h3>Mechanical Properties of Solids</h3>
+
+                <p>
+                    Stress, strain, elastic modulus and
+                    Hooke's law.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('solids','concepts')">Concepts</button>
+
+                    <button onclick="openContent('solids','formula')">Formulae</button>
+
+                    <button onclick="openContent('solids','pyq')">PYQs</button>
+
+                    <button onclick="openContent('solids','numerical')">Numericals</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CHAPTER 9
+    ========================= -->
+
+    <section class="syllabus-section">
+
+        <div class="unit-title">
+            <span>09</span>
+
+            <div>
+                <h2>Mechanical Properties of Fluids</h2>
+                <p>Pressure, viscosity and fluid flow</p>
+            </div>
+        </div>
+
+        <div class="topic-grid">
+
+            <div class="topic-card">
+
+                <div class="topic-icon">💧</div>
+
+                <h3>Mechanical Properties of Fluids</h3>
+
+                <p>
+                    Pressure, Pascal's law, Bernoulli's theorem,
+                    viscosity and surface tension.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('fluids','concepts')">Concepts</button>
+
+                    <button onclick="openContent('fluids','formula')">Formulae</button>
+
+                    <button onclick="openContent('fluids','pyq')">PYQs</button>
+
+                    <button onclick="openContent('fluids','numerical')">Numericals</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CHAPTER 10
+    ========================= -->
+
+    <section class="syllabus-section">
+
+        <div class="unit-title">
+            <span>10</span>
+
+            <div>
+                <h2>Thermal Properties of Matter</h2>
+                <p>Heat and temperature</p>
+            </div>
+        </div>
+
+        <div class="topic-grid">
+
+            <div class="topic-card">
+
+                <div class="topic-icon">🌡️</div>
+
+                <h3>Thermal Properties</h3>
+
+                <p>
+                    Thermal expansion, calorimetry,
+                    heat transfer and temperature.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('thermal','concepts')">Concepts</button>
+
+                    <button onclick="openContent('thermal','formula')">Formulae</button>
+
+                    <button onclick="openContent('thermal','pyq')">PYQs</button>
+
+                    <button onclick="openContent('thermal','numerical')">Numericals</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CHAPTER 11
+    ========================= -->
+
+    <section class="syllabus-section">
+
+        <div class="unit-title">
+            <span>11</span>
+
+            <div>
+                <h2>Thermodynamics</h2>
+                <p>Heat, work and thermodynamic processes</p>
+            </div>
+        </div>
+
+        <div class="topic-grid">
+
+            <div class="topic-card">
+
+                <div class="topic-icon">🔥</div>
+
+                <h3>Thermodynamics</h3>
+
+                <p>
+                    Zeroth law, first law, internal energy,
+                    heat engines and thermodynamic processes.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('thermo','concepts')">Concepts</button>
+
+                    <button onclick="openContent('thermo','formula')">Formulae</button>
+
+                    <button onclick="openContent('thermo','pyq')">PYQs</button>
+
+                    <button onclick="openContent('thermo','numerical')">Numericals</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CHAPTER 12
+    ========================= -->
+
+    <section class="syllabus-section">
+
+        <div class="unit-title">
+            <span>12</span>
+
+            <div>
+                <h2>Kinetic Theory</h2>
+                <p>Gas molecules and kinetic theory</p>
+            </div>
+        </div>
+
+        <div class="topic-grid">
+
+            <div class="topic-card">
+
+                <div class="topic-icon">💨</div>
+
+                <h3>Kinetic Theory</h3>
+
+                <p>
+                    Ideal gas, molecular motion, pressure,
+                    temperature and degrees of freedom.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('kinetic','concepts')">Concepts</button>
+
+                    <button onclick="openContent('kinetic','formula')">Formulae</button>
+
+                    <button onclick="openContent('kinetic','pyq')">PYQs</button>
+
+                    <button onclick="openContent('kinetic','numerical')">Numericals</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CHAPTER 13
+    ========================= -->
+
+    <section class="syllabus-section">
+
+        <div class="unit-title">
+            <span>13</span>
+
+            <div>
+                <h2>Oscillations</h2>
+                <p>Simple harmonic motion</p>
+            </div>
+        </div>
+
+        <div class="topic-grid">
+
+            <div class="topic-card">
+
+                <div class="topic-icon">〰️</div>
+
+                <h3>Oscillations</h3>
+
+                <p>
+                    SHM, spring-mass system, energy and
+                    simple pendulum.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('oscillations','concepts')">Concepts</button>
+
+                    <button onclick="openContent('oscillations','formula')">Formulae</button>
+
+                    <button onclick="openContent('oscillations','pyq')">PYQs</button>
+
+                    <button onclick="openContent('oscillations','numerical')">Numericals</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CHAPTER 14
+    ========================= -->
+
+    <section class="syllabus-section">
+
+        <div class="unit-title">
+            <span>14</span>
+
+            <div>
+                <h2>Waves</h2>
+                <p>Wave motion and sound</p>
+            </div>
+        </div>
+
+        <div class="topic-grid">
+
+            <div class="topic-card">
+
+                <div class="topic-icon">🌊</div>
+
+                <h3>Waves</h3>
+
+                <p>
+                    Wave motion, sound waves, standing waves,
+                    strings and organ pipes.
+                </p>
+
+                <div class="topic-buttons">
+
+                    <button onclick="openContent('waves','concepts')">Concepts</button>
+
+                    <button onclick="openContent('waves','formula')">Formulae</button>
+
+                    <button onclick="openContent('waves','pyq')">PYQs</button>
+
+                    <button onclick="openContent('waves','numerical')">Numericals</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STUDY SYSTEM -->
+
+    <section class="study-system">
+
+        <div>
+
+            <p class="section-tag">
+                HOW TO STUDY
+            </p>
+
+            <h2>
+                Master Class 11 Physics
+            </h2>
+
+            <p>
+                Concept → Formula → Numericals → PYQs →
+                Test → Revision.
+            </p>
+
+        </div>
+
+        <div class="system-steps">
+
+            <div>
+                <strong>01</strong>
+                <span>Concept</span>
+            </div>
+
+            <div>
+                <strong>02</strong>
+                <span>Formula</span>
+            </div>
+
+            <div>
+                <strong>03</strong>
+                <span>Numericals</span>
+            </div>
+
+            <div>
+                <strong>04</strong>
+                <span>PYQs</span>
+            </div>
+
+            <div>
+                <strong>05</strong>
+                <span>Test</span>
+            </div>
+
+            <div>
+                <strong>06</strong>
+                <span>Revision</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>NEET Spark 360</h3>
+
+        <p>NEET Preparation in 360°</p>
+
+        <p class="copyright">
+            © 2026 NEET Spark 360. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         POPUP
+    ========================= -->
+
+    <div id="contentModal" class="content-modal">
+
+        <div class="content-box">
+
+            <button class="close-modal" onclick="closeContent()">×</button>
+
+            <div id="modalIcon" class="modal-icon">⚡</div>
+
+            <h2 id="modalTitle">Physics</h2>
+
+            <div id="modalContent"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        const contentData = {
+
+            units: {
+                title: "Units & Measurements",
+                icon: "📏",
+
+                concepts: `
+                    <h3>Core Concepts</h3>
+
+                    <p>
+                        Physics quantities are measured using numerical
+                        values and units.
+                    </p>
+
+                    <ul>
+                        <li>SI is the internationally accepted system of units.</li>
+                        <li>Fundamental quantities include length, mass and time.</li>
+                        <li>Derived quantities are obtained from fundamental quantities.</li>
+                        <li>Dimensions help check the consistency of equations.</li>
+                        <li>Significant figures represent meaningful digits in a measurement.</li>
+                    </ul>
+                `,
+
+                formula: `
+                    <h3>Important Formulae</h3>
+
+                    <div class="formula">Percentage error = (Absolute error / Measured value) × 100</div>
+
+                    <div class="formula">Relative error = Absolute error / Measured value</div>
+
+                    <div class="formula">Density = Mass / Volume</div>
+
+                    <div class="formula">[Velocity] = [LT⁻¹]</div>
+
+                    <div class="formula">[Acceleration] = [LT⁻²]</div>
+                `,
+
+                pyq: `
+                    <h3>NEET PYQ Practice</h3>
+
+                    <div class="question">
+                        Q. Which quantity has dimensions [MLT⁻²]?
+                        <br><br>
+                        <span class="answer">Answer: Force</span>
+                    </div>
+
+                    <div class="question">
+                        Q. Number of significant figures in 0.00450?
+                        <br><br>
+                        <span class="answer">Answer: 3</span>
+                    </div>
+                `,
+
+                numerical: `
+                    <h3>Numerical Practice</h3>
+
+                    <div class="question">
+                        A body has mass 2 kg and volume 0.5 m³.
+                        Find its density.
+                        <br><br>
+                        <span class="answer">
+                        Density = 2 / 0.5 = 4 kg/m³
+                        </span>
+                    </div>
+                `
+            },
+
+
+            motion1: {
+                title: "Motion in a Straight Line",
+                icon: "🏃",
+
+                concepts: `
+                    <h3>Core Concepts</h3>
+
+                    <ul>
+                        <li>Distance is the total path travelled.</li>
+                        <li>Displacement is the shortest directed distance between initial and final positions.</li>
+                        <li>Speed is scalar; velocity is vector.</li>
+                        <li>Acceleration is the rate of change of velocity.</li>
+                        <li>The slope of a position-time graph gives velocity.</li>
+                        <li>The area under a velocity-time graph gives displacement.</li>
+                    </ul>
+                `,
+
+                formula: `
+                    <h3>Important Formulae</h3>
+
+                    <div class="formula">v = u + at</div>
+                    <div class="formula">s = ut + ½at²</div>
+                    <div class="formula">v² = u² + 2as</div>
+                    <div class="formula">s = ½(u + v)t</div>
+                `,
+
+                pyq: `
+                    <h3>PYQ Practice</h3>
+
+                    <div class="question">
+                        A body starts from rest with acceleration 2 m/s².
+                        Find its velocity after 5 s.
+                        <br><br>
+                        <span class="answer">Answer: 10 m/s</span>
+                    </div>
+                `,
+
+                numerical: `
+                    <h3>Numerical</h3>
+
+                    <div class="question">
+                        u = 5 m/s, a = 2 m/s² and t = 4 s.
+                        Find v.
+                        <br><br>
+                        <span class="answer">
+                        v = u + at = 5 + 8 = 13 m/s
+                        </span>
+                    </div>
+                `
+            },
+
+
+            motion2: {
+                title: "Motion in a Plane",
+                icon: "🎯",
+
+                concepts: `
+                    <h3>Core Concepts</h3>
+
+                    <ul>
+                        <li>Vectors have magnitude and direction.</li>
+                        <li>Projectile motion is two-dimensional motion under gravity.</li>
+                        <li>Horizontal velocity remains constant when air resistance is ignored.</li>
+                        <li>Vertical velocity changes due to gravity.</li>
+                    </ul>
+                `,
+
+                formula: `
+                    <h3>Important Formulae</h3>
+
+                    <div class="formula">R = u² sin 2θ / g</div>
+                    <div class="formula">H = u² sin²θ / 2g</div>
+                    <div class="formula">T = 2u sinθ / g</div>
+                `,
+
+                pyq: `
+                    <h3>PYQ</h3>
+
+                    <div class="question">
+                        At what angle is projectile range maximum?
+                        <br><br>
+                        <span class="answer">Answer: 45°</span>
+                    </div>
+                `,
+
+                numerical: `
+                    <h3>Numerical</h3>
+
+                    <div class="question">
+                        A projectile is thrown at 45°.
+                        Its range is maximum for the given speed.
+                        <br><br>
+                        <span class="answer">Maximum range occurs at 45°.</span>
+                    </div>
+                `
+            },
+
+
+            laws: {
+                title: "Laws of Motion",
+                icon: "⚙️",
+
+                concepts: `
+                    <h3>Core Concepts</h3>
+
+                    <ul>
+                        <li>Newton's first law describes inertia.</li>
+                        <li>Newton's second law relates force and acceleration.</li>
+                        <li>Newton's third law describes action-reaction pairs.</li>
+                        <li>Friction opposes relative motion.</li>
+                        <li>Momentum is conserved when external force is zero.</li>
+                    </ul>
+                `,
+
+                formula: `
+                    <h3>Important Formulae</h3>
+
+                    <div class="formula">F = ma</div>
+                    <div class="formula">p = mv</div>
+                    <div class="formula">Impulse = Δp</div>
+                    <div class="formula">fₛ(max) = μₛN</div>
+                    <div class="formula">fₖ = μₖN</div>
+                `,
+
+                pyq: `
+                    <h3>PYQ</h3>
+
+                    <div class="question">
+                        If net force on a body is zero, its acceleration is:
+                        <br><br>
+                        <span class="answer">Answer: Zero</span>
+                    </div>
+                `,
+
+                numerical: `
+                    <h3>Numerical</h3>
+
+                    <div class="question">
+                        A force of 20 N acts on a 5 kg body.
+                        Find acceleration.
+                        <br><br>
+                        <span class="answer">a = F/m = 20/5 = 4 m/s²</span>
+                    </div>
+                `
+            },
+
+
+            wep: {
+                title: "Work, Energy & Power",
+                icon: "🔋",
+
+                concepts: `
+                    <h3>Core Concepts</h3>
+
+                    <ul>
+                        <li>Work is done when force causes displacement.</li>
+                        <li>Kinetic energy is energy due to motion.</li>
+                        <li>Potential energy depends on configuration or position.</li>
+                        <li>Power is the rate of doing work.</li>
+                        <li>Work-energy theorem connects net work with change in kinetic energy.</li>
+                    </ul>
+                `,
+
+                formula: `
+                    <h3>Formulae</h3>
+
+                    <div class="formula">W = Fs cosθ</div>
+                    <div class="formula">KE = ½mv²</div>
+                    <div class="formula">PE = mgh</div>
+                    <div class="formula">P = W/t</div>
+                    <div class="formula">W(net) = ΔKE</div>
+                `,
+
+                pyq: `
+                    <h3>PYQ</h3>
+
+                    <div class="question">
+                        Kinetic energy depends on velocity as:
+                        <br><br>
+                        <span class="answer">Answer: KE ∝ v²</span>
+                    </div>
+                `,
+
+                numerical: `
+                    <h3>Numerical</h3>
+
+                    <div class="question">
+                        Find KE of a 2 kg body moving at 3 m/s.
+                        <br><br>
+                        <span class="answer">
+                        KE = ½ × 2 × 3² = 9 J
+                        </span>
+                    </div>
+                `
+            },
+
+
+            rotation: {
+                title: "Rotational Motion",
+                icon: "🔄",
+
+                concepts: `
+                    <h3>Core Concepts</h3>
+
+                    <ul>
+                        <li>Torque is the turning effect of force.</li>
+                        <li>Angular velocity describes rotational motion.</li>
+                        <li>Moment of inertia measures resistance to angular acceleration.</li>
+                        <li>Angular momentum is conserved when external torque is zero.</li>
+                    </ul>
+                `,
+
+                formula: `
+                    <h3>Formulae</h3>
+
+                    <div class="formula">τ = rF sinθ</div>
+                    <div class="formula">L = Iω</div>
+                    <div class="formula">τ = Iα</div>
+                    <div class="formula">K(rot) = ½Iω²</div>
+                `,
+
+                pyq: `
+                    <h3>PYQ</h3>
+
+                    <div class="question">
+                        SI unit of torque is:
+                        <br><br>
+                        <span class="answer">Answer: N m</span>
+                    </div>
+                `,
+
+                numerical: `
+                    <h3>Numerical</h3>
+
+                    <div class="question">
+                        A force of 10 N acts at a distance of 2 m
+                        perpendicular to the lever arm.
+                        <br><br>
+                        <span class="answer">Torque = 20 N m</span>
+                    </div>
+                `
+            },
+
+
+            gravitation: {
+                title: "Gravitation",
+                icon: "🌍",
+
+                concepts: `
+                    <h3>Core Concepts</h3>
+
+                    <ul>
+                        <li>Every mass attracts every other mass.</li>
+                        <li>Gravitational force is always attractive.</li>
+                        <li>Acceleration due to gravity depends on distance from Earth's centre.</li>
+                        <li>Satellites remain in orbit due to gravitational force.</li>
+                    </ul>
+                `,
+
+                formula: `
+                    <h3>Formulae</h3>
+
+                    <div class="formula">F = GMm/r²</div>
+                    <div class="formula">g = GM/R²</div>
+                    <div class="formula">vₑ = √(2GM/R)</div>
+                    <div class="formula">vₒ = √(GM/r)</div>
+                `,
+
+                pyq: `
+                    <h3>PYQ</h3>
+
+                    <div class="question">
+                        Escape velocity from Earth is approximately:
+                        <br><br>
+                        <span class="answer">Answer: 11.2 km/s</span>
+                    </div>
+                `,
+
+                numerical: `
+                    <h3>Numerical</h3>
+
+                    <div class="question">
+                        If the distance between two masses is doubled,
+                        gravitational force becomes:
+                        <br><br>
+                        <span class="answer">One-fourth of the original force.</span>
+                    </div>
+                `
+            },
+
+
+            solids: {
+                title: "Mechanical Properties of Solids",
+                icon: "🧱",
+
+                concepts: `
+                    <h3>Core Concepts</h3>
+
+                    <ul>
+                        <li>Stress is force per unit area.</li>
+                        <li>Strain is fractional deformation.</li>
+                        <li>Elasticity is the ability to regain original shape.</li>
+                        <li>Hooke's law applies within elastic limit.</li>
+                    </ul>
+                `,
+
+                formula: `
+                    <h3>Formulae</h3>
+
+                    <div class="formula">Stress = F/A</div>
+                    <div class="formula">Strain = ΔL/L</div>
+                    <div class="formula">Y = Stress/Strain</div>
+                `,
+
+                pyq: `
+                    <h3>PYQ</h3>
+
+                    <div class="question">
+                        SI unit of Young's modulus is:
+                        <br><br>
+                        <span class="answer">Answer: Pascal</span>
+                    </div>
+                `,
+
+                numerical: `
+                    <h3>Numerical</h3>
+
+                    <div class="question">
+                        If force is doubled while area remains constant,
+                        stress becomes:
+                        <br><br>
+                        <span class="answer">Double</span>
+                    </div>
+                `
+            },
+
+
+            fluids: {
+                title: "Mechanical Properties of Fluids",
+                icon: "💧",
+
+                concepts: `
+                    <h3>Core Concepts</h3>
+
+                    <ul>
+                        <li>Pressure is force per unit area.</li>
+                        <li>Pascal's law explains pressure transmission in fluids.</li>
+                        <li>Bernoulli's theorem relates pressure, speed and height.</li>
+                        <li>Viscosity measures resistance to flow.</li>
+                    </ul>
+                `,
+
+                formula: `
+                    <h3>Formulae</h3>
+
+                    <div class="formula">P = F/A</div>
+                    <div class="formula">P = P₀ + ρgh</div>
+                    <div class="formula">A₁v₁ = A₂v₂</div>
+                    <div class="formula">P + ½ρv² + ρgh = constant</div>
+                `,
+
+                pyq: `
+                    <h3>PYQ</h3>
+
+                    <div class="question">
+                        According to Bernoulli's principle,
+                        when fluid speed increases, pressure generally:
+                        <br><br>
+                        <span class="answer">Answer: Decreases</span>
+                    </div>
+                `,
+
+                numerical: `
+                    <h3>Numerical</h3>
+
+                    <div class="question">
+                        Find pressure due to a force of 100 N acting
+                        over area 2 m².
+                        <br><br>
+                        <span class="answer">P = 50 Pa</span>
+                    </div>
+                `
+            },
+
+
+            thermal: {
+                title: "Thermal Properties of Matter",
+                icon: "🌡️",
+
+                concepts: `
+                    <h3>Core Concepts</h3>
+
+                    <ul>
+                        <li>Temperature indicates thermal state.</li>
+                        <li>Heat is energy transferred due to temperature difference.</li>
+                        <li>Materials expand when heated.</li>
+                        <li>Calorimetry deals with heat exchange.</li>
+                    </ul>
+                `,
+
+                formula: `
+                    <h3>Formulae</h3>
+
+                    <div class="formula">Q = mcΔT</div>
+                    <div class="formula">Q = mL</div>
+                    <div class="formula">ΔL = αLΔT</div>
+                `,
+
+                pyq: `
+                    <h3>PYQ</h3>
+
+                    <div class="question">
+                        Specific heat capacity is the heat required to
+                        raise temperature of unit mass by:
+                        <br><br>
+                        <span class="answer">Answer: 1°C or 1 K</span>
+                    </div>
+                `,
+
+                numerical: `
+                    <h3>Numerical</h3>
+
+                    <div class="question">
+                        Calculate heat required to raise 2 kg water
+                        by 5°C. Take c = 4200 J/kg°C.
+                        <br><br>
+                        <span class="answer">
+                        Q = mcΔT = 2 × 4200 × 5 = 42000 J
+                        </span>
+                    </div>
+                `
+            },
+
+
+            thermo: {
+                title: "Thermodynamics",
+                icon: "🔥",
+
+                concepts: `
+                    <h3>Core Concepts</h3>
+
+                    <ul>
+                        <li>Thermodynamics studies heat, work and energy transfer.</li>
+                        <li>Internal energy is the total microscopic energy of a system.</li>
+                        <li>The first law represents conservation of energy.</li>
+                        <li>Heat and work are modes of energy transfer.</li>
+                    </ul>
+                `,
+
+                formula: `
+                    <h3>Formulae</h3>
+
+                    <div class="formula">ΔQ = ΔU + W</div>
+
+                    <div class="formula">W = PΔV</div>
+
+                    <div class="formula">ΔU = nCᵥΔT</div>
+                `,
+
+                pyq: `
+                    <h3>PYQ</h3>
+
+                    <div class="question">
+                        First law of thermodynamics is based on:
+                        <br><br>
+                        <span class="answer">Answer: Conservation of energy</span>
+                    </div>
+                `,
+
+                numerical: `
+                    <h3>Numerical</h3>
+
+                    <div class="question">
+                        If heat supplied is 500 J and work done by
+                        system is 200 J, find change in internal energy.
+                        <br><br>
+                        <span class="answer">
+                        ΔU = Q - W = 300 J
+                        </span>
+                    </div>
+                `
+            },
+
+
+            kinetic: {
+                title: "Kinetic Theory",
+                icon: "💨",
+
+                concepts: `
+                    <h3>Core Concepts</h3>
+
+                    <ul>
+                        <li>Gas consists of a large number of molecules.</li>
+                        <li>Molecules are in continuous random motion.</li>
+                        <li>Temperature is related to average kinetic energy.</li>
+                        <li>Collisions are assumed to be elastic in ideal gas theory.</li>
+                    </ul>
+                `,
+
+                formula: `
+                    <h3>Formulae</h3>
+
+                    <div class="formula">PV = nRT</div>
+                    <div class="formula">PV = NkT</div>
+                    <div class="formula">Kavg = 3/2 kT</div>
+                    <div class="formula">vᵣₘₛ = √(3RT/M)</div>
+                `,
+
+                pyq: `
+                    <h3>PYQ</h3>
+
+                    <div class="question">
+                        Average kinetic energy of gas molecules depends on:
+                        <br><br>
+                        <span class="answer">Answer: Absolute temperature</span>
+                    </div>
+                `,
+
+                numerical: `
+                    <h3>Numerical</h3>
+
+                    <div class="question">
+                        If absolute temperature of an ideal gas is
+                        doubled, average kinetic energy becomes:
+                        <br><br>
+                        <span class="answer">Double</span>
+                    </div>
+                `
+            },
+
+
+            oscillations: {
+                title: "Oscillations",
+                icon: "〰️",
+
+                concepts: `
+                    <h3>Core Concepts</h3>
+
+                    <ul>
+                        <li>Periodic motion repeats after equal intervals.</li>
+                        <li>SHM is a special type of oscillatory motion.</li>
+                        <li>Restoring force in SHM is proportional to displacement and opposite in direction.</li>
+                        <li>Energy continuously changes between kinetic and potential forms.</li>
+                    </ul>
+                `,
+
+                formula: `
+                    <h3>Formulae</h3>
+
+                    <div class="formula">F = -kx</div>
+                    <div class="formula">T = 2π√(m/k)</div>
+                    <div class="formula">T = 2π√(l/g)</div>
+                    <div class="formula">ω = 2π/T</div>
+                `,
+
+                pyq: `
+                    <h3>PYQ</h3>
+
+                    <div class="question">
+                        Time period of a simple pendulum depends on:
+                        <br><br>
+                        <span class="answer">Answer: √l and 1/√g</span>
+                    </div>
+                `,
+
+                numerical: `
+                    <h3>Numerical</h3>
+
+                    <div class="question">
+                        If the length of a pendulum becomes four times,
+                        its time period becomes:
+                        <br><br>
+                        <span class="answer">Double</span>
+                    </div>
+                `
+            },
+
+
+            waves: {
+                title: "Waves",
+                icon: "🌊",
+
+                concepts: `
+                    <h3>Core Concepts</h3>
+
+                    <ul>
+                        <li>Waves transfer energy without net transfer of matter.</li>
+                        <li>Mechanical waves require a medium.</li>
+                        <li>Sound is a mechanical longitudinal wave.</li>
+                        <li>Standing waves are formed by superposition of waves travelling in opposite directions.</li>
+                    </ul>
+                `,
+
+                formula: `
+                    <h3>Formulae</h3>
+
+                    <div class="formula">v = fλ</div>
+
+                    <div class="formula">f = 1/T</div>
+
+                    <div class="formula">ω = 2πf</div>
+
+                    <div class="formula">v = √(T/μ)</div>
+                `,
+
+                pyq: `
+                    <h3>PYQ</h3>
+
+                    <div class="question">
+                        Relation between wave speed, frequency and wavelength is:
+                        <br><br>
+                        <span class="answer">Answer: v = fλ</span>
+                    </div>
+                `,
+
+                numerical: `
+                    <h3>Numerical</h3>
+
+                    <div class="question">
+                        A wave has frequency 50 Hz and wavelength 2 m.
+                        Find its speed.
+                        <br><br>
+                        <span class="answer">
+                        v = fλ = 50 × 2 = 100 m/s
+                        </span>
+                    </div>
+                `
+            }
+
+        };
+
+
+        function openContent(chapter, type) {
+
+            const data = contentData[chapter];
+
+            if (!data) {
+                alert("Content is being prepared.");
+                return;
+            }
+
+            let title = data.title;
+            let content = data[type];
+
+            if (!content) {
+                content = `
+                    <p>
+                        Content for this section is being prepared.
+                    </p>
+                `;
+            }
+
+            document.getElementById("modalIcon").innerHTML = data.icon;
+
+            document.getElementById("modalTitle").innerText = title;
+
+            document.getElementById("modalContent").innerHTML = content;
+
+            document.getElementById("contentModal").classList.add("active");
+
+        }
+
+
+        function closeContent() {
+
+            document
+                .getElementById("contentModal")
+                .classList.remove("active");
+
+        }
+
+
+        document
+            .getElementById("contentModal")
+            .addEventListener("click", function (e) {
+
+                if (e.target === this) {
+                    closeContent();
+                }
+
+            });
+
+
+        document.addEventListener("keydown", function (e) {
+
+            if (e.key === "Escape") {
+                closeContent();
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

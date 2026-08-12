@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | NEET Spark 360</title>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #07111f;
+            color: #fff
+        }
+
+        header {
+            height: 72px;
+            padding: 0 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #091827;
+            border-bottom: 1px solid #203247;
+            position: sticky;
+            top: 0;
+            z-index: 10
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 11px
+        }
+
+        .logo span {
+            font-size: 30px
+        }
+
+        .logo h1 {
+            font-size: 20px;
+            margin: 0
+        }
+
+        .logo p {
+            font-size: 11px;
+            color: #8fa4b8;
+            margin: 3px 0
+        }
+
+        nav {
+            display: flex;
+            gap: 20px
+        }
+
+        nav a {
+            color: #bcd0e3;
+            text-decoration: none;
+            font-size: 13px
+        }
+
+        nav a:hover {
+            color: #38bdf8
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        .avatar {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #38bdf8, #2563eb);
+            display: grid;
+            place-items: center;
+            font-weight: bold
+        }
+
+        main {
+            padding: 42px 7%;
+            max-width: 1400px;
+            margin: auto
+        }
+
+        .welcome {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 28px
+        }
+
+        .tag {
+            color: #38bdf8;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 1.5px
+        }
+
+        .welcome h2 {
+            font-size: 38px;
+            margin: 8px 0
+        }
+
+        .welcome p {
+            color: #8fa4b8;
+            margin: 0
+        }
+
+        .continue {
+            background: linear-gradient(135deg, #38bdf8, #2563eb);
+            border: 0;
+            color: white;
+            padding: 13px 20px;
+            border-radius: 11px;
+            font-weight: bold;
+            cursor: pointer
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 28px
+        }
+
+        .stat {
+            padding: 21px;
+            border-radius: 17px;
+            background: #0d1c2e;
+            border: 1px solid #1d344c
+        }
+
+        .stat strong {
+            font-size: 27px;
+            color: #38bdf8;
+            display: block
+        }
+
+        .stat span {
+            font-size: 12px;
+            color: #8fa4b8
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 20px
+        }
+
+        .panel {
+            background: #0d1c2e;
+            border: 1px solid #1d344c;
+            border-radius: 20px;
+            padding: 25px
+        }
+
+        .panel h3 {
+            margin: 0 0 18px;
+            font-size: 19px
+        }
+
+        .subject {
+            margin: 14px 0
+        }
+
+        .subject-head {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            margin-bottom: 7px
+        }
+
+        .subject-head span {
+            color: #8fa4b8
+        }
+
+        .bar {
+            height: 8px;
+            background: #172b40;
+            border-radius: 10px;
+            overflow: hidden
+        }
+
+        .fill {
+            height: 100%;
+            background: linear-gradient(90deg, #38bdf8, #2563eb);
+            border-radius: 10px
+        }
+
+        .chapter {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 0;
+            border-bottom: 1px solid #1a3044
+        }
+
+        .chapter:last-child {
+            border-bottom: 0
+        }
+
+        .chapter-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: #10283d;
+            display: grid;
+            place-items: center;
+            font-size: 20px
+        }
+
+        .chapter-info {
+            flex: 1
+        }
+
+        .chapter-info strong {
+            display: block;
+            font-size: 13px
+        }
+
+        .chapter-info small {
+            color: #8fa4b8
+        }
+
+        .open {
+            background: #10283d;
+            border: 1px solid #28506e;
+            color: #cfe5f5;
+            padding: 8px 11px;
+            border-radius: 8px;
+            cursor: pointer
+        }
+
+        .open:hover {
+            border-color: #38bdf8;
+            color: #38bdf8
+        }
+
+        .quick {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px
+        }
+
+        .quick button {
+            padding: 17px;
+            border: 1px solid #1d344c;
+            background: #102438;
+            color: #dbeafe;
+            border-radius: 13px;
+            text-align: left;
+            cursor: pointer
+        }
+
+        .quick button:hover {
+            border-color: #38bdf8;
+            transform: translateY(-1px)
+        }
+
+        .quick b {
+            display: block;
+            margin-bottom: 5px
+        }
+
+        .quick small {
+            color: #8fa4b8
+        }
+
+        .activity {
+            margin-top: 20px
+        }
+
+        .activity-item {
+            display: flex;
+            gap: 12px;
+            padding: 13px 0;
+            border-bottom: 1px solid #1a3044;
+            font-size: 13px
+        }
+
+        .activity-item span {
+            color: #38bdf8
+        }
+
+        .activity-item small {
+            display: block;
+            color: #64748b;
+            margin-top: 4px
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #64748b;
+            font-size: 12px;
+            margin-top: 30px;
+            border-top: 1px solid #172b40
+        }
+
+        @media(max-width:850px) {
+            .layout {
+                grid-template-columns: 1fr
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .welcome {
+                display: block
+            }
+
+            .continue {
+                margin-top: 18px
+            }
+        }
+
+        @media(max-width:550px) {
+            nav {
+                display: none
+            }
+
+            main {
+                padding: 28px 5%
+            }
+
+            .welcome h2 {
+                font-size: 30px
+            }
+
+            .stats {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .quick {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"><span>⚛️</span>
+            <div>
+                <h1>NEET Spark 360</h1>
+                <p>NEET Preparation in 360°</p>
+            </div>
+        </div>
+        <nav><a href="index.html">Home</a><a href="chemistry.html">Chemistry</a><a href="biology.html">Biology</a><a
+                href="physics.html">Physics</a></nav>
+        <div class="profile">
+            <div class="avatar" id="avatar">S</div>
+        </div>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <div>
+                <div class="tag">STUDENT DASHBOARD</div>
+                <h2>Welcome back, <span id="studentName">Student</span> 👋</h2>
+                <p>Keep the momentum going. One chapter at a time.</p>
+            </div>
+            <button class="continue" onclick="continueStudy()">▶ Continue Studying</button>
+        </section>
+
+        <section class="stats">
+            <div class="stat"><strong id="progress">0%</strong><span>Overall Progress</span></div>
+            <div class="stat"><strong>0</strong><span>Tests Completed</span></div>
+            <div class="stat"><strong>0</strong><span>Questions Solved</span></div>
+            <div class="stat"><strong>🔥 1</strong><span>Day Streak</span></div>
+        </section>
+
+        <div class="layout">
+            <div>
+                <div class="panel">
+                    <h3>📚 Continue Your Preparation</h3>
+
+                    <div class="chapter">
+                        <div class="chapter-icon">⚛️</div>
+                        <div class="chapter-info"><strong>Structure of Atom</strong><small>Chemistry • Class 11</small>
+                        </div>
+                        <button class="open" onclick="location.href='structure-of-atom.html'">Open →</button>
+                    </div>
+
+                    <div class="chapter">
+                        <div class="chapter-icon">🌱</div>
+                        <div class="chapter-info"><strong>Sexual Reproduction in Flowering Plants</strong><small>Biology
+                                • Class 12</small></div>
+                        <button class="open" onclick="location.href='biology.html'">Open →</button>
+                    </div>
+
+                    <div class="chapter">
+                        <div class="chapter-icon">⚡</div>
+                        <div class="chapter-info"><strong>Physics Preparation</strong><small>Physics • NEET</small>
+                        </div>
+                        <button class="open" onclick="location.href='physics.html'">Open →</button>
+                    </div>
+                </div>
+
+                <div class="panel activity">
+                    <h3>⚡ Recent Activity</h3>
+                    <div class="activity-item"><span>✓</span>
+                        <div>Dashboard created<small>Just now</small></div>
+                    </div>
+                    <div class="activity-item"><span>→</span>
+                        <div>Structure of Atom added<small>Continue your chapter</small></div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="panel">
+                    <h3>🚀 Quick Actions</h3>
+                    <div class="quick">
+                        <button onclick="location.href='structure-atom-formulas.html'"><b>📘 Formula
+                                Sheet</b><small>Revise important formulae</small></button>
+                        <button onclick="location.href='structure-atom-numericals.html'"><b>🔢
+                                Numericals</b><small>Practice calculations</small></button>
+                        <button onclick="alert('Chapter tests coming soon!')"><b>📝 Chapter Test</b><small>Test your
+                                preparation</small></button>
+                        <button onclick="alert('NEET PYQs coming soon!')"><b>🎯 NEET PYQs</b><small>Previous year
+                                questions</small></button>
+                    </div>
+                </div>
+
+                <div class="panel" style="margin-top:20px">
+                    <h3>📊 Subject Progress</h3>
+                    <div class="subject">
+                        <div class="subject-head"><b>Biology</b><span>0%</span></div>
+                        <div class="bar">
+                            <div class="fill" style="width:0%"></div>
+                        </div>
+                    </div>
+                    <div class="subject">
+                        <div class="subject-head"><b>Chemistry</b><span>10%</span></div>
+                        <div class="bar">
+                            <div class="fill" style="width:10%"></div>
+                        </div>
+                    </div>
+                    <div class="subject">
+                        <div class="subject-head"><b>Physics</b><span>0%</span></div>
+                        <div class="bar">
+                            <div class="fill" style="width:0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>NEET Spark 360 • NEET Preparation in 360° • © 2026</footer>
+
+    <script>
+        function continueStudy() { location.href = "structure-of-atom.html"; }
+        const name = localStorage.getItem("neetSparkName");
+        if (name) {
+            document.getElementById("studentName").textContent = name;
+            document.getElementById("avatar").textContent = name.charAt(0).toUpperCase();
+        }
+    </script>
+</body>
+
+</html>
