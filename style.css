@@ -1,0 +1,2069 @@
+/* =========================================================
+   NEET SPARK 360
+   CLEAN RESPONSIVE MASTER CSS
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8fafc;
+    color: #172033;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+    padding: 16px 7%;
+
+    background: rgba(255, 255, 255, .96);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    min-width: 0;
+}
+
+.logo>span {
+    font-size: 32px;
+    flex-shrink: 0;
+}
+
+.logo h1 {
+    font-size: 22px;
+    line-height: 1.2;
+}
+
+.logo p {
+    color: #64748b;
+    font-size: 12px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    color: #172033;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: .25s;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+.section {
+    padding: 90px 8%;
+    text-align: center;
+}
+
+.section-tag {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.section-title {
+    font-size: 38px;
+    margin-bottom: 45px;
+}
+
+.primary-btn {
+    border: none;
+
+    padding: 14px 24px;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    transition: .25s;
+}
+
+.primary-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   HOME HERO
+========================================================= */
+
+.hero {
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+
+    padding: 80px 10%;
+
+    background:
+        linear-gradient(135deg, #eff6ff, #ffffff);
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.tag {
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.hero h2 {
+    font-size: 60px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero h2 span {
+    color: #2563eb;
+}
+
+.hero-description {
+    max-width: 520px;
+
+    color: #64748b;
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+/* HERO BOX */
+
+.hero-box {
+    width: 330px;
+    min-height: 330px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, .08);
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 38px;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+.hero-box h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.hero-box p {
+    color: #64748b;
+}
+
+/* =========================================================
+   SUBJECT CARDS
+========================================================= */
+
+.subject-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.subject-card {
+    padding: 35px 25px;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+
+    transition: .25s;
+}
+
+.subject-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, .08);
+}
+
+.subject-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.subject-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.subject-card p {
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.subject-card button {
+    border: none;
+    background: transparent;
+
+    color: #2563eb;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.features-section {
+    background: #f1f5f9;
+}
+
+.feature-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.feature {
+    padding: 30px 20px;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    transition: .25s;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, .06);
+}
+
+.feature span {
+    font-size: 35px;
+}
+
+.feature h3 {
+    margin: 12px 0 8px;
+}
+
+.feature p {
+    color: #64748b;
+}
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about {
+    padding: 100px 10%;
+
+    text-align: center;
+
+    background: #172033;
+    color: white;
+}
+
+.about h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    max-width: 650px;
+
+    margin: 0 auto 30px;
+
+    color: #cbd5e1;
+}
+
+.founder-label {
+    color: #93c5fd !important;
+
+    font-size: 12px !important;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px !important;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 35px 20px;
+
+    text-align: center;
+
+    background: #0f172a;
+    color: white;
+}
+
+footer h3 {
+    font-size: 20px;
+}
+
+footer p {
+    color: #94a3b8;
+}
+
+footer .copyright {
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+/* =========================================================
+   SUBJECT / CHAPTER / TOPIC HERO
+========================================================= */
+
+.subject-hero,
+.chapter-hero,
+.syllabus-hero,
+.topic-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    padding: 70px 10%;
+
+    background:
+        linear-gradient(135deg, #eff6ff, #ffffff);
+}
+
+.subject-hero,
+.chapter-hero,
+.syllabus-hero {
+    min-height: 430px;
+}
+
+.topic-hero {
+    min-height: 450px;
+}
+
+.chapter-hero-text {
+    max-width: 700px;
+}
+
+.subject-hero h2,
+.chapter-hero h2,
+.syllabus-hero h2,
+.topic-hero h2 {
+    line-height: 1.1;
+    margin: 15px 0 20px;
+}
+
+.subject-hero h2,
+.chapter-hero h2,
+.syllabus-hero h2 {
+    font-size: 52px;
+}
+
+.topic-hero h2 {
+    font-size: 50px;
+}
+
+.subject-hero h2 span,
+.chapter-hero h2 span,
+.syllabus-hero h2 span,
+.topic-hero h2 span {
+    color: #2563eb;
+}
+
+.subject-hero p:not(.section-tag),
+.chapter-hero p:not(.section-tag),
+.syllabus-hero p:not(.section-tag),
+.topic-hero p:not(.section-tag) {
+    max-width: 680px;
+
+    color: #64748b;
+
+    font-size: 17px;
+}
+
+/* HERO ICONS */
+
+.subject-hero-icon,
+.chapter-hero-icon,
+.topic-hero-icon {
+    width: 220px;
+    height: 220px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: white;
+
+    font-size: 90px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, .08);
+}
+
+.syllabus-hero-box {
+    width: 220px;
+    height: 220px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, .08);
+}
+
+.syllabus-hero-box strong {
+    color: #2563eb;
+    font-size: 42px;
+}
+
+.syllabus-hero-box span {
+    color: #64748b;
+    font-weight: 700;
+}
+
+/* =========================================================
+   CLASS CARDS
+========================================================= */
+
+.class-container {
+    max-width: 900px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+.class-card {
+    padding: 40px 30px;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+
+    transition: .25s;
+}
+
+.class-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, .08);
+}
+
+.class-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.class-card h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.class-card p {
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.class-card button {
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+    color: white;
+
+    font-weight: 700;
+}
+
+/* =========================================================
+   CHAPTER / TOPIC BUTTONS
+========================================================= */
+
+.chapter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+.secondary-btn {
+    display: inline-block;
+
+    padding: 13px 20px;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    color: #2563eb;
+    background: white;
+
+    border: 1px solid #2563eb;
+}
+
+.chapter-actions,
+.topic-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.chapter-actions button,
+.topic-buttons button {
+    padding: 9px 13px;
+
+    border: 1px solid #dbeafe;
+    border-radius: 8px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: .2s;
+}
+
+.chapter-actions button:hover,
+.topic-buttons button:hover {
+    background: #2563eb;
+    color: white;
+}
+
+/* =========================================================
+   CHAPTER / SYLLABUS SECTIONS
+========================================================= */
+
+.chapter-section,
+.syllabus-section {
+    padding: 75px 8%;
+}
+
+.chapter-heading,
+.unit-title {
+    max-width: 1100px;
+
+    margin: 0 auto 30px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+.chapter-heading>span,
+.unit-title>span {
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #2563eb;
+    color: white;
+
+    font-weight: 700;
+}
+
+.chapter-heading h2,
+.unit-title h2 {
+    font-size: 30px;
+}
+
+.chapter-heading p,
+.unit-title p {
+    color: #64748b;
+}
+
+/* =========================================================
+   CHAPTER / TOPIC GRID
+========================================================= */
+
+.chapter-grid,
+.topic-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+.chapter-card,
+.topic-card {
+    min-width: 0;
+
+    padding: 28px;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+
+    transition: .25s;
+}
+
+.chapter-card:hover,
+.topic-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, .08);
+}
+
+.chapter-number {
+    color: #2563eb;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+.chapter-card h3,
+.topic-card h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.chapter-card>p,
+.topic-card>p {
+    color: #64748b;
+
+    font-size: 14px;
+
+    margin-bottom: 22px;
+}
+
+.topic-icon {
+    font-size: 34px;
+}
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats-section {
+    display: flex;
+    justify-content: center;
+
+    gap: 20px;
+
+    padding: 35px 5%;
+
+    background: white;
+
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    min-width: 180px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+}
+
+.stat-card strong {
+    display: block;
+
+    color: #2563eb;
+
+    font-size: 25px;
+}
+
+.stat-card span {
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* =========================================================
+   QUICK REVISION / STUDY SYSTEM
+========================================================= */
+
+.quick-revision,
+.study-system {
+    padding: 80px 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    background: #172033;
+    color: white;
+}
+
+.quick-revision h2 {
+    font-size: 38px;
+    line-height: 1.15;
+
+    margin: 12px 0 18px;
+}
+
+.study-system h2 {
+    font-size: 36px;
+    margin: 12px 0 15px;
+}
+
+.quick-revision>div:first-child p:last-child,
+.study-system>div:first-child p:last-child {
+    max-width: 600px;
+    color: #cbd5e1;
+}
+
+.revision-box {
+    display: flex;
+    gap: 15px;
+}
+
+.revision-box div,
+.system-steps div {
+    padding: 20px;
+
+    text-align: center;
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, .08);
+}
+
+.revision-box div {
+    min-width: 110px;
+}
+
+.revision-box strong,
+.system-steps strong {
+    display: block;
+    color: #93c5fd;
+}
+
+.revision-box strong {
+    font-size: 22px;
+}
+
+.revision-box span,
+.system-steps span {
+    color: #cbd5e1;
+    font-size: 12px;
+}
+
+.system-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.system-steps div {
+    min-width: 110px;
+}
+
+.system-steps strong {
+    font-size: 20px;
+}
+
+/* =========================================================
+   TOPIC CONTENT
+========================================================= */
+
+.topic-progress {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    padding: 30px 5%;
+
+    background: white;
+
+    flex-wrap: wrap;
+}
+
+.topic-progress div {
+    min-width: 160px;
+
+    padding: 16px;
+
+    text-align: center;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+.topic-progress strong {
+    display: block;
+    color: #2563eb;
+}
+
+.topic-progress span {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.content-nav {
+    position: sticky;
+    top: 73px;
+    z-index: 100;
+
+    display: flex;
+    gap: 8px;
+
+    overflow-x: auto;
+
+    padding: 12px 5%;
+
+    background: white;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.content-nav a {
+    flex-shrink: 0;
+
+    padding: 8px 13px;
+
+    border-radius: 8px;
+
+    background: #f1f5f9;
+    color: #334155;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.topic-content {
+    background: #f8fafc;
+}
+
+.study-block {
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 70px 30px;
+}
+
+.block-label {
+    color: #2563eb;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+}
+
+.study-block h2 {
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.study-block>p {
+    color: #475569;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* =========================================================
+   INFO / SPECIAL / CONCEPT
+========================================================= */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.info-grid div,
+.special-grid div {
+    padding: 20px;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+.info-grid strong {
+    display: block;
+
+    color: #2563eb;
+
+    margin-bottom: 5px;
+}
+
+.info-grid p,
+.special-grid p {
+    color: #64748b;
+}
+
+.concept-box {
+    margin-top: 22px;
+
+    padding: 25px;
+
+    background: white;
+
+    border-left: 4px solid #2563eb;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .03);
+}
+
+.concept-box h3 {
+    margin-bottom: 12px;
+}
+
+.concept-box p,
+.concept-box li {
+    color: #475569;
+    line-height: 1.8;
+}
+
+.concept-box ul {
+    padding-left: 20px;
+}
+
+.special-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-top: 30px;
+}
+
+/* =========================================================
+   PROCESS / REVISION FLOW
+========================================================= */
+
+.process-box,
+.revision-flow {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.process-box {
+    margin: 30px 0;
+
+    padding: 25px;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+
+    text-align: center;
+}
+
+.process-box span,
+.revision-flow span {
+    padding: 10px 15px;
+
+    border-radius: 8px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.process-box b,
+.revision-flow b {
+    color: #64748b;
+}
+
+/* =========================================================
+   NCERT / PRACTICE
+========================================================= */
+
+.ncert-block {
+    background: white;
+
+    max-width: none;
+
+    padding-left: max(30px, calc((100% - 1000px)/2));
+    padding-right: max(30px, calc((100% - 1000px)/2));
+}
+
+.revision-list {
+    margin-top: 25px;
+    padding-left: 22px;
+}
+
+.revision-list li {
+    margin-bottom: 13px;
+
+    color: #334155;
+
+    line-height: 1.7;
+}
+
+.practice-section {
+    padding: 80px 10%;
+
+    text-align: center;
+
+    background: #172033;
+    color: white;
+}
+
+.practice-section h2 {
+    font-size: 38px;
+    margin: 10px 0;
+}
+
+.practice-section>p:not(.section-tag) {
+    color: #cbd5e1;
+}
+
+.practice-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+}
+
+.practice-buttons button {
+    padding: 13px 20px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #2563eb;
+    color: white;
+
+    font-weight: 700;
+}
+
+/* =========================================================
+   CHAPTER CONTENT
+========================================================= */
+
+.chapter-content {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 70px 25px;
+}
+
+.chapter-intro {
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+.topic-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.topic-number {
+    min-width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #eff6ff;
+    color: #2563eb;
+
+    font-weight: 700;
+}
+
+.topic-info h3 {
+    margin-bottom: 7px;
+}
+
+.topic-info p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.topic-tags {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.topic-tags span {
+    padding: 5px 8px;
+
+    background: #f1f5f9;
+
+    border-radius: 6px;
+
+    color: #475569;
+
+    font-size: 11px;
+}
+
+.topic-card button.completed {
+    background: #16a34a;
+}
+
+/* =========================================================
+   PRACTICE CARDS
+========================================================= */
+
+.practice-zone {
+    padding: 70px 10%;
+
+    text-align: center;
+
+    background: #f8fafc;
+}
+
+.practice-cards {
+    max-width: 1100px;
+
+    margin: 35px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.practice-card {
+    padding: 30px 25px;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+
+    text-decoration: none;
+    color: #0f172a;
+
+    transition: .25s;
+}
+
+.practice-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, .07);
+}
+
+.practice-card>span {
+    font-size: 35px;
+}
+
+.practice-card h3 {
+    margin: 15px 0 8px;
+}
+
+.practice-card p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.practice-card strong {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    color: #2563eb;
+}
+
+/* =========================================================
+   QUIZ
+========================================================= */
+
+.quiz-hero {
+    padding: 75px 10%;
+
+    text-align: center;
+
+    background: linear-gradient(135deg, #eff6ff, #ffffff);
+}
+
+.quiz-hero h2 {
+    font-size: 48px;
+    margin: 15px 0;
+}
+
+.quiz-hero h2 span {
+    color: #2563eb;
+}
+
+.quiz-hero>p:not(.section-tag) {
+    color: #64748b;
+    font-size: 17px;
+}
+
+.quiz-container,
+.mcq-container {
+    max-width: 900px;
+
+    margin: auto;
+}
+
+.quiz-container {
+    padding: 60px 25px;
+}
+
+.quiz-top,
+.mcq-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+
+    color: #64748b;
+}
+
+.score-display {
+    color: #2563eb;
+}
+
+.progress-bar,
+.mcq-progress {
+    width: 100%;
+    height: 8px;
+
+    margin-bottom: 25px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: #e2e8f0;
+}
+
+#progress {
+    width: 10%;
+    height: 100%;
+    background: #2563eb;
+}
+
+#mcqProgress {
+    width: 3.33%;
+    height: 100%;
+    background: #dc2626;
+}
+
+.question-card,
+.mcq-card,
+.final-result,
+.mcq-result {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+}
+
+.question-card,
+.mcq-card {
+    padding: 35px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, .05);
+}
+
+.question-source,
+.difficulty {
+    display: inline-block;
+
+    padding: 6px 10px;
+
+    margin-bottom: 15px;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.question-source {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.difficulty {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.question-card h2,
+.mcq-card h2 {
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.question-card h2 {
+    font-size: 23px;
+}
+
+.mcq-card h2 {
+    font-size: 22px;
+}
+
+.options,
+.mcq-options {
+    display: grid;
+    gap: 12px;
+}
+
+.option-btn,
+.mcq-option {
+    width: 100%;
+
+    padding: 15px;
+
+    text-align: left;
+
+    border: 1px solid #dbe2ea;
+    border-radius: 10px;
+
+    background: white;
+    color: #334155;
+
+    font-size: 15px;
+}
+
+.option-btn:hover:not(:disabled) {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+.mcq-option:hover:not(:disabled) {
+    border-color: #dc2626;
+    background: #fff1f2;
+}
+
+.option-btn.correct,
+.mcq-option.correct {
+    background: #dcfce7;
+    border-color: #22c55e;
+    color: #166534;
+}
+
+.option-btn.wrong,
+.mcq-option.wrong {
+    background: #fee2e2;
+    border-color: #ef4444;
+    color: #991b1b;
+}
+
+.answer-result,
+.mcq-explanation {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    line-height: 1.6;
+}
+
+.correct-result,
+.correct-explanation {
+    background: #f0fdf4;
+    color: #166534;
+}
+
+.wrong-result,
+.wrong-explanation {
+    background: #fef2f2;
+    color: #991b1b;
+}
+
+.next-btn,
+.mcq-next {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #2563eb;
+    color: white;
+
+    font-weight: 700;
+}
+
+.mcq-next {
+    background: #dc2626;
+}
+
+.next-btn:disabled,
+.mcq-next:disabled {
+    opacity: .45;
+}
+
+.final-result,
+.mcq-result {
+    display: none;
+
+    padding: 50px 25px;
+
+    text-align: center;
+}
+
+.final-result h2,
+.mcq-result h2 {
+    font-size: 30px;
+}
+
+.final-result>strong,
+.mcq-result>strong {
+    display: block;
+
+    margin: 15px;
+
+    font-size: 50px;
+
+    color: #2563eb;
+}
+
+.mcq-result>strong {
+    color: #dc2626;
+}
+
+.final-result p,
+.mcq-result>p {
+    color: #64748b;
+}
+
+.result-icon {
+    font-size: 55px;
+}
+
+.result-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin: 30px 0;
+}
+
+.result-stats div {
+    padding: 18px;
+
+    background: #f8fafc;
+
+    border-radius: 10px;
+}
+
+.result-stats strong {
+    display: block;
+
+    color: #2563eb;
+
+    font-size: 23px;
+}
+
+.result-stats span {
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* =========================================================
+   HARD MCQ HERO
+========================================================= */
+
+.mcq-hero {
+    padding: 70px 10%;
+
+    text-align: center;
+
+    background:
+        linear-gradient(135deg, #fff1f2, #ffffff);
+}
+
+.mcq-hero h2 {
+    font-size: 46px;
+    margin: 15px 0;
+}
+
+.mcq-hero h2 span {
+    color: #dc2626;
+}
+
+.mcq-hero p:not(.section-tag) {
+    color: #64748b;
+}
+
+.test-info {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    padding: 30px 5%;
+
+    flex-wrap: wrap;
+}
+
+.test-info div {
+    min-width: 130px;
+
+    padding: 18px;
+
+    text-align: center;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+.test-info strong {
+    display: block;
+
+    color: #dc2626;
+
+    font-size: 20px;
+}
+
+.test-info span {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.timer {
+    color: #dc2626;
+    font-weight: 700;
+}
+
+/* =========================================================
+   MOBILE — TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 14px 5%;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+
+        padding: 65px 5%;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero h2 {
+        font-size: 45px;
+    }
+
+    .subject-container {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-box {
+        width: min(330px, 100%);
+    }
+}
+
+/* =========================================================
+   MOBILE — 700
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .subject-hero,
+    .chapter-hero,
+    .syllabus-hero,
+    .topic-hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 60px 5%;
+    }
+
+    .subject-hero h2,
+    .chapter-hero h2,
+    .syllabus-hero h2 {
+        font-size: 40px;
+    }
+
+    .topic-hero h2 {
+        font-size: 38px;
+    }
+
+    .class-container,
+    .chapter-grid,
+    .topic-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .subject-hero-icon,
+    .chapter-hero-icon,
+    .topic-hero-icon {
+        width: 170px;
+        height: 170px;
+
+        font-size: 65px;
+    }
+
+    .syllabus-hero-box {
+        width: 170px;
+        height: 170px;
+    }
+
+    .syllabus-hero-box strong {
+        font-size: 32px;
+    }
+
+    .chapter-section,
+    .syllabus-section {
+        padding: 60px 5%;
+    }
+
+    .chapter-heading h2,
+    .unit-title h2 {
+        font-size: 24px;
+    }
+
+    .quick-revision,
+    .study-system {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 65px 5%;
+    }
+
+    .revision-box {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .system-steps {
+        width: 100%;
+    }
+
+    .info-grid,
+    .special-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .practice-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .study-block {
+        padding: 55px 20px;
+    }
+
+    .study-block h2 {
+        font-size: 27px;
+    }
+
+    .quiz-hero {
+        padding: 60px 5%;
+    }
+
+    .quiz-hero h2 {
+        font-size: 36px;
+    }
+
+    .quiz-container {
+        padding: 40px 15px;
+    }
+
+    .question-card,
+    .mcq-card {
+        padding: 25px 18px;
+    }
+
+    .question-card h2,
+    .mcq-card h2 {
+        font-size: 19px;
+    }
+
+    .mcq-hero {
+        padding: 55px 5%;
+    }
+
+    .mcq-hero h2 {
+        font-size: 34px;
+    }
+
+    .mcq-container {
+        padding: 35px 12px;
+    }
+
+    .result-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================================
+   MOBILE — 500
+========================================================= */
+
+@media (max-width: 500px) {
+
+    header {
+        padding: 11px 4%;
+        gap: 8px;
+    }
+
+    .logo>span {
+        font-size: 26px;
+    }
+
+    .logo h1 {
+        font-size: 17px;
+    }
+
+    .logo p {
+        display: none;
+    }
+
+    nav {
+        gap: 8px;
+
+        max-width: 55vw;
+
+        overflow-x: auto;
+
+        scrollbar-width: none;
+    }
+
+    nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    nav a {
+        flex-shrink: 0;
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: auto;
+
+        padding: 55px 5% 60px;
+
+        gap: 38px;
+    }
+
+    .hero h2 {
+        font-size: 38px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-box {
+        width: 100%;
+        min-height: 280px;
+    }
+
+    .circle {
+        width: 125px;
+        height: 125px;
+
+        font-size: 32px;
+    }
+
+    .feature-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 65px 5%;
+    }
+
+    .section-title {
+        font-size: 29px;
+    }
+
+    .about {
+        padding: 70px 6%;
+    }
+
+    .about h2 {
+        font-size: 32px;
+    }
+
+    .revision-box {
+        flex-direction: column;
+    }
+
+    .revision-box div {
+        width: 100%;
+    }
+
+    .content-nav {
+        top: 56px;
+        padding: 10px 4%;
+    }
+
+    .chapter-heading,
+    .unit-title {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .chapter-heading>span,
+    .unit-title>span {
+        flex-shrink: 0;
+    }
+
+    .chapter-actions,
+    .topic-buttons,
+    .practice-buttons {
+        justify-content: flex-start;
+
+        flex-wrap: nowrap;
+
+        overflow-x: auto;
+
+        scrollbar-width: none;
+    }
+
+    .chapter-actions::-webkit-scrollbar,
+    .topic-buttons::-webkit-scrollbar,
+    .practice-buttons::-webkit-scrollbar {
+        display: none;
+    }
+
+    .chapter-actions button,
+    .topic-buttons button,
+    .practice-buttons button {
+        flex-shrink: 0;
+    }
+
+    .quiz-top,
+    .mcq-top {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .stats-section {
+        padding: 25px 5%;
+    }
+
+    .stat-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .question-card,
+    .mcq-card,
+    .chapter-card,
+    .topic-card {
+        overflow-wrap: anywhere;
+    }
+}
+
+/* =========================================================
+   EXTRA SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .logo h1 {
+        font-size: 15px;
+    }
+
+    nav {
+        max-width: 50vw;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .primary-btn {
+        width: 100%;
+    }
+}
