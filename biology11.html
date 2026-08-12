@@ -1,0 +1,2070 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biology Class 11 | NEET Spark 360</title>
+
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #06151a;
+            color: #fff;
+        }
+
+        header {
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #081d23;
+            border-bottom: 1px solid #1b3940;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo span {
+            font-size: 32px
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        .logo p {
+            margin: 3px 0 0;
+            color: #91aab0;
+            font-size: 12px;
+        }
+
+        nav a {
+            color: #cde2e5;
+            text-decoration: none;
+            margin-left: 18px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #4ade80
+        }
+
+        .hero {
+            padding: 55px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background:
+                radial-gradient(circle at 80% 30%, #10452f, transparent 35%),
+                linear-gradient(135deg, #09252a, #06151a);
+        }
+
+        .tag {
+            font-size: 12px;
+            color: #4ade80;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+        }
+
+        .hero h2 {
+            font-size: 46px;
+            margin: 12px 0;
+        }
+
+        .hero h2 span {
+            color: #4ade80
+        }
+
+        .hero p {
+            max-width: 720px;
+            color: #a9bec2;
+            line-height: 1.7;
+        }
+
+        .badge {
+            width: 110px;
+            height: 110px;
+            border-radius: 28px;
+            background: #0d3028;
+            border: 1px solid #2c755d;
+            display: grid;
+            place-items: center;
+            text-align: center;
+        }
+
+        .badge strong {
+            font-size: 40px;
+            color: #4ade80;
+            display: block;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            padding: 25px 8%;
+        }
+
+        .stat {
+            background: #0b242b;
+            border: 1px solid #1b3940;
+            border-radius: 16px;
+            padding: 20px;
+        }
+
+        .stat strong {
+            display: block;
+            color: #4ade80;
+            font-size: 25px;
+        }
+
+        .stat span {
+            color: #91aab0;
+            font-size: 12px;
+        }
+
+        main {
+            padding: 20px 8%
+        }
+
+        .section-title {
+            margin: 25px 0 18px
+        }
+
+        .section-title h2 {
+            margin: 5px 0
+        }
+
+        .section-title p {
+            color: #91aab0
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: #0b242b;
+            border: 1px solid #1b3940;
+            border-radius: 18px;
+            padding: 22px;
+            transition: .2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: #4ade80;
+        }
+
+        .num {
+            font-size: 11px;
+            color: #4ade80;
+            font-weight: bold;
+        }
+
+        .icon {
+            font-size: 29px;
+            margin: 8px 0;
+        }
+
+        .card h3 {
+            margin: 8px 0
+        }
+
+        .card p {
+            color: #91aab0;
+            font-size: 14px;
+            line-height: 1.55;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+
+        .buttons button {
+            background: #102f34;
+            border: 1px solid #27504e;
+            color: #d9eeee;
+            border-radius: 9px;
+            padding: 9px 12px;
+            cursor: pointer;
+        }
+
+        .buttons button:hover {
+            border-color: #4ade80;
+            color: #4ade80;
+        }
+
+        .content {
+            display: none;
+            margin-top: 15px;
+            background: #06191e;
+            border: 1px solid #265149;
+            border-radius: 12px;
+            padding: 16px;
+            color: #cfe3e5;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .content.active {
+            display: block
+        }
+
+        .content h3 {
+            margin-top: 0;
+            color: #4ade80;
+        }
+
+        .content h4 {
+            color: #dfffee;
+            margin-bottom: 5px;
+        }
+
+        .content ul {
+            padding-left: 20px;
+        }
+
+        .question {
+            background: #0b242b;
+            border: 1px solid #1b3940;
+            padding: 12px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #668084;
+            border-top: 1px solid #18343a;
+            margin-top: 30px;
+        }
+
+        @media(max-width:700px) {
+            nav {
+                display: none
+            }
+
+            .hero {
+                display: block;
+                padding: 42px 6%;
+            }
+
+            .hero h2 {
+                font-size: 38px
+            }
+
+            .badge {
+                margin-top: 25px
+            }
+
+            .stats {
+                grid-template-columns: 1fr 1fr;
+                padding: 20px 6%;
+            }
+
+            main {
+                padding: 15px 6%
+            }
+        }
+
+        .chapter-grid {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 22px;
+        }
+
+        .chapter-grid .card {
+            width: 100%;
+            display: block !important;
+        }
+
+        @media(max-width:650px) {
+            .chapter-grid {
+                grid-template-columns: 1fr;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <span>🧬</span>
+
+            <div>
+                <h1>NEET Spark 360</h1>
+                <p>NEET Preparation in 360°</p>
+            </div>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="biology.html">Biology</a>
+            <a href="biology12.html">Class 12</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+
+    </header>
+
+
+    <section class="hero">
+
+        <div>
+            <div class="tag">BIOLOGY • CLASS 11 • NEET</div>
+
+            <h2>
+                Biology <span>Class 11</span>
+            </h2>
+
+            <p>
+                Complete Class 11 Biology preparation with chapter-wise
+                concepts, NCERT points, NEET questions and quick revision.
+            </p>
+        </div>
+
+        <div class="badge">
+            <div>
+                <strong>11</strong>
+                CLASS
+            </div>
+        </div>
+
+    </section>
+
+
+    <div class="stats">
+
+        <div class="stat">
+            <strong>22</strong>
+            <span>Chapters</span>
+        </div>
+
+        <div class="stat">
+            <strong>5</strong>
+            <span>Major Units</span>
+        </div>
+
+        <div class="stat">
+            <strong>NEET</strong>
+            <span>Focused</span>
+        </div>
+
+        <div class="stat">
+            <strong>360°</strong>
+            <span>Revision</span>
+        </div>
+
+    </div>
+
+
+    <main>
+
+        <div class="section-title">
+
+            <div class="tag">CHAPTER-WISE PREPARATION</div>
+
+            <h2>🌱 Class 11 Biology Chapters</h2>
+
+            <p>
+                Open a section to study important material.
+            </p>
+
+        </div>
+
+
+        <div class="grid">
+
+
+            <div class="chapter-grid">
+                <!-- CHAPTER 1 -->
+
+                <div class="card">
+
+                    <div class="num">CHAPTER 01</div>
+
+                    <div class="icon">🌿</div>
+
+                    <h3>The Living World</h3>
+
+                    <p>
+                        Living organisms, taxonomy, nomenclature,
+                        classification and taxonomic hierarchy.
+                    </p>
+
+                    <div class="buttons">
+
+                        <button onclick="openContent('c1','concepts')">
+                            Concepts
+                        </button>
+
+                        <button onclick="openContent('c1','ncert')">
+                            NCERT
+                        </button>
+
+                        <button onclick="openContent('c1','pyq')">
+                            PYQs
+                        </button>
+
+                        <button onclick="openContent('c1','tricks')">
+                            Tricks
+                        </button>
+
+                    </div>
+
+                    <div id="c1" class="content"></div>
+
+                </div>
+
+
+                <!-- CHAPTER 2 -->
+
+                <div class="card">
+
+                    <div class="num">CHAPTER 02</div>
+
+                    <div class="icon">🧫</div>
+
+                    <h3>Biological Classification</h3>
+
+                    <p>
+                        Five kingdom classification, Monera, Protista,
+                        Fungi, viruses and viroids.
+                    </p>
+
+                    <div class="buttons">
+
+                        <button onclick="showChapter2('concepts')">Concepts</button>
+                        <button onclick="showChapter2('ncert')">NCERT</button>
+                        <button onclick="showChapter2('pyq')">PYQs</button>
+                        <button onclick="showChapter2('tricks')">Tricks</button>
+
+                    </div>
+
+                    <div id="c2" class="content"></div>
+
+                </div>
+
+
+                <!-- CHAPTER 3 -->
+
+                <div class="card">
+
+                    <div class="num">CHAPTER 03</div>
+
+                    <div class="icon">🌱</div>
+
+                    <h3>Plant Kingdom</h3>
+
+                    <p>
+                        Algae, bryophytes, pteridophytes, gymnosperms and
+                        angiosperms, with their life cycles and key features.
+                    </p>
+
+                    <div class="buttons">
+
+                        <button onclick="showChapter3('concepts')">Concepts</button>
+                        <button onclick="showChapter3('ncert')">NCERT</button>
+                        <button onclick="showChapter3('pyq')">PYQs</button>
+                        <button onclick="showChapter3('tricks')">Tricks</button>
+
+                    </div>
+
+                    <div id="c3" class="content"></div>
+
+                </div>
+
+
+                <!-- CHAPTER 4 -->
+
+                <div class="card">
+
+                    <div class="num">CHAPTER 04</div>
+
+                    <div class="icon">🦁</div>
+
+                    <h3>Animal Kingdom</h3>
+
+                    <p>
+                        Animal classification, body organisation, symmetry,
+                        coelom, segmentation and major animal phyla.
+                    </p>
+
+                    <div class="buttons">
+
+                        <button onclick="showChapter4('concepts')">Concepts</button>
+                        <button onclick="showChapter4('ncert')">NCERT</button>
+                        <button onclick="showChapter4('pyq')">PYQs</button>
+                        <button onclick="showChapter4('tricks')">Tricks</button>
+
+                    </div>
+
+                    <div id="c4" class="content"></div>
+
+                </div>
+
+
+                <!-- CHAPTER 5 -->
+
+                <div class="card">
+
+                    <div class="num">CHAPTER 05</div>
+
+                    <div class="icon">🌸</div>
+
+                    <h3>Morphology of Flowering Plants</h3>
+
+                    <p>
+                        Root, stem, leaf, inflorescence, flower,
+                        fruit and seed.
+                    </p>
+
+                    <div class="buttons">
+                        <button onclick="showChapter5('concepts')">Concepts</button>
+                        <button onclick="showChapter5('ncert')">NCERT</button>
+                        <button onclick="showChapter5('pyq')">PYQs</button>
+                        <button onclick="showChapter5('tricks')">Tricks</button>
+                    </div>
+
+                    <div id="c5" class="content"></div>
+
+                </div>
+
+
+                <!-- CHAPTER 6 -->
+
+                <div class="card">
+
+                    <div class="num">CHAPTER 06</div>
+
+                    <div class="icon">🌳</div>
+
+                    <h3>Anatomy of Flowering Plants</h3>
+
+                    <p>
+                        Plant tissues and internal structure of roots,
+                        stems and leaves.
+                    </p>
+
+                    <div class="buttons">
+                        <button onclick="showChapter6('concepts')">Concepts</button>
+                        <button onclick="showChapter6('ncert')">NCERT</button>
+                        <button onclick="showChapter6('pyq')">PYQs</button>
+                        <button onclick="showChapter6('tricks')">Tricks</button>
+                    </div>
+
+                    <div id="c6" class="content"></div>
+
+                </div>
+
+
+                <!-- CHAPTER 7 -->
+
+                <div class="card">
+
+                    <div class="num">CHAPTER 07</div>
+
+                    <div class="icon">🔬</div>
+
+                    <h3>Structural Organisation in Animals</h3>
+
+                    <p>
+                        Animal tissues and structural organisation.
+                    </p>
+
+                    <div class="buttons">
+                        <button onclick="simpleContent('c7','Concepts')">Concepts</button>
+                        <button onclick="simpleContent('c7','NCERT')">NCERT</button>
+                        <button onclick="simpleContent('c7','PYQs')">PYQs</button>
+                    </div>
+
+                    <div id="c7" class="content"></div>
+
+                </div>
+
+
+                <!-- CHAPTER 7 -->
+                <div class="card">
+                    <div class="num">CHAPTER 07</div>
+                    <div class="icon">🔬</div>
+                    <h3>Structural Organisation in Animals</h3>
+                    <p>Animal tissues, epithelial, connective, muscular and nervous tissues; basic organisation in
+                        cockroach and earthworm.</p>
+                    <div class="buttons">
+                        <button onclick="showChapter7('concepts')">Concepts</button>
+                        <button onclick="showChapter7('ncert')">NCERT</button>
+                        <button onclick="showChapter7('pyq')">PYQs</button>
+                        <button onclick="showChapter7('tricks')">Tricks</button>
+                    </div>
+                    <div id="c7" class="content"></div>
+                </div>
+
+                <!-- CHAPTER 8 -->
+
+                <div class="card">
+
+                    <div class="num">CHAPTER 08</div>
+
+                    <div class="icon">⚛️</div>
+
+                    <h3>Cell: The Unit of Life</h3>
+
+                    <p>
+                        Cell structure, organelles, prokaryotic and
+                        eukaryotic cells.
+                    </p>
+
+                    <div class="buttons">
+                        <button onclick="simpleContent('c8','Concepts')">Concepts</button>
+                        <button onclick="simpleContent('c8','NCERT')">NCERT</button>
+                        <button onclick="simpleContent('c8','PYQs')">PYQs</button>
+                    </div>
+
+                    <div id="c8" class="content"></div>
+
+                </div>
+
+
+                <!-- CHAPTER 9 -->
+
+                <div class="card">
+
+                    <div class="num">CHAPTER 09</div>
+
+                    <div class="icon">🧪</div>
+
+                    <h3>Biomolecules</h3>
+
+                    <p>
+                        Carbohydrates, proteins, lipids, nucleic acids
+                        and enzymes.
+                    </p>
+
+                    <div class="buttons">
+                        <button onclick="simpleContent('c9','Concepts')">Concepts</button>
+                        <button onclick="simpleContent('c9','NCERT')">NCERT</button>
+                        <button onclick="simpleContent('c9','PYQs')">PYQs</button>
+                    </div>
+
+                    <div id="c9" class="content"></div>
+
+                </div>
+
+
+                <!-- CHAPTER 10 -->
+
+                <div class="card">
+
+                    <div class="num">CHAPTER 10</div>
+
+                    <div class="icon">🔋</div>
+
+                    <h3>Cell Cycle and Cell Division</h3>
+
+                    <p>
+                        Cell cycle, mitosis, meiosis and significance.
+                    </p>
+
+                    <div class="buttons">
+                        <button onclick="simpleContent('c10','Concepts')">Concepts</button>
+                        <button onclick="simpleContent('c10','NCERT')">NCERT</button>
+                        <button onclick="simpleContent('c10','PYQs')">PYQs</button>
+                    </div>
+
+                    <div id="c10" class="content"></div>
+
+                </div>
+
+
+                <!-- CHAPTER 11 -->
+
+                <div class="card">
+
+                    <div class="num">CHAPTER 11</div>
+
+                    <div class="icon">☀️</div>
+
+                    <h3>Photosynthesis in Plants</h3>
+
+                    <p>
+                        Light reaction, Calvin cycle, pigments and factors
+                        affecting photosynthesis.
+                    </p>
+
+                    <div class="buttons">
+                        <button onclick="simpleContent('c11','Concepts')">Concepts</button>
+                        <button onclick="simpleContent('c11','NCERT')">NCERT</button>
+                        <button onclick="simpleContent('c11','PYQs')">PYQs</button>
+                    </div>
+
+                    <div id="c11" class="content"></div>
+
+                </div>
+
+
+                <!-- CHAPTER 12 -->
+
+                <div class="card">
+
+                    <div class="num">CHAPTER 12</div>
+
+                    <div class="icon">🌬️</div>
+
+                    <h3>Respiration in Plants</h3>
+
+                    <p>
+                        Glycolysis, fermentation, Krebs cycle and
+                        oxidative phosphorylation.
+                    </p>
+
+                    <div class="buttons">
+                        <button onclick="simpleContent('c12','Concepts')">Concepts</button>
+                        <button onclick="simpleContent('c12','NCERT')">NCERT</button>
+                        <button onclick="simpleContent('c12','PYQs')">PYQs</button>
+                    </div>
+
+                    <div id="c12" class="content"></div>
+
+                </div>
+
+
+                <!-- CHAPTER 13 -->
+
+                <div class="card">
+
+                    <div class="num">CHAPTER 13</div>
+
+                    <div class="icon">🌱</div>
+
+                    <h3>Plant Growth and Development</h3>
+
+                    <p>
+                        Growth phases and plant growth regulators.
+                    </p>
+
+                    <div class="buttons">
+                        <button onclick="simpleContent('c13','Concepts')">Concepts</button>
+                        <button onclick="simpleContent('c13','NCERT')">NCERT</button>
+                        <button onclick="simpleContent('c13','PYQs')">PYQs</button>
+                    </div>
+
+                    <div id="c13" class="content"></div>
+
+                </div>
+
+
+                <!-- CHAPTER 14 -->
+
+                <div class="card">
+
+                    <div class="num">CHAPTER 14</div>
+
+                    <div class="icon">🍽️</div>
+
+                    <h3>Digestion and Absorption</h3>
+
+                    <p>
+                        Human digestive system, enzymes and nutrient
+                        absorption.
+                    </p>
+
+                    <div class="buttons">
+                        <button onclick="simpleContent('c14','Concepts')">Concepts</button>
+                        <button onclick="simpleContent('c14','NCERT')">NCERT</button>
+                        <button onclick="simpleContent('c14','PYQs')">PYQs</button>
+                    </div>
+
+                    <div id="c14" class="content"></div>
+
+                </div>
+
+
+                <!-- CHAPTER 15 -->
+
+                <div class="card">
+
+                    <div class="num">CHAPTER 15</div>
+
+                    <div class="icon">🫁</div>
+
+                    <h3>Breathing and Exchange of Gases</h3>
+
+                    <p>
+                        Respiratory organs, breathing, gas exchange
+                        and transport.
+                    </p>
+
+                    <div class="buttons">
+                        <button onclick="simpleContent('c15','Concepts')">Concepts</button>
+                        <button onclick="simpleContent('c15','NCERT')">NCERT</button>
+                        <button onclick="simpleContent('c15','PYQs')">PYQs</button>
+                    </div>
+
+                    <div id="c15" class="content"></div>
+
+                </div>
+
+
+                <!-- CHAPTER 16 -->
+
+                <div class="card">
+
+                    <div class="num">CHAPTER 16</div>
+
+                    <div class="icon">❤️</div>
+
+                    <h3>Body Fluids and Circulation</h3>
+
+                    <p>
+                        Blood, lymph, heart, cardiac cycle and circulation.
+                    </p>
+
+                    <div class="buttons">
+                        <button onclick="simpleContent('c16','Concepts')">Concepts</button>
+                        <button onclick="simpleContent('c16','NCERT')">NCERT</button>
+                        <button onclick="simpleContent('c16','PYQs')">PYQs</button>
+                    </div>
+
+                    <div id="c16" class="content"></div>
+
+                </div>
+
+
+                <!-- CHAPTER 17 -->
+
+                <div class="card">
+
+                    <div class="num">CHAPTER 17</div>
+
+                    <div class="icon">🚰</div>
+
+                    <h3>Excretory Products and Elimination</h3>
+
+                    <p>
+                        Excretion, nephron, urine formation and
+                        osmoregulation.
+                    </p>
+
+                    <div class="buttons">
+                        <button onclick="simpleContent('c17','Concepts')">Concepts</button>
+                        <button onclick="simpleContent('c17','NCERT')">NCERT</button>
+                        <button onclick="simpleContent('c17','PYQs')">PYQs</button>
+                    </div>
+
+                    <div id="c17" class="content"></div>
+
+                </div>
+
+
+                <!-- CHAPTER 18 -->
+
+                <div class="card">
+
+                    <div class="num">CHAPTER 18</div>
+
+                    <div class="icon">🦴</div>
+
+                    <h3>Locomotion and Movement</h3>
+
+                    <p>
+                        Muscles, skeletal system and contraction mechanism.
+                    </p>
+
+                    <div class="buttons">
+                        <button onclick="simpleContent('c18','Concepts')">Concepts</button>
+                        <button onclick="simpleContent('c18','NCERT')">NCERT</button>
+                        <button onclick="simpleContent('c18','PYQs')">PYQs</button>
+                    </div>
+
+                    <div id="c18" class="content"></div>
+
+                </div>
+
+
+                <!-- CHAPTER 19 -->
+
+                <div class="card">
+
+                    <div class="num">CHAPTER 19</div>
+
+                    <div class="icon">🧠</div>
+
+                    <h3>Neural Control and Coordination</h3>
+
+                    <p>
+                        Neuron, nerve impulse, brain, spinal cord
+                        and reflex action.
+                    </p>
+
+                    <div class="buttons">
+                        <button onclick="simpleContent('c19','Concepts')">Concepts</button>
+                        <button onclick="simpleContent('c19','NCERT')">NCERT</button>
+                        <button onclick="simpleContent('c19','PYQs')">PYQs</button>
+                    </div>
+
+                    <div id="c19" class="content"></div>
+
+                </div>
+
+
+                <!-- CHAPTER 20 -->
+
+                <div class="card">
+
+                    <div class="num">CHAPTER 20</div>
+
+                    <div class="icon">👁️</div>
+
+                    <h3>Human Eye and Sensory Reception</h3>
+
+                    <p>
+                        Eye, vision, photoreceptors and sensory reception.
+                    </p>
+
+                    <div class="buttons">
+                        <button onclick="simpleContent('c20','Concepts')">Concepts</button>
+                        <button onclick="simpleContent('c20','NCERT')">NCERT</button>
+                        <button onclick="simpleContent('c20','PYQs')">PYQs</button>
+                    </div>
+
+                    <div id="c20" class="content"></div>
+
+                </div>
+
+
+                <!-- CHAPTER 21 -->
+
+                <div class="card">
+
+                    <div class="num">CHAPTER 21</div>
+
+                    <div class="icon">🧪</div>
+
+                    <h3>Chemical Coordination and Integration</h3>
+
+                    <p>
+                        Endocrine glands, hormones and hormonal regulation.
+                    </p>
+
+                    <div class="buttons">
+                        <button onclick="simpleContent('c21','Concepts')">Concepts</button>
+                        <button onclick="simpleContent('c21','NCERT')">NCERT</button>
+                        <button onclick="simpleContent('c21','PYQs')">PYQs</button>
+                    </div>
+
+                    <div id="c21" class="content"></div>
+
+                </div>
+
+
+                <!-- REVISION -->
+
+                <div class="card">
+
+                    <div class="num">REVISION</div>
+
+                    <div class="icon">🎯</div>
+
+                    <h3>Class 11 Biology Revision</h3>
+
+                    <p>
+                        High-yield revision of important Class 11 Biology
+                        concepts and NEET facts.
+                    </p>
+
+                    <div class="buttons">
+                        <button onclick="simpleContent('c22','Revision')">Revision</button>
+                        <button onclick="simpleContent('c22','Tricks')">Tricks</button>
+                        <button onclick="simpleContent('c22','PYQs')">PYQs</button>
+                    </div>
+
+                    <div id="c22" class="content"></div>
+
+                </div>
+
+
+            </div>
+    </main>
+
+
+    <footer>
+
+        <h3>NEET Spark 360</h3>
+
+        <p>
+            Biology Class 11 • NEET Preparation in 360°
+        </p>
+
+        <p>
+            © 2026 NEET Spark 360
+        </p>
+
+    </footer>
+
+
+
+    <!-- CHAPTER 05 -->
+    <div class="card">
+        <div class="num">CHAPTER 05</div>
+        <div class="icon">🌸</div>
+        <h3>Morphology of Flowering Plants</h3>
+        <p>Complete Class 11 Biology chapter-wise revision material.</p>
+        <div class="buttons">
+            <button onclick="showExtraChapter('05','concepts')">Concepts</button>
+            <button onclick="showExtraChapter('05','ncert')">NCERT</button>
+            <button onclick="showExtraChapter('05','pyq')">PYQs</button>
+            <button onclick="showExtraChapter('05','tricks')">Tricks</button>
+        </div>
+        <div id="c05" class="content"></div>
+    </div>
+
+
+    <!-- CHAPTER 06 -->
+    <div class="card">
+        <div class="num">CHAPTER 06</div>
+        <div class="icon">🔬</div>
+        <h3>Anatomy of Flowering Plants</h3>
+        <p>Complete Class 11 Biology chapter-wise revision material.</p>
+        <div class="buttons">
+            <button onclick="showExtraChapter('06','concepts')">Concepts</button>
+            <button onclick="showExtraChapter('06','ncert')">NCERT</button>
+            <button onclick="showExtraChapter('06','pyq')">PYQs</button>
+            <button onclick="showExtraChapter('06','tricks')">Tricks</button>
+        </div>
+        <div id="c06" class="content"></div>
+    </div>
+
+
+    <!-- CHAPTER 07 -->
+    <div class="card">
+        <div class="num">CHAPTER 07</div>
+        <div class="icon">🧬</div>
+        <h3>Structural Organisation in Animals</h3>
+        <p>Complete Class 11 Biology chapter-wise revision material.</p>
+        <div class="buttons">
+            <button onclick="showExtraChapter('07','concepts')">Concepts</button>
+            <button onclick="showExtraChapter('07','ncert')">NCERT</button>
+            <button onclick="showExtraChapter('07','pyq')">PYQs</button>
+            <button onclick="showExtraChapter('07','tricks')">Tricks</button>
+        </div>
+        <div id="c07" class="content"></div>
+    </div>
+
+
+    <!-- CHAPTER 08 -->
+    <div class="card">
+        <div class="num">CHAPTER 08</div>
+        <div class="icon">🧫</div>
+        <h3>Cell: The Unit of Life</h3>
+        <p>Complete Class 11 Biology chapter-wise revision material.</p>
+        <div class="buttons">
+            <button onclick="showExtraChapter('08','concepts')">Concepts</button>
+            <button onclick="showExtraChapter('08','ncert')">NCERT</button>
+            <button onclick="showExtraChapter('08','pyq')">PYQs</button>
+            <button onclick="showExtraChapter('08','tricks')">Tricks</button>
+        </div>
+        <div id="c08" class="content"></div>
+    </div>
+
+
+    <!-- CHAPTER 09 -->
+    <div class="card">
+        <div class="num">CHAPTER 09</div>
+        <div class="icon">⚗️</div>
+        <h3>Biomolecules</h3>
+        <p>Complete Class 11 Biology chapter-wise revision material.</p>
+        <div class="buttons">
+            <button onclick="showExtraChapter('09','concepts')">Concepts</button>
+            <button onclick="showExtraChapter('09','ncert')">NCERT</button>
+            <button onclick="showExtraChapter('09','pyq')">PYQs</button>
+            <button onclick="showExtraChapter('09','tricks')">Tricks</button>
+        </div>
+        <div id="c09" class="content"></div>
+    </div>
+
+
+    <!-- CHAPTER 10 -->
+    <div class="card">
+        <div class="num">CHAPTER 10</div>
+        <div class="icon">🔄</div>
+        <h3>Cell Cycle and Cell Division</h3>
+        <p>Complete Class 11 Biology chapter-wise revision material.</p>
+        <div class="buttons">
+            <button onclick="showExtraChapter('10','concepts')">Concepts</button>
+            <button onclick="showExtraChapter('10','ncert')">NCERT</button>
+            <button onclick="showExtraChapter('10','pyq')">PYQs</button>
+            <button onclick="showExtraChapter('10','tricks')">Tricks</button>
+        </div>
+        <div id="c10" class="content"></div>
+    </div>
+
+
+    <!-- CHAPTER 11 -->
+    <div class="card">
+        <div class="num">CHAPTER 11</div>
+        <div class="icon">💧</div>
+        <h3>Transport in Plants</h3>
+        <p>Complete Class 11 Biology chapter-wise revision material.</p>
+        <div class="buttons">
+            <button onclick="showExtraChapter('11','concepts')">Concepts</button>
+            <button onclick="showExtraChapter('11','ncert')">NCERT</button>
+            <button onclick="showExtraChapter('11','pyq')">PYQs</button>
+            <button onclick="showExtraChapter('11','tricks')">Tricks</button>
+        </div>
+        <div id="c11" class="content"></div>
+    </div>
+
+
+    <!-- CHAPTER 12 -->
+    <div class="card">
+        <div class="num">CHAPTER 12</div>
+        <div class="icon">🌿</div>
+        <h3>Mineral Nutrition</h3>
+        <p>Complete Class 11 Biology chapter-wise revision material.</p>
+        <div class="buttons">
+            <button onclick="showExtraChapter('12','concepts')">Concepts</button>
+            <button onclick="showExtraChapter('12','ncert')">NCERT</button>
+            <button onclick="showExtraChapter('12','pyq')">PYQs</button>
+            <button onclick="showExtraChapter('12','tricks')">Tricks</button>
+        </div>
+        <div id="c12" class="content"></div>
+    </div>
+
+
+    <!-- CHAPTER 13 -->
+    <div class="card">
+        <div class="num">CHAPTER 13</div>
+        <div class="icon">☀️</div>
+        <h3>Photosynthesis in Plants</h3>
+        <p>Complete Class 11 Biology chapter-wise revision material.</p>
+        <div class="buttons">
+            <button onclick="showExtraChapter('13','concepts')">Concepts</button>
+            <button onclick="showExtraChapter('13','ncert')">NCERT</button>
+            <button onclick="showExtraChapter('13','pyq')">PYQs</button>
+            <button onclick="showExtraChapter('13','tricks')">Tricks</button>
+        </div>
+        <div id="c13" class="content"></div>
+    </div>
+
+
+    <!-- CHAPTER 14 -->
+    <div class="card">
+        <div class="num">CHAPTER 14</div>
+        <div class="icon">🌬️</div>
+        <h3>Respiration in Plants</h3>
+        <p>Complete Class 11 Biology chapter-wise revision material.</p>
+        <div class="buttons">
+            <button onclick="showExtraChapter('14','concepts')">Concepts</button>
+            <button onclick="showExtraChapter('14','ncert')">NCERT</button>
+            <button onclick="showExtraChapter('14','pyq')">PYQs</button>
+            <button onclick="showExtraChapter('14','tricks')">Tricks</button>
+        </div>
+        <div id="c14" class="content"></div>
+    </div>
+
+
+    <!-- CHAPTER 15 -->
+    <div class="card">
+        <div class="num">CHAPTER 15</div>
+        <div class="icon">🌱</div>
+        <h3>Plant Growth and Development</h3>
+        <p>Complete Class 11 Biology chapter-wise revision material.</p>
+        <div class="buttons">
+            <button onclick="showExtraChapter('15','concepts')">Concepts</button>
+            <button onclick="showExtraChapter('15','ncert')">NCERT</button>
+            <button onclick="showExtraChapter('15','pyq')">PYQs</button>
+            <button onclick="showExtraChapter('15','tricks')">Tricks</button>
+        </div>
+        <div id="c15" class="content"></div>
+    </div>
+
+
+    <!-- CHAPTER 16 -->
+    <div class="card">
+        <div class="num">CHAPTER 16</div>
+        <div class="icon">🍎</div>
+        <h3>Digestion and Absorption</h3>
+        <p>Complete Class 11 Biology chapter-wise revision material.</p>
+        <div class="buttons">
+            <button onclick="showExtraChapter('16','concepts')">Concepts</button>
+            <button onclick="showExtraChapter('16','ncert')">NCERT</button>
+            <button onclick="showExtraChapter('16','pyq')">PYQs</button>
+            <button onclick="showExtraChapter('16','tricks')">Tricks</button>
+        </div>
+        <div id="c16" class="content"></div>
+    </div>
+
+
+    <!-- CHAPTER 17 -->
+    <div class="card">
+        <div class="num">CHAPTER 17</div>
+        <div class="icon">🫁</div>
+        <h3>Breathing and Exchange of Gases</h3>
+        <p>Complete Class 11 Biology chapter-wise revision material.</p>
+        <div class="buttons">
+            <button onclick="showExtraChapter('17','concepts')">Concepts</button>
+            <button onclick="showExtraChapter('17','ncert')">NCERT</button>
+            <button onclick="showExtraChapter('17','pyq')">PYQs</button>
+            <button onclick="showExtraChapter('17','tricks')">Tricks</button>
+        </div>
+        <div id="c17" class="content"></div>
+    </div>
+
+
+    <!-- CHAPTER 18 -->
+    <div class="card">
+        <div class="num">CHAPTER 18</div>
+        <div class="icon">❤️</div>
+        <h3>Body Fluids and Circulation</h3>
+        <p>Complete Class 11 Biology chapter-wise revision material.</p>
+        <div class="buttons">
+            <button onclick="showExtraChapter('18','concepts')">Concepts</button>
+            <button onclick="showExtraChapter('18','ncert')">NCERT</button>
+            <button onclick="showExtraChapter('18','pyq')">PYQs</button>
+            <button onclick="showExtraChapter('18','tricks')">Tricks</button>
+        </div>
+        <div id="c18" class="content"></div>
+    </div>
+
+
+    <!-- CHAPTER 19 -->
+    <div class="card">
+        <div class="num">CHAPTER 19</div>
+        <div class="icon">🧪</div>
+        <h3>Excretory Products and Their Elimination</h3>
+        <p>Complete Class 11 Biology chapter-wise revision material.</p>
+        <div class="buttons">
+            <button onclick="showExtraChapter('19','concepts')">Concepts</button>
+            <button onclick="showExtraChapter('19','ncert')">NCERT</button>
+            <button onclick="showExtraChapter('19','pyq')">PYQs</button>
+            <button onclick="showExtraChapter('19','tricks')">Tricks</button>
+        </div>
+        <div id="c19" class="content"></div>
+    </div>
+
+
+    <!-- CHAPTER 20 -->
+    <div class="card">
+        <div class="num">CHAPTER 20</div>
+        <div class="icon">💪</div>
+        <h3>Locomotion and Movement</h3>
+        <p>Complete Class 11 Biology chapter-wise revision material.</p>
+        <div class="buttons">
+            <button onclick="showExtraChapter('20','concepts')">Concepts</button>
+            <button onclick="showExtraChapter('20','ncert')">NCERT</button>
+            <button onclick="showExtraChapter('20','pyq')">PYQs</button>
+            <button onclick="showExtraChapter('20','tricks')">Tricks</button>
+        </div>
+        <div id="c20" class="content"></div>
+    </div>
+
+
+    <!-- CHAPTER 21 -->
+    <div class="card">
+        <div class="num">CHAPTER 21</div>
+        <div class="icon">🧠</div>
+        <h3>Neural Control and Coordination</h3>
+        <p>Complete Class 11 Biology chapter-wise revision material.</p>
+        <div class="buttons">
+            <button onclick="showExtraChapter('21','concepts')">Concepts</button>
+            <button onclick="showExtraChapter('21','ncert')">NCERT</button>
+            <button onclick="showExtraChapter('21','pyq')">PYQs</button>
+            <button onclick="showExtraChapter('21','tricks')">Tricks</button>
+        </div>
+        <div id="c21" class="content"></div>
+    </div>
+
+
+    <!-- CHAPTER 22 -->
+    <div class="card">
+        <div class="num">CHAPTER 22</div>
+        <div class="icon">🧬</div>
+        <h3>Chemical Coordination and Integration</h3>
+        <p>Complete Class 11 Biology chapter-wise revision material.</p>
+        <div class="buttons">
+            <button onclick="showExtraChapter('22','concepts')">Concepts</button>
+            <button onclick="showExtraChapter('22','ncert')">NCERT</button>
+            <button onclick="showExtraChapter('22','pyq')">PYQs</button>
+            <button onclick="showExtraChapter('22','tricks')">Tricks</button>
+        </div>
+        <div id="c22" class="content"></div>
+    </div>
+
+    </div>
+    <script>
+        const extraChapters = {
+            '05': { title: 'Morphology of Flowering Plants', concepts: '<ul><li>Root, stem, leaf and their modifications.</li><li>Inflorescence, flower, fruit and seed.</li><li>Families and important floral characters.</li></ul>', ncert: '<ul><li>Root → primary root, lateral roots and root hairs.</li><li>Stem → nodes, internodes and buds.</li><li>Leaf → petiole, lamina and venation.</li><li>Flower → reproductive structure of angiosperms.</li><li>Fruit develops generally from the ovary after fertilisation.</li><li>Fabaceae, Solanaceae and Liliaceae are important NCERT families.</li></ul>', pyq: '<h3>🧠 PYQs</h3><div class="question"><b>Q1.</b> Revise the NCERT statements of this chapter and practise chapter-wise NEET questions.<br><br><b>Answer:</b> Use the NCERT-based revision above.</div>', tricks: '<h3>💡 Tricks</h3><ul><li>Read NCERT line by line.</li><li>Make a one-page formula/fact sheet.</li><li>Revise diagrams and keywords.</li></ul>' },
+            '06': { title: 'Anatomy of Flowering Plants', concepts: '<ul><li>Plant tissues and tissue systems.</li><li>Meristematic and permanent tissues.</li><li>Dicot and monocot root, stem and leaf anatomy.</li></ul>', ncert: '<ul><li>Meristematic tissue is actively dividing.</li><li>Parenchyma, collenchyma and sclerenchyma are simple permanent tissues.</li><li>Xylem and phloem are complex tissues.</li><li>Epidermis, ground tissue and vascular tissue form major tissue systems.</li><li>Dicot stem has vascular bundles arranged in a ring.</li><li>Monocot stem has scattered vascular bundles.</li></ul>', pyq: '<h3>🧠 PYQs</h3><div class="question"><b>Q1.</b> Revise the NCERT statements of this chapter and practise chapter-wise NEET questions.<br><br><b>Answer:</b> Use the NCERT-based revision above.</div>', tricks: '<h3>💡 Tricks</h3><ul><li>Read NCERT line by line.</li><li>Make a one-page formula/fact sheet.</li><li>Revise diagrams and keywords.</li></ul>' },
+            '07': { title: 'Structural Organisation in Animals', concepts: '<ul><li>Animal tissues and their functions.</li><li>Epithelial, connective, muscular and nervous tissues.</li><li>Basic organisation using cockroach and frog examples.</li></ul>', ncert: '<ul><li>Epithelial tissue covers body surfaces and lines cavities.</li><li>Connective tissue includes areolar, adipose, cartilage, bone and blood.</li><li>Muscle tissue may be skeletal, smooth or cardiac.</li><li>Neuron is the structural and functional unit of nervous tissue.</li><li>Cockroach is an arthropod with segmented body and jointed appendages.</li></ul>', pyq: '<h3>🧠 PYQs</h3><div class="question"><b>Q1.</b> Revise the NCERT statements of this chapter and practise chapter-wise NEET questions.<br><br><b>Answer:</b> Use the NCERT-based revision above.</div>', tricks: '<h3>💡 Tricks</h3><ul><li>Read NCERT line by line.</li><li>Make a one-page formula/fact sheet.</li><li>Revise diagrams and keywords.</li></ul>' },
+            '08': { title: 'Cell: The Unit of Life', concepts: '<ul><li>Cell theory and cell structure.</li><li>Prokaryotic and eukaryotic cells.</li><li>Cell organelles and their functions.</li></ul>', ncert: '<ul><li>Cell is the basic structural and functional unit of life.</li><li>Prokaryotes lack a membrane-bound nucleus.</li><li>Eukaryotic cells possess membrane-bound organelles.</li><li>Mitochondria are major sites of aerobic respiration.</li><li>Ribosomes are involved in protein synthesis.</li><li>Lysosomes contain hydrolytic enzymes.</li></ul>', pyq: '<h3>🧠 PYQs</h3><div class="question"><b>Q1.</b> Revise the NCERT statements of this chapter and practise chapter-wise NEET questions.<br><br><b>Answer:</b> Use the NCERT-based revision above.</div>', tricks: '<h3>💡 Tricks</h3><ul><li>Read NCERT line by line.</li><li>Make a one-page formula/fact sheet.</li><li>Revise diagrams and keywords.</li></ul>' },
+            '09': { title: 'Biomolecules', concepts: '<ul><li>Carbohydrates, proteins, lipids and nucleic acids.</li><li>Enzymes and their catalytic activity.</li><li>Primary and secondary metabolites.</li></ul>', ncert: '<ul><li>Monosaccharides are simple sugars.</li><li>Proteins are polymers of amino acids.</li><li>Lipids are important components of membranes and energy storage.</li><li>DNA and RNA are nucleic acids.</li><li>Enzymes are biological catalysts.</li><li>Enzyme activity depends on factors such as temperature and pH.</li></ul>', pyq: '<h3>🧠 PYQs</h3><div class="question"><b>Q1.</b> Revise the NCERT statements of this chapter and practise chapter-wise NEET questions.<br><br><b>Answer:</b> Use the NCERT-based revision above.</div>', tricks: '<h3>💡 Tricks</h3><ul><li>Read NCERT line by line.</li><li>Make a one-page formula/fact sheet.</li><li>Revise diagrams and keywords.</li></ul>' },
+            '10': { title: 'Cell Cycle and Cell Division', concepts: '<ul><li>Cell cycle, interphase and mitosis.</li><li>Meiosis and reduction division.</li><li>Significance of cell division.</li></ul>', ncert: '<ul><li>Interphase includes G1, S and G2 phases.</li><li>DNA replication occurs during S phase.</li><li>Mitosis produces two genetically similar daughter cells.</li><li>Meiosis produces haploid cells and creates variation through recombination.</li><li>Crossing over occurs during pachytene of prophase I.</li></ul>', pyq: '<h3>🧠 PYQs</h3><div class="question"><b>Q1.</b> Revise the NCERT statements of this chapter and practise chapter-wise NEET questions.<br><br><b>Answer:</b> Use the NCERT-based revision above.</div>', tricks: '<h3>💡 Tricks</h3><ul><li>Read NCERT line by line.</li><li>Make a one-page formula/fact sheet.</li><li>Revise diagrams and keywords.</li></ul>' },
+            '11': { title: 'Transport in Plants', concepts: '<ul><li>Water movement and mineral transport.</li><li>Diffusion, osmosis and transpiration.</li><li>Xylem transport and phloem translocation.</li></ul>', ncert: '<ul><li>Water potential determines movement of water.</li><li>Transpiration is loss of water mainly through stomata.</li><li>Xylem conducts water and minerals mainly upward.</li><li>Phloem translocates organic solutes.</li><li>Root pressure and transpiration pull contribute to water movement.</li></ul>', pyq: '<h3>🧠 PYQs</h3><div class="question"><b>Q1.</b> Revise the NCERT statements of this chapter and practise chapter-wise NEET questions.<br><br><b>Answer:</b> Use the NCERT-based revision above.</div>', tricks: '<h3>💡 Tricks</h3><ul><li>Read NCERT line by line.</li><li>Make a one-page formula/fact sheet.</li><li>Revise diagrams and keywords.</li></ul>' },
+            '12': { title: 'Mineral Nutrition', concepts: '<ul><li>Essential mineral elements.</li><li>Macronutrients and micronutrients.</li><li>Nitrogen metabolism and biological nitrogen fixation.</li></ul>', ncert: '<ul><li>Plants require essential elements for normal growth.</li><li>Nitrogen, phosphorus and potassium are macronutrients.</li><li>Iron, manganese, zinc, copper, molybdenum, boron, chlorine and nickel are micronutrients.</li><li>Nitrogen is a major component of proteins and nucleic acids.</li><li>Rhizobium participates in symbiotic nitrogen fixation in legumes.</li></ul>', pyq: '<h3>🧠 PYQs</h3><div class="question"><b>Q1.</b> Revise the NCERT statements of this chapter and practise chapter-wise NEET questions.<br><br><b>Answer:</b> Use the NCERT-based revision above.</div>', tricks: '<h3>💡 Tricks</h3><ul><li>Read NCERT line by line.</li><li>Make a one-page formula/fact sheet.</li><li>Revise diagrams and keywords.</li></ul>' },
+            '13': { title: 'Photosynthesis in Plants', concepts: '<ul><li>Light reaction and carbon fixation.</li><li>Photosystems, electron transport and ATP formation.</li><li>C3 and C4 pathways and photorespiration.</li></ul>', ncert: '<ul><li>Chlorophyll absorbs light energy.</li><li>Light reactions occur in thylakoid membranes.</li><li>ATP and NADPH are generated during light reactions.</li><li>Calvin cycle occurs in the stroma.</li><li>C4 plants possess Kranz anatomy.</li><li>Photorespiration is prominent in C3 plants under certain conditions.</li></ul>', pyq: '<h3>🧠 PYQs</h3><div class="question"><b>Q1.</b> Revise the NCERT statements of this chapter and practise chapter-wise NEET questions.<br><br><b>Answer:</b> Use the NCERT-based revision above.</div>', tricks: '<h3>💡 Tricks</h3><ul><li>Read NCERT line by line.</li><li>Make a one-page formula/fact sheet.</li><li>Revise diagrams and keywords.</li></ul>' },
+            '14': { title: 'Respiration in Plants', concepts: '<ul><li>Glycolysis, fermentation and aerobic respiration.</li><li>Krebs cycle and electron transport system.</li><li>Respiratory balance sheet.</li></ul>', ncert: '<ul><li>Glycolysis occurs in the cytoplasm.</li><li>Pyruvate is oxidised before entering the Krebs cycle.</li><li>Krebs cycle occurs in the mitochondrial matrix.</li><li>Electron transport occurs on the inner mitochondrial membrane.</li><li>Fermentation occurs under anaerobic conditions.</li></ul>', pyq: '<h3>🧠 PYQs</h3><div class="question"><b>Q1.</b> Revise the NCERT statements of this chapter and practise chapter-wise NEET questions.<br><br><b>Answer:</b> Use the NCERT-based revision above.</div>', tricks: '<h3>💡 Tricks</h3><ul><li>Read NCERT line by line.</li><li>Make a one-page formula/fact sheet.</li><li>Revise diagrams and keywords.</li></ul>' },
+            '15': { title: 'Plant Growth and Development', concepts: '<ul><li>Growth phases and growth rates.</li><li>Plant growth regulators.</li><li>Photoperiodism and vernalisation.</li></ul>', ncert: '<ul><li>Auxin promotes cell elongation in many tissues.</li><li>Gibberellins promote stem elongation and other growth responses.</li><li>Cytokinins promote cell division.</li><li>Abscisic acid is associated with stress responses and dormancy.</li><li>Ethylene is a gaseous plant hormone and promotes fruit ripening.</li></ul>', pyq: '<h3>🧠 PYQs</h3><div class="question"><b>Q1.</b> Revise the NCERT statements of this chapter and practise chapter-wise NEET questions.<br><br><b>Answer:</b> Use the NCERT-based revision above.</div>', tricks: '<h3>💡 Tricks</h3><ul><li>Read NCERT line by line.</li><li>Make a one-page formula/fact sheet.</li><li>Revise diagrams and keywords.</li></ul>' },
+            '16': { title: 'Digestion and Absorption', concepts: '<ul><li>Human digestive system.</li><li>Digestion of carbohydrates, proteins and fats.</li><li>Absorption and assimilation of nutrients.</li></ul>', ncert: '<ul><li>Digestion begins in the mouth.</li><li>Stomach secretes HCl and pepsin-related digestive secretions.</li><li>Most digestion and absorption occur in the small intestine.</li><li>Villi increase the absorptive surface area.</li><li>Bile helps emulsify fats.</li><li>Large intestine mainly absorbs water and electrolytes.</li></ul>', pyq: '<h3>🧠 PYQs</h3><div class="question"><b>Q1.</b> Revise the NCERT statements of this chapter and practise chapter-wise NEET questions.<br><br><b>Answer:</b> Use the NCERT-based revision above.</div>', tricks: '<h3>💡 Tricks</h3><ul><li>Read NCERT line by line.</li><li>Make a one-page formula/fact sheet.</li><li>Revise diagrams and keywords.</li></ul>' },
+            '17': { title: 'Breathing and Exchange of Gases', concepts: '<ul><li>Human respiratory system.</li><li>Mechanism of breathing.</li><li>Gas exchange and transport of oxygen and carbon dioxide.</li></ul>', ncert: '<ul><li>Alveoli are major sites of gaseous exchange.</li><li>Inspiration occurs when thoracic volume increases.</li><li>Most oxygen is transported bound to haemoglobin.</li><li>Carbon dioxide is transported mainly as bicarbonate ions.</li><li>Gas exchange occurs by diffusion down partial-pressure gradients.</li></ul>', pyq: '<h3>🧠 PYQs</h3><div class="question"><b>Q1.</b> Revise the NCERT statements of this chapter and practise chapter-wise NEET questions.<br><br><b>Answer:</b> Use the NCERT-based revision above.</div>', tricks: '<h3>💡 Tricks</h3><ul><li>Read NCERT line by line.</li><li>Make a one-page formula/fact sheet.</li><li>Revise diagrams and keywords.</li></ul>' },
+            '18': { title: 'Body Fluids and Circulation', concepts: '<ul><li>Blood and lymph.</li><li>Human circulatory system.</li><li>Cardiac cycle, ECG and blood pressure.</li></ul>', ncert: '<ul><li>Blood consists of plasma and formed elements.</li><li>RBCs contain haemoglobin and transport oxygen.</li><li>WBCs participate in defence.</li><li>Platelets help in blood clotting.</li><li>Human heart has four chambers.</li><li>Double circulation is present in humans.</li></ul>', pyq: '<h3>🧠 PYQs</h3><div class="question"><b>Q1.</b> Revise the NCERT statements of this chapter and practise chapter-wise NEET questions.<br><br><b>Answer:</b> Use the NCERT-based revision above.</div>', tricks: '<h3>💡 Tricks</h3><ul><li>Read NCERT line by line.</li><li>Make a one-page formula/fact sheet.</li><li>Revise diagrams and keywords.</li></ul>' },
+            '19': { title: 'Excretory Products and Their Elimination', concepts: '<ul><li>Human excretory system.</li><li>Urine formation.</li><li>Osmoregulation and regulation of kidney function.</li></ul>', ncert: '<ul><li>Kidneys are the major excretory organs in humans.</li><li>Nephron is the structural and functional unit of kidney.</li><li>Urine formation involves filtration, reabsorption and secretion.</li><li>ADH promotes water reabsorption.</li><li>Urea is the major nitrogenous excretory product in humans.</li></ul>', pyq: '<h3>🧠 PYQs</h3><div class="question"><b>Q1.</b> Revise the NCERT statements of this chapter and practise chapter-wise NEET questions.<br><br><b>Answer:</b> Use the NCERT-based revision above.</div>', tricks: '<h3>💡 Tricks</h3><ul><li>Read NCERT line by line.</li><li>Make a one-page formula/fact sheet.</li><li>Revise diagrams and keywords.</li></ul>' },
+            '20': { title: 'Locomotion and Movement', concepts: '<ul><li>Types of movement.</li><li>Skeletal muscle structure and contraction.</li><li>Skeletal system and joints.</li></ul>', ncert: '<ul><li>Actin and myosin are major contractile proteins.</li><li>Muscle contraction involves sliding of actin over myosin.</li><li>ATP is required for muscle contraction.</li><li>Bones and cartilage form the skeletal system.</li><li>Joints connect bones and permit movement.</li></ul>', pyq: '<h3>🧠 PYQs</h3><div class="question"><b>Q1.</b> Revise the NCERT statements of this chapter and practise chapter-wise NEET questions.<br><br><b>Answer:</b> Use the NCERT-based revision above.</div>', tricks: '<h3>💡 Tricks</h3><ul><li>Read NCERT line by line.</li><li>Make a one-page formula/fact sheet.</li><li>Revise diagrams and keywords.</li></ul>' },
+            '21': { title: 'Neural Control and Coordination', concepts: '<ul><li>Neuron and nervous system.</li><li>Generation and transmission of nerve impulses.</li><li>Human brain and reflex action.</li></ul>', ncert: '<ul><li>Neuron is the structural and functional unit of nervous system.</li><li>Resting membrane has a potential difference across the membrane.</li><li>Action potential is associated with depolarisation and repolarisation.</li><li>Synapses transmit signals between neurons or to effectors.</li><li>Cerebrum is associated with higher mental functions.</li></ul>', pyq: '<h3>🧠 PYQs</h3><div class="question"><b>Q1.</b> Revise the NCERT statements of this chapter and practise chapter-wise NEET questions.<br><br><b>Answer:</b> Use the NCERT-based revision above.</div>', tricks: '<h3>💡 Tricks</h3><ul><li>Read NCERT line by line.</li><li>Make a one-page formula/fact sheet.</li><li>Revise diagrams and keywords.</li></ul>' },
+            '22': { title: 'Chemical Coordination and Integration', concepts: '<ul><li>Endocrine glands and hormones.</li><li>Mechanisms of hormonal action.</li><li>Major human endocrine disorders.</li></ul>', ncert: '<ul><li>Pituitary is often called the master endocrine gland.</li><li>Thyroid secretes thyroxine.</li><li>Pancreas secretes insulin and glucagon.</li><li>Adrenal medulla secretes adrenaline and noradrenaline.</li><li>Insulin lowers blood glucose concentration.</li><li>Hormones act as chemical messengers.</li></ul>', pyq: '<h3>🧠 PYQs</h3><div class="question"><b>Q1.</b> Revise the NCERT statements of this chapter and practise chapter-wise NEET questions.<br><br><b>Answer:</b> Use the NCERT-based revision above.</div>', tricks: '<h3>💡 Tricks</h3><ul><li>Read NCERT line by line.</li><li>Make a one-page formula/fact sheet.</li><li>Revise diagrams and keywords.</li></ul>' }
+        };
+
+        function showChapter7(type) {
+            const data = {
+                concepts: `<h3>📘 Structural Organisation in Animals</h3>
+<h4>Animal Tissues</h4><ul><li><b>Epithelial tissue:</b> covers body surfaces and lines cavities.</li><li><b>Connective tissue:</b> connects, supports and binds body parts.</li><li><b>Muscular tissue:</b> produces movement by contraction.</li><li><b>Nervous tissue:</b> receives and transmits impulses.</li></ul>
+<h4>Epithelial Tissue</h4><p>Major types include squamous, cuboidal, columnar, ciliated and glandular epithelium. Stratified epithelium mainly provides protection.</p>
+<h4>Connective Tissue</h4><ul><li>Areolar → packing and support</li><li>Adipose → fat storage</li><li>Blood → transport</li><li>Bone → support and protection</li><li>Cartilage → flexible support</li></ul>
+<h4>Muscular Tissue</h4><ul><li>Skeletal/striated → voluntary</li><li>Smooth/unstriated → involuntary</li><li>Cardiac → involuntary and branched</li></ul>
+<h4>Nervous Tissue</h4><p>Neuron is the structural and functional unit. It receives and conducts nerve impulses.</p>`,
+                ncert: `<h3>📗 NCERT Important Points</h3><ul><li>Epithelium has closely packed cells with little intercellular space.</li><li>Blood is a fluid connective tissue.</li><li>Bone matrix is hard because of mineral salts.</li><li>Adipose tissue stores fat.</li><li>Skeletal muscles are generally voluntary.</li><li>Smooth muscles are involuntary.</li><li>Cardiac muscle is found in the heart and works involuntarily.</li><li>Neuron is the structural and functional unit of nervous tissue.</li></ul>`,
+                pyq: `<h3>🧠 NEET Practice</h3><div class="question"><b>Q1.</b> Which is a fluid connective tissue?<br><br>A) Bone B) Blood C) Cartilage D) Adipose<br><br><b>Answer: B) Blood</b></div><div class="question"><b>Q2.</b> Which muscle is involuntary and striated?<br><br>A) Smooth B) Skeletal C) Cardiac D) Tendon<br><br><b>Answer: C) Cardiac</b></div><div class="question"><b>Q3.</b> Structural and functional unit of nervous tissue?<br><br>A) Nephron B) Neuron C) Sarcomere D) Osteocyte<br><br><b>Answer: B) Neuron</b></div>`,
+                tricks: `<h3>💡 Quick Tricks</h3><ul><li>Blood → fluid connective tissue</li><li>Bone → hard support</li><li>Adipose → fat storage</li><li>Skeletal → voluntary</li><li>Smooth → involuntary</li><li>Cardiac → heart</li><li>Neuron → nervous tissue</li></ul>`
+            };
+            const box = document.getElementById('c7'); box.innerHTML = data[type]; box.classList.add('active'); box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function showChapter6(type) {
+            const data = {
+                concepts: `<h3>📘 Anatomy of Flowering Plants</h3><h4>🌱 Plant Tissues</h4><ul><li>Meristematic tissues actively divide.</li><li>Permanent tissues are formed after differentiation.</li><li>Simple permanent tissues: parenchyma, collenchyma and sclerenchyma.</li><li>Complex tissues: xylem and phloem.</li></ul><h4>🌿 Meristems</h4><ul><li>Apical meristem → primary growth.</li><li>Intercalary meristem → growth at internodes/base of leaves.</li><li>Lateral meristem → secondary growth.</li></ul><h4>🌳 Dicot vs Monocot</h4><p>Dicot roots generally show a central pith that is small or inconspicuous, while monocot roots usually have a large pith. Dicot stems generally have vascular bundles arranged in a ring; monocot stems have them scattered.</p><h4>🍃 Vascular Tissues</h4><ul><li>Xylem conducts water and minerals.</li><li>Phloem transports organic food.</li><li>Vascular cambium contributes to secondary growth in plants where it is present.</li></ul>`,
+                ncert: `<h3>📗 NCERT Important Points</h3><ul><li>Meristematic cells have dense cytoplasm and prominent nuclei.</li><li>Parenchyma cells are generally living and thin-walled.</li><li>Collenchyma provides mechanical support to growing parts.</li><li>Sclerenchyma cells are generally dead at maturity and have thick walls.</li><li>Xylem includes tracheids, vessels, xylem fibres and xylem parenchyma.</li><li>Phloem includes sieve tubes, companion cells, phloem parenchyma and phloem fibres.</li><li>Dicot stem vascular bundles are commonly arranged in a ring.</li><li>Monocot stem vascular bundles are commonly scattered.</li></ul>`,
+                pyq: `<h3>🧠 NEET Practice</h3><div class="question"><b>Q1.</b> Which meristem is mainly responsible for increase in length?<br><br>A) Lateral B) Apical C) Cork cambium D) Vascular cambium<br><br><b>Answer: B) Apical</b></div><div class="question"><b>Q2.</b> Which tissue conducts water and minerals?<br><br>A) Phloem B) Xylem C) Collenchyma D) Parenchyma<br><br><b>Answer: B) Xylem</b></div><div class="question"><b>Q3.</b> Vascular bundles in a typical monocot stem are generally:<br><br>A) In a ring B) Scattered C) Absent D) Only peripheral<br><br><b>Answer: B) Scattered</b></div>`,
+                tricks: `<h3>💡 Quick Tricks</h3><ul><li>Apical → length</li><li>Lateral → girth</li><li>Xylem → water + minerals</li><li>Phloem → food</li><li>Collenchyma → flexible support</li><li>Sclerenchyma → strong support</li><li>Dicot stem → bundles in ring</li><li>Monocot stem → bundles scattered</li></ul>`
+            }; const box = document.getElementById('c6'); box.innerHTML = data[type]; box.classList.add('active'); box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+
+        function showChapter5(type) { const data = { concepts: `<h3>📘 Morphology of Flowering Plants</h3><h4>🌱 Root</h4><ul><li>Usually develops from the radicle.</li><li>Functions include anchorage and absorption of water and minerals.</li><li>Tap root is common in dicots; fibrous root is common in monocots.</li><li>Root hairs increase absorptive surface area.</li></ul><h4>🌿 Stem</h4><ul><li>Develops from the plumule.</li><li>Has nodes, internodes, leaves and buds.</li><li>Functions in support and conduction.</li><li>Rhizome, tuber, bulb and runner are stem modifications.</li></ul><h4>🍃 Leaf</h4><ul><li>Typical leaf has leaf base, petiole and lamina.</li><li>Venation may be reticulate or parallel.</li><li>Main site of photosynthesis and transpiration.</li></ul><h4>🌼 Inflorescence</h4><p>Arrangement of flowers on the floral axis. Racemose and cymose are major types.</p><h4>🌸 Flower</h4><p>Reproductive unit of angiosperms. Four main whorls are calyx, corolla, androecium and gynoecium.</p><ul><li>Calyx → sepals</li><li>Corolla → petals</li><li>Androecium → stamens</li><li>Gynoecium → carpels/pistil</li></ul><h4>🍎 Fruit and Seed</h4><p>Ovary generally develops into fruit and ovules into seeds after fertilisation.</p><h4>🌺 Important Families</h4><ul><li>Fabaceae</li><li>Solanaceae</li><li>Liliaceae</li></ul>`, ncert: `<h3>📗 NCERT Important Points</h3><ul><li>Root hairs are unicellular extensions of epidermal cells.</li><li>Stem has nodes and internodes.</li><li>Leaves arise at nodes.</li><li>Reticulate venation is common in dicots.</li><li>Parallel venation is common in monocots.</li><li>Androecium is the male reproductive whorl.</li><li>Gynoecium is the female reproductive whorl.</li><li>Ovary generally develops into fruit.</li><li>Ovules generally develop into seeds.</li><li>Fabaceae, Solanaceae and Liliaceae are important NEET families.</li></ul>`, pyq: `<h3>🧠 NEET Practice</h3><div class="question"><b>Q1.</b> Which structure increases root surface area for absorption?<br><br>A) Root cap B) Root hairs C) Pericycle D) Cortex<br><br><b>Answer: B) Root hairs</b></div><div class="question"><b>Q2.</b> Male reproductive whorl of a flower?<br><br>A) Calyx B) Corolla C) Androecium D) Gynoecium<br><br><b>Answer: C) Androecium</b></div><div class="question"><b>Q3.</b> Ovary generally develops into?<br><br>A) Seed B) Fruit C) Embryo D) Endosperm<br><br><b>Answer: B) Fruit</b></div><div class="question"><b>Q4.</b> Parallel venation is common in?<br><br>A) Dicots B) Monocots C) Bryophytes D) Fungi<br><br><b>Answer: B) Monocots</b></div><div class="question"><b>Q5.</b> Potato is a modified?<br><br>A) Root B) Stem C) Leaf D) Flower<br><br><b>Answer: B) Stem</b></div>`, tricks: `<h3>💡 Quick Tricks</h3><ul><li>Root → absorption + anchorage</li><li>Stem → nodes + internodes</li><li>Androecium → male</li><li>Gynoecium → female</li><li>Ovary → Fruit</li><li>Ovule → Seed</li><li>Dicot → usually reticulate</li><li>Monocot → usually parallel</li><li>Potato → stem tuber</li></ul>` }; const box = document.getElementById("c5"); box.innerHTML = data[type]; box.classList.add("active"); } function openContent(id, type) {
+
+            const box = document.getElementById(id);
+
+            box.innerHTML = chapter1[type];
+
+            box.classList.add("active");
+
+            box.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest"
+            });
+
+        }
+
+
+
+        function showExtraChapter(num, type) {
+            const box = document.getElementById("c" + num);
+            const d = extraChapters[num];
+            box.innerHTML = "<h3>" + d.title + "</h3>" + d[type];
+            box.classList.add("active");
+            box.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+
+
+
+
+        const chapter2 = {
+
+            concepts: `
+<h3>📘 Biological Classification — Concepts</h3>
+
+<h4>Why Classification?</h4>
+<p>
+The enormous diversity of organisms makes identification and study easier
+when organisms are grouped according to their similarities and differences.
+Modern classification also considers evolutionary relationships.
+</p>
+
+<h4>Five Kingdom Classification</h4>
+<p>
+R.H. Whittaker proposed the five kingdom classification in 1969.
+The five kingdoms are:
+</p>
+
+<ul>
+<li><b>Monera</b></li>
+<li><b>Protista</b></li>
+<li><b>Fungi</b></li>
+<li><b>Plantae</b></li>
+<li><b>Animalia</b></li>
+</ul>
+
+<h4>Basis of Classification</h4>
+<ul>
+<li>Cell structure</li>
+<li>Body organisation</li>
+<li>Mode of nutrition</li>
+<li>Reproduction</li>
+<li>Phylogenetic relationships</li>
+</ul>
+
+<h4>Kingdom Monera</h4>
+<ul>
+<li>Includes prokaryotic organisms.</li>
+<li>They generally lack a true nucleus and membrane-bound organelles.</li>
+<li>Examples include bacteria, cyanobacteria and archaebacteria.</li>
+<li>Bacteria may be autotrophic or heterotrophic.</li>
+</ul>
+
+<h4>Archaebacteria</h4>
+<p>
+Archaebacteria live in extreme habitats such as very salty areas,
+hot springs and marshy areas.
+</p>
+
+<ul>
+<li>Methanogens occur in marshy areas and the rumen of cattle.</li>
+<li>Halophiles live in highly saline habitats.</li>
+<li>Thermoacidophiles live in hot and acidic environments.</li>
+</ul>
+
+<h4>Kingdom Protista</h4>
+<ul>
+<li>Mostly unicellular eukaryotic organisms.</li>
+<li>They are mainly aquatic.</li>
+<li>Examples include Chrysophytes, Dinoflagellates, Euglenoids, Slime moulds and Protozoans.</li>
+</ul>
+
+<h4>Kingdom Fungi</h4>
+<ul>
+<li>Fungi are eukaryotic organisms.</li>
+<li>They are generally heterotrophic and absorptive in nutrition.</li>
+<li>Their cell wall is mainly made of chitin and polysaccharides.</li>
+<li>Most fungi are filamentous and their filaments are called hyphae.</li>
+<li>A network of hyphae is called mycelium.</li>
+</ul>
+
+<h4>Major Fungal Groups</h4>
+<ul>
+<li>Phycomycetes</li>
+<li>Ascomycetes</li>
+<li>Basidiomycetes</li>
+<li>Deuteromycetes</li>
+</ul>
+
+<h4>Lichens</h4>
+<p>
+Lichens are a symbiotic association between an alga and a fungus.
+The algal partner provides food while the fungal partner provides
+shelter and absorbs water and minerals.
+</p>
+
+<h4>Viruses</h4>
+<p>
+Viruses are acellular infectious agents. They contain genetic material
+surrounded by a protein coat and can reproduce only inside living host cells.
+</p>
+
+<h4>Viroids</h4>
+<p>
+Viroids are smaller infectious agents consisting of a short,
+single-stranded circular RNA molecule without a protein coat.
+</p>
+`,
+
+            ncert: `
+<h3>📗 Biological Classification — NCERT Important Points</h3>
+
+<ul>
+<li>R.H. Whittaker proposed the five kingdom classification in 1969.</li>
+<li>The five kingdoms are Monera, Protista, Fungi, Plantae and Animalia.</li>
+<li>Monerans are prokaryotic.</li>
+<li>Protists are mostly unicellular eukaryotes.</li>
+<li>Fungal cell walls contain chitin and polysaccharides.</li>
+<li>Fungi are generally heterotrophic and absorptive.</li>
+<li>Archaebacteria have a special cell wall structure.</li>
+<li>Methanogens are present in the rumen of cattle and produce methane.</li>
+<li>Cyanobacteria are photosynthetic autotrophs.</li>
+<li>Lichens represent a symbiotic association between algae and fungi.</li>
+<li>Viruses are non-cellular entities outside their host but multiply inside living cells.</li>
+<li>Viroids consist of RNA without a protein coat.</li>
+</ul>
+
+<h4>⭐ Must Remember</h4>
+<p>
+<b>Monera = Prokaryotic</b><br>
+<b>Protista = Mostly unicellular eukaryotic</b><br>
+<b>Fungi = Chitin cell wall</b><br>
+<b>Lichen = Alga + Fungus</b><br>
+<b>Viroid = RNA without protein coat</b>
+</p>
+`,
+
+            pyq: `
+<h3>🧠 Biological Classification — NEET Practice</h3>
+
+<div class="question">
+<b>Q1.</b> Five kingdom classification was proposed by:
+<br><br>
+A) Linnaeus<br>
+B) Whittaker<br>
+C) Aristotle<br>
+D) Haeckel
+<br><br>
+<b>Answer: B) Whittaker</b>
+</div>
+
+<div class="question">
+<b>Q2.</b> Which kingdom contains prokaryotic organisms?
+<br><br>
+A) Protista<br>
+B) Fungi<br>
+C) Monera<br>
+D) Plantae
+<br><br>
+<b>Answer: C) Monera</b>
+</div>
+
+<div class="question">
+<b>Q3.</b> The cell wall of fungi is mainly composed of:
+<br><br>
+A) Cellulose<br>
+B) Chitin<br>
+C) Peptidoglycan<br>
+D) Silica
+<br><br>
+<b>Answer: B) Chitin</b>
+</div>
+
+<div class="question">
+<b>Q4.</b> Lichens are an association between:
+<br><br>
+A) Bacteria and fungus<br>
+B) Alga and fungus<br>
+C) Virus and alga<br>
+D) Bacteria and alga
+<br><br>
+<b>Answer: B) Alga and fungus</b>
+</div>
+
+<div class="question">
+<b>Q5.</b> Viroids are made up of:
+<br><br>
+A) DNA and protein<br>
+B) RNA and protein<br>
+C) RNA without protein coat<br>
+D) Protein only
+<br><br>
+<b>Answer: C) RNA without protein coat</b>
+</div>
+`,
+
+            tricks: `
+<h3>💡 Biological Classification — Quick Tricks</h3>
+
+<h4>Five Kingdoms</h4>
+<p>
+<b>M P F P A</b>
+</p>
+<p>
+Monera → Protista → Fungi → Plantae → Animalia
+</p>
+
+<h4>NEET Quick Recall</h4>
+<ul>
+<li>Monera → Prokaryotic</li>
+<li>Protista → Mostly unicellular eukaryotic</li>
+<li>Fungi → Chitin</li>
+<li>Lichen → Alga + Fungus</li>
+<li>Virus → Acellular</li>
+<li>Viroid → Naked RNA</li>
+<li>Methanogen → Methane production</li>
+<li>Halophile → High salt</li>
+<li>Thermoacidophile → Hot + acidic</li>
+</ul>
+
+<h4>Fungal Groups</h4>
+<p>
+<b>P A B D</b> → Phycomycetes, Ascomycetes, Basidiomycetes, Deuteromycetes
+</p>
+`
+        };
+
+        const chapter1 = {
+
+            concepts: `
+<h3>📘 The Living World — Concepts</h3>
+
+<h4>What is Living?</h4>
+
+<ul>
+<li>Living organisms show cellular organisation.</li>
+<li>They perform metabolism — the sum total of chemical reactions occurring inside the body.</li>
+<li>Living organisms respond to external stimuli.</li>
+<li>Growth and reproduction are important characteristics, but neither alone is sufficient to define life.</li>
+<li>Consciousness or the ability to sense surroundings is a defining property of living organisms.</li>
+</ul>
+
+<h4>Growth</h4>
+
+<p>
+Growth is an increase in mass and number of cells.
+In plants, growth continues throughout life because of
+the presence of meristematic tissues.
+</p>
+
+<h4>Reproduction</h4>
+
+<p>
+Reproduction is the production of new individuals.
+It may be sexual or asexual.
+However, reproduction is not an all-inclusive characteristic
+because some living organisms are sterile.
+</p>
+
+<h4>Metabolism</h4>
+
+<p>
+All living organisms perform thousands of chemical reactions.
+The sum total of these reactions is called metabolism.
+</p>
+
+<h4>Taxonomy</h4>
+
+<p>
+Taxonomy deals with identification, nomenclature and
+classification of organisms.
+</p>
+
+<h4>Systematics</h4>
+
+<p>
+Systematics includes identification, nomenclature,
+classification and the study of evolutionary relationships.
+</p>
+
+<h4>Binomial Nomenclature</h4>
+
+<ul>
+<li>Scientific names generally contain two words.</li>
+<li>First word = Genus.</li>
+<li>Second word = specific epithet.</li>
+<li>Genus begins with a capital letter.</li>
+<li>Specific epithet begins with a small letter.</li>
+<li>Printed names are written in italics.</li>
+</ul>
+
+<p>
+Example: <i>Homo sapiens</i>
+</p>
+
+<h4>Taxonomic Hierarchy</h4>
+
+<p>
+Species → Genus → Family → Order → Class → Phylum/Division → Kingdom
+</p>
+
+<h4>Taxonomic Categories</h4>
+
+<ul>
+<li><b>Species:</b> Basic unit of classification.</li>
+<li><b>Genus:</b> Group of related species.</li>
+<li><b>Family:</b> Group of related genera.</li>
+<li><b>Order:</b> Group of related families.</li>
+<li><b>Class:</b> Group of related orders.</li>
+<li><b>Phylum/Division:</b> Group of related classes.</li>
+<li><b>Kingdom:</b> Highest category in this hierarchy.</li>
+</ul>
+`,
+
+            ncert: `
+<h3>📗 The Living World — NCERT Important Points</h3>
+
+<ul>
+<li>Growth is an important characteristic of living organisms.</li>
+<li>Reproduction is not an all-inclusive defining characteristic of life.</li>
+<li>Metabolism is a defining feature of living organisms.</li>
+<li>Cellular organisation is a fundamental characteristic of life.</li>
+<li>Consciousness is a defining property of living organisms.</li>
+<li>Taxonomy deals with identification, nomenclature and classification.</li>
+<li>Carolus Linnaeus is associated with binomial nomenclature.</li>
+<li>Species is the basic unit of classification.</li>
+<li>Genus comprises related species.</li>
+<li>Family comprises related genera.</li>
+<li>Order comprises related families.</li>
+<li>Class comprises related orders.</li>
+<li>Phylum comprises related classes.</li>
+</ul>
+
+<h4>⭐ Must Remember</h4>
+
+<p>
+Binomial nomenclature = <b>Genus + specific epithet</b>
+</p>
+
+<p>
+Taxonomic hierarchy:
+<b>Species → Genus → Family → Order → Class → Phylum → Kingdom</b>
+</p>
+`,
+
+            pyq: `
+<h3>🧠 The Living World — NEET Practice</h3>
+
+<div class="question">
+<b>Q1.</b> Which of the following is considered a defining property
+of living organisms?
+<br><br>
+A) Growth<br>
+B) Reproduction<br>
+C) Consciousness<br>
+D) Movement
+<br><br>
+<b>Answer: C) Consciousness</b>
+</div>
+
+<div class="question">
+<b>Q2.</b> The basic unit of classification is:
+<br><br>
+A) Genus<br>
+B) Species<br>
+C) Family<br>
+D) Order
+<br><br>
+<b>Answer: B) Species</b>
+</div>
+
+<div class="question">
+<b>Q3.</b> The first word in a binomial scientific name represents:
+<br><br>
+A) Species<br>
+B) Family<br>
+C) Genus<br>
+D) Order
+<br><br>
+<b>Answer: C) Genus</b>
+</div>
+
+<div class="question">
+<b>Q4.</b> Which sequence is correct?
+<br><br>
+A) Species → Genus → Family → Order<br>
+B) Genus → Species → Family → Order<br>
+C) Family → Genus → Species → Order<br>
+D) Order → Family → Genus → Species
+<br><br>
+<b>Answer: A</b>
+</div>
+`,
+
+            tricks: `
+<h3>💡 The Living World — Quick Tricks</h3>
+
+<h4>Taxonomic Hierarchy</h4>
+
+<p>
+<b>S → G → F → O → C → P → K</b>
+</p>
+
+<p>
+Species → Genus → Family → Order → Class → Phylum → Kingdom
+</p>
+
+<h4>Memory Trick</h4>
+
+<p>
+<b>Species Gives Families Orders, Classes, Phyla, Kingdoms.</b>
+</p>
+
+<h4>NEET Traps</h4>
+
+<ul>
+<li>Growth is not sufficient alone to define life.</li>
+<li>Reproduction is not universal among all living organisms.</li>
+<li>Metabolism is a defining feature of living organisms.</li>
+<li>Species is the basic unit of classification.</li>
+<li>First word of binomial name = Genus.</li>
+<li>Second word = specific epithet.</li>
+</ul>
+`
+        };
+
+
+        function openContent(id, type) {
+
+            const box = document.getElementById(id);
+
+            box.innerHTML = chapter1[type];
+
+            box.classList.add("active");
+
+            box.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest"
+            });
+
+        }
+
+
+        function showChapter4(type) {
+
+            const data = {
+
+                concepts: `
+        <h3>📘 Animal Kingdom — Concepts</h3>
+
+        <h4>Basis of Classification</h4>
+        <ul>
+            <li>Level of organisation</li>
+            <li>Body symmetry</li>
+            <li>Number of germ layers</li>
+            <li>Presence or absence of coelom</li>
+            <li>Segmentation</li>
+            <li>Presence of notochord</li>
+        </ul>
+
+        <h4>Level of Organisation</h4>
+        <ul>
+            <li><b>Cellular:</b> Porifera</li>
+            <li><b>Tissue:</b> Cnidaria and Ctenophora</li>
+            <li><b>Organ:</b> Platyhelminthes</li>
+            <li><b>Organ-system:</b> higher animals</li>
+        </ul>
+
+        <h4>Body Symmetry</h4>
+        <ul>
+            <li><b>Asymmetrical:</b> Porifera</li>
+            <li><b>Radial symmetry:</b> Cnidaria, Ctenophora and adult Echinodermata</li>
+            <li><b>Bilateral symmetry:</b> Platyhelminthes onwards in most groups</li>
+        </ul>
+
+        <h4>Germ Layers</h4>
+        <p>
+        Diploblastic animals have two germ layers: ectoderm and endoderm,
+        with mesoglea between them. Triploblastic animals have ectoderm,
+        mesoderm and endoderm.
+        </p>
+
+        <h4>Coelom</h4>
+        <ul>
+            <li><b>Acoelomate:</b> Platyhelminthes</li>
+            <li><b>Pseudocoelomate:</b> Aschelminthes</li>
+            <li><b>Coelomate:</b> Annelida onwards among major groups</li>
+        </ul>
+
+        <h4>Major Phyla</h4>
+        <ul>
+            <li><b>Porifera:</b> pore-bearing animals; canal system.</li>
+            <li><b>Cnidaria:</b> cnidoblasts; aquatic animals.</li>
+            <li><b>Ctenophora:</b> comb plates; marine.</li>
+            <li><b>Platyhelminthes:</b> flatworms; mostly parasitic.</li>
+            <li><b>Aschelminthes:</b> roundworms; pseudocoelomate.</li>
+            <li><b>Annelida:</b> segmented worms.</li>
+            <li><b>Arthropoda:</b> jointed appendages; largest phylum.</li>
+            <li><b>Mollusca:</b> soft-bodied animals, usually with mantle and shell.</li>
+            <li><b>Echinodermata:</b> marine; water vascular system.</li>
+            <li><b>Chordata:</b> notochord, dorsal hollow nerve cord and pharyngeal slits at some stage.</li>
+        </ul>
+
+        <h4>Chordata</h4>
+        <p>
+        The major chordate features include notochord, dorsal hollow nerve cord,
+        pharyngeal slits and post-anal tail.
+        </p>
+        `,
+
+                ncert: `
+        <h3>📗 Animal Kingdom — NCERT Important Points</h3>
+
+        <ul>
+            <li>Porifera have a canal system and numerous pores.</li>
+            <li>Cnidarians possess cnidoblasts or stinging cells.</li>
+            <li>Ctenophores possess eight rows of comb plates.</li>
+            <li>Platyhelminthes are dorsoventrally flattened.</li>
+            <li>Aschelminthes are pseudocoelomate.</li>
+            <li>Annelids show metameric segmentation.</li>
+            <li>Arthropoda is the largest phylum of Animalia.</li>
+            <li>Molluscs generally possess a mantle and muscular foot.</li>
+            <li>Echinoderms possess a water vascular system.</li>
+            <li>Echinoderms are exclusively marine.</li>
+            <li>Adult echinoderms show radial symmetry while larvae are bilateral.</li>
+            <li>Chordates possess a notochord at least during some stage of life.</li>
+        </ul>
+
+        <h4>⭐ Must Remember</h4>
+        <p>
+        Porifera → pores<br>
+        Cnidaria → cnidoblasts<br>
+        Ctenophora → comb plates<br>
+        Annelida → segmentation<br>
+        Arthropoda → jointed appendages<br>
+        Echinodermata → water vascular system<br>
+        Chordata → notochord
+        </p>
+        `,
+
+                pyq: `
+        <h3>🧠 Animal Kingdom — NEET Practice</h3>
+
+        <div class="question">
+        <b>Q1.</b> Which is the largest phylum of Animalia?
+        <br><br>
+        A) Mollusca<br>
+        B) Arthropoda<br>
+        C) Annelida<br>
+        D) Chordata
+        <br><br>
+        <b>Answer: B) Arthropoda</b>
+        </div>
+
+        <div class="question">
+        <b>Q2.</b> Cnidoblasts are characteristic of:
+        <br><br>
+        A) Porifera<br>
+        B) Cnidaria<br>
+        C) Annelida<br>
+        D) Mollusca
+        <br><br>
+        <b>Answer: B) Cnidaria</b>
+        </div>
+
+        <div class="question">
+        <b>Q3.</b> Water vascular system is characteristic of:
+        <br><br>
+        A) Arthropoda<br>
+        B) Mollusca<br>
+        C) Echinodermata<br>
+        D) Annelida
+        <br><br>
+        <b>Answer: C) Echinodermata</b>
+        </div>
+
+        <div class="question">
+        <b>Q4.</b> Which phylum shows metameric segmentation?
+        <br><br>
+        A) Annelida<br>
+        B) Porifera<br>
+        C) Cnidaria<br>
+        D) Mollusca
+        <br><br>
+        <b>Answer: A) Annelida</b>
+        </div>
+
+        <div class="question">
+        <b>Q5.</b> Notochord is a characteristic feature of:
+        <br><br>
+        A) Arthropoda<br>
+        B) Chordata<br>
+        C) Echinodermata<br>
+        D) Annelida
+        <br><br>
+        <b>Answer: B) Chordata</b>
+        </div>
+        `,
+
+                tricks: `
+        <h3>💡 Animal Kingdom — Quick Tricks</h3>
+
+        <h4>Phylum Recall</h4>
+        <p>
+        <b>P C C P A A M E C</b>
+        </p>
+        <p>
+        Porifera → Cnidaria → Ctenophora → Platyhelminthes →
+        Aschelminthes → Annelida → Mollusca → Echinodermata → Chordata
+        </p>
+
+        <h4>NEET One-Liners</h4>
+        <ul>
+            <li>Porifera → pores + canal system</li>
+            <li>Cnidaria → cnidoblasts</li>
+            <li>Ctenophora → comb plates</li>
+            <li>Platyhelminthes → flatworms</li>
+            <li>Aschelminthes → pseudocoelom</li>
+            <li>Annelida → metamerism</li>
+            <li>Arthropoda → largest phylum + jointed legs</li>
+            <li>Mollusca → mantle + muscular foot</li>
+            <li>Echinodermata → water vascular system</li>
+            <li>Chordata → notochord</li>
+        </ul>
+        `
+
+            };
+
+            const box = document.getElementById("c4");
+            box.innerHTML = data[type];
+            box.classList.add("active");
+            box.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+
+
+        function showChapter3(type) {
+
+            const data = {
+                concepts: `<h3>📘 Plant Kingdom — Concepts</h3><h4>Major Groups</h4><p>Algae, bryophytes, pteridophytes, gymnosperms and angiosperms show increasing complexity in plant organisation.</p><ul><li>Algae → simple thalloid body.</li><li>Bryophytes → amphibians of plant kingdom.</li><li>Pteridophytes → vascular cryptogams.</li><li>Gymnosperms → naked seeds.</li><li>Angiosperms → flowers, enclosed ovules and double fertilisation.</li></ul>`,
+                ncert: `<h3>📗 Plant Kingdom — NCERT</h3><ul><li>Bryophytes require water for sexual reproduction.</li><li>Pteridophytes have vascular tissues but no seeds.</li><li>Gymnosperm ovules are not enclosed by an ovary.</li><li>Angiosperms show double fertilisation.</li><li>Green algae contain chlorophyll a and b.</li><li>Brown algae have fucoxanthin.</li><li>Red algae have phycoerythrin.</li></ul>`,
+                pyq: `<h3>🧠 Plant Kingdom — PYQs</h3><div class="question"><b>Q1.</b> Bryophytes are called amphibians because they require water for sexual reproduction.<br><br><b>Answer: Correct</b></div><div class="question"><b>Q2.</b> Naked seeds occur in:<br><br>A) Bryophytes B) Pteridophytes C) Gymnosperms D) Angiosperms<br><br><b>Answer: C</b></div><div class="question"><b>Q3.</b> Double fertilisation occurs in:<br><br><b>Answer: Angiosperms</b></div>`,
+                tricks: `<h3>💡 Plant Kingdom — Tricks</h3><ul><li>Bryophytes → amphibians</li><li>Pteridophytes → vascular + spores</li><li>Gymnosperms → naked seeds</li><li>Angiosperms → flowers + fruits</li><li>Red algae → phycoerythrin</li><li>Brown algae → fucoxanthin</li></ul>`
+            };
+
+            const box = document.getElementById("c3");
+            box.innerHTML = data[type];
+            box.classList.add("active");
+            box.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+
+
+        function showChapter2(type) {
+
+            const data = {
+                concepts: `<h3>📘 Biological Classification — Concepts</h3><h4>Five Kingdoms</h4><p>R.H. Whittaker proposed five kingdom classification in 1969: Monera, Protista, Fungi, Plantae and Animalia.</p><ul><li>Monera → prokaryotic.</li><li>Protista → mostly unicellular eukaryotic.</li><li>Fungi → heterotrophic, chitin-containing cell wall.</li><li>Lichen → alga + fungus.</li><li>Viroid → infectious RNA without protein coat.</li></ul>`,
+                ncert: `<h3>📗 NCERT Important Points</h3><ul><li>Whittaker proposed five kingdom classification in 1969.</li><li>Monera contains prokaryotes.</li><li>Fungal cell wall contains chitin.</li><li>Methanogens occur in the rumen of cattle.</li><li>Lichens are an association between algae and fungi.</li><li>Viroids consist of RNA without a protein coat.</li></ul>`,
+                pyq: `<h3>🧠 Biological Classification — PYQs</h3><div class="question"><b>Q1.</b> Five kingdom classification was proposed by?<br><br><b>Answer: Whittaker</b></div><div class="question"><b>Q2.</b> Fungal cell wall mainly contains?<br><br><b>Answer: Chitin</b></div><div class="question"><b>Q3.</b> Lichens are association of?<br><br><b>Answer: Alga + fungus</b></div>`,
+                tricks: `<h3>💡 Quick Tricks</h3><p><b>M → P → F → P → A</b></p><p>Monera → Protista → Fungi → Plantae → Animalia</p>`
+            };
+
+            const box = document.getElementById("c2");
+            box.innerHTML = data[type];
+            box.classList.add("active");
+            box.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+
+
+        function simpleContent(id, type) {
+
+            const box = document.getElementById(id);
+
+            box.innerHTML = `
+        <h3>${type}</h3>
+        <p>
+        This section is ready for detailed chapter-wise content.
+        Complete the chapter concepts first, then revise NCERT
+        and practise NEET questions.
+        </p>
+    `;
+
+            box.classList.add("active");
+            box.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+
+    </script>
+
+</body>
+
+</html>
